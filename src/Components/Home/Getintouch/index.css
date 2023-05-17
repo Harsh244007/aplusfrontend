@@ -1,0 +1,127 @@
+.MainGetingTouch {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.MainGetingTouch {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1400px;
+  margin-top: 50px;
+}
+.firstBoxGETINTOUCH {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.MainGetingTouch .nessageinput,
+.MainGetingTouch .emailinput {
+  display: grid;
+  /* grid-template-columns: .3fr 1fr; */
+  gap: 10px;
+  /* font-weight: 600 !important; */
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
+  height: 64px !important;
+}
+.emailinput input,
+.messagebox {
+  color: white !important;
+  background: #001620 !important;
+  border-radius: 8px !important;
+  /* border: 1.5px solid rgb(137, 136, 136) !important; */
+  border: 1.5px solid rgba(255, 255, 255, 0.05);
+}
+.emailinput input:focus,
+.messagebox:focus {
+  border-color: coral !important;
+}
+.emailinput input::placeholder,
+.messagebox::placeholder {
+  color: #b1b1b1 !important;
+}
+.MainGetingTouch .emailinput {
+  align-items: center;
+  font-weight: 600;
+}
+.firstBoxGETINTOUCH {
+  border-radius: 24px !important;
+}
+
+.buttonSubmit:hover {
+  color: white !important;
+  background: #001620 !important;
+  border: 1px solid white !important;
+}
+.buttonSubmit {
+  border-radius: 41px;
+}
+.firstofgetintouch {
+  width: 603px !important;
+  background-size: cover !important;
+  background-color: rgba(0, 22, 32, 0.5) !important;
+  border-radius: 24px 0px 0px 24px !important;
+}
+.mainget {
+  border-radius: 24px;
+}
+.containergetintouch {
+  border-radius: 0px 24px 24px 0px !important;
+}
+
+@media (max-width: 1022px) {
+  .firstofgetintouch {
+    display: none !important;
+  }
+  .containergetintouch {
+    border-radius: 24px !important;
+  }
+}
+.mainget {
+  display: flex !important;
+  max-width: 1400px !important;
+}
+.textfirstofgetTou {
+  margin: 0px !important;
+  color: white !important;
+  font-family: 'Inter','sans-serif' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  width: 426.66px;
+}
+.firstofgetintouch {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 80px !important;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  gap: 20px !important;
+  background-position: 99% 50%;
+  background-size: cover;
+  /* opacity: 0.8; */
+  background-blend-mode: color-burn;
+}
+
+.headerfirsofget {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  width: 426.66px;
+  margin: 0px;
+  line-height: 74px !important;
+  color: #ffffff;
+}
+.headeringgetintouch2 {
+  font-family: 'Dosis', 'sans-serif' !important;
+}

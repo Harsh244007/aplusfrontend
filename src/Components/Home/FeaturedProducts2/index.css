@@ -1,0 +1,189 @@
+.MainFeatureProducts2 {
+  margin: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  gap: 30px !important;
+  padding-top: 80px !important;
+  background-position-x: right !important;
+  /* background-size:cover !important; */
+  background-repeat: no-repeat !important;
+}
+.firstFeaturedProducts2 {
+  margin: auto !important;
+  /* width:700px !important; */
+  height: 434px !important;
+  /* gap: 20px !important; */
+  column-gap: 70px !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+.firstfeaturedText1 {
+  /* width: 126px !important; */
+  height: 40px !important;
+  font-family: 'Dosis', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  /* text-align: center !important; */
+  color: #001620 !important;
+  letter-spacing: -0.02em !important;
+}
+.firstfeaturedText2 {
+  /* height: 87px !important; */
+  width: 300px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  color: rgba(0, 22, 32, 0.7) !important;
+  font-size: 24px !important;
+  line-height: 29px !important;
+  letter-spacing: -0.02em !important;
+}
+.firstfeaturedImage1 {
+  display: flex !important;
+  background-size: contain !important;
+  align-items: end !important;
+  width: 343px !important;
+  background-repeat: no-repeat !important;
+  height: 302px !important;
+  justify-content: center !important;
+}
+/* .uniqueimage1::after {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 279px;
+  z-index: -100 !important;
+  background: #05e8ba !important;
+  opacity: 0.25 !important;
+  border-radius: 8px !important;
+  transform: rotate(6.04deg) !important;
+  content: '' !important;
+  position: absolute !important;
+  height: 100% !important;
+  background-repeat: no-repeat !important;
+  top: -8px !important;
+  left: 390px !important;
+}
+.uniqueimage2::after {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 279px;
+  z-index: -100 !important;
+  background: #ff4e00 !important;
+  opacity: 0.25 !important;
+  border-radius: 8px !important;
+  transform: rotate(6.04deg) !important;
+  content: '' !important;
+  position: absolute !important;
+  height: 100% !important;
+  background-repeat: no-repeat !important;
+  top: 10px !important;
+  left: 390px !important;
+}
+.uniqueimage3::after {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 279px;
+  background: #fa43d1 !important;
+  opacity: 0.25 !important;
+  border-radius: 8px !important;
+  transform: rotate(-6.04deg) !important;
+  content: '' !important;
+  z-index: -100 !important;
+  position: absolute !important;
+  height: 100% !important;
+  background-repeat: no-repeat !important;
+  top: -8px !important;
+  left: -15px !important;
+} */
+.featuredproducts {
+  position: absolute;
+  width: 1177px;
+  /* height: 177px; */
+  left: -500px;
+  top: 600px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 88px !important;
+  line-height: 66px;
+  text-transform: capitalize;
+  color: #001620;
+  opacity: 0.1;
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+
+.firstFeaturedProducts20 {
+  flex-direction: row-reverse !important;
+}
+.uniqueimage1::after,
+.uniqueimage2::after,
+.uniqueimage3::after {
+  height: 387px !important;
+}
+
+@media (max-width: 900px) {
+  .featuredproducts {
+    display: none !important;
+  }
+  .firstFeaturedProducts2 {
+    height: 454px !important;
+  }
+}
+@media (max-width: 650px) {
+  .MainFeatureProducts2 {
+    margin-bottom: 200px !important;
+  }
+  .firstfeaturedImage1 {
+    margin: 30px !important;
+  }
+  .firstFeaturedProducts20 {
+    flex-direction: column;
+  }
+  .firstFeaturedProducts2 {
+    height: 484px !important;
+  }
+}
+.buttonoffeaturedproducts {
+  width: 70px !important;
+  margin-top: -5px !important;
+  background: #001620 !important;
+  color: white !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  font-family: 'Inter', 'sans-serif' !important;
+}
+.firstImageFeatured {
+  width: 269px !important;
+  height: 259px !important;
+  filter: drop-shadow(0px 21px 24px rgba(0, 0, 0, 0.22));
+  -webkit-filter: drop-shadow(0px 21px 24px rgba(0, 0, 0, 0.22));
+}
+.discoverMoreArrowFeature {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.discoverMoreArrowFeature img {
+  width: 20px;
+  height: 18px;
+  align-self: center;
+}
+.discoverMoreArrowFeature {
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  color: #ff4e00 !important;
+  letter-spacing: -0.02em !important;
+}

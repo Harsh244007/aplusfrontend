@@ -1,0 +1,157 @@
+.headerProducts2 {
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-size: 48px;
+  width: 380px;
+  font-family: 'Dosis', sans-serif !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: #001620;
+  line-height: 56px;
+  margin: auto !important;
+  margin-bottom: 40px !important;
+  margin-top: 20px !important;
+  text-align: center;
+}
+.slick-dots {
+  top: 655px;
+  position: absolute !important;
+  z-index: 110;
+}
+.slick-dots li button::before {
+  font-size: 18px !important;
+  width: 100px !important;
+}
+.MainReview {
+  /* border-bottom: 1px solid; */
+  
+  font-family: 'Dosis', sans-serif !important;
+}
+.MainReview h2 {
+  margin: 0px;
+  font-family: 'Dosis', sans-serif !important;
+}
+.slick-active {
+  /* width: 100px !important; */
+  text-align: center;
+  transition: all 300ms ease !important;
+}
+.boxofReview {
+  display: flex;
+  /* align-items:stretch; */
+  flex-direction: column;
+  padding: 15px;
+  /* background: var(--chakra-colors-gray-50); */
+  /* border: 0.1px solid var(--chakra-colors-gray-50); */
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+.buttonCarousal {
+  background: var(--chakra-colors-gray-50);
+}
+
+.boxofReview2 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* background: var(--chakra-colors-gray-50); */
+  /* border: 0.1px solid var(--chakra-colors-gray-50); */
+  border-radius: 24px;
+  width: 367px;
+  height: 390px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (max-width: 1022px) {
+  .boxofReview {
+    padding: 10px;
+  }
+}
+.CardsName {
+  color: #ff4e00 !important;
+}
+
+.CardsCity {
+  /* font-weight:400; */
+  font-size: 12px;
+  font-family: 'Dosis', sans-serif !important;
+}
+.buttonrealcarousal {
+  color: #6876e2 !important;
+  font-size: 32px;
+}
+.MainReview .slick-slide {
+  height: auto !important;
+}
+.slick-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+}
+.slick-disabled {
+  display: none;
+}
+.MainReview .slick-slide > div {
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+.boxofReview,
+.boxofReview2 {
+  gap: 10px;
+  justify-content: space-evenly;
+  width: 308px !important;
+  /* padding-top: 60px; */
+}
+.boxofReview3 {
+  border-top: 1px dashed !important;
+}
+.TEXTOFREVIEW2 {
+  color: rgba(24, 25, 31, 0.6) !important;
+  height: 255px !important;
+  font-family: 'Jost', sans-serif !important;
+  /* font-family: 'Dosis', sans-serif !important; */
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+}
+.signleReviewBox {
+  display: flex !important;
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth !important;
+  position: relative !important;
+  scrollbar-width: none !important;
+  scroll-snap-type: x mandatory !important;
+  -ms-overflow-style: none; /* IE and Edge */
+  /* scroll-snap-align: start !important; */
+}
+.imagereview1 {
+  animation: primary 15s alternate infinite;
+  scroll-snap-align: start !important;
+  /* position: absolute; */
+  /* animation-direction: alternate; */
+  z-index: 10 !important;
+}
+/* .imagereview1:hover,
+.imagereview1:active {
+  animation-play-state: paused;
+} */
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+.signleReviewBox::-webkit-scrollbar {
+  display: none;
+}
+/* .imagereview1:hover,
+.imagereview1:active {
+  z-index: 100 !important;
+  animation-play-state: paused !important;
+} */
