@@ -26,6 +26,7 @@ const HoverLink = props => (
 
 const Navigation = observer(({ onClose }) => {
   const navigate = useNavigate();
+
   return (
     <Stack as="nav">
       <Link to="/" onClick={() => onClose()}>
@@ -41,16 +42,8 @@ const Navigation = observer(({ onClose }) => {
       >
         About
       </Link>
-      <Link
       
-      to="/products"
-        onClick={() => {
-          // Appstore.setReg(true);
-          onClose();
-        }}
-      >
-        Our Prodcuts
-      </Link>
+     
       <Link
         to="/participation"
         onClick={() => {
@@ -121,10 +114,10 @@ const LayoutWithMenu = ({ children }) => {
   );
 };
 
-const Dropdown = () => {
+const DropdownMobile = () => {
   return <LayoutWithMenu></LayoutWithMenu>;
 };
 
-Dropdown.containerSize = 'fill';
+DropdownMobile.containerSize = 'fill';
 
-export default React.memo(Dropdown);
+export default React.memo(DropdownMobile);

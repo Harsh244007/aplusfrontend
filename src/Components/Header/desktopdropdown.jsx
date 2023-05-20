@@ -1,13 +1,14 @@
-import { Button, Select, Stack } from '@chakra-ui/react';
+import { Box, Button, Select, Stack } from '@chakra-ui/react';
 import { observer } from 'mobx-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Appstore from '../../Store/Appstore';
 // import Dropdown from 'react-dropdown';
 import Dropdown from 'react-dropdown-animated';
+import axios from 'axios';
+import { useQuery } from 'react-query';
 // import 'react-dropdown/style.css';
 const Desktopdropdown = observer(() => {
-  const location = useNavigate();
   //   const options = ['Products', 'Loudspeaker', 'Microphone','Crossover Networks Active Crossover', 'Mixer', 'Amplifier'
   // ,'P.A. Amplifier', 'Wallmount Loudspeaker', 'Loudspeaker System','Compression Drivers'];
   const [showDD, setShowDD] = useState(true);
@@ -15,69 +16,50 @@ const Desktopdropdown = observer(() => {
   const toggleDD = () => setShowDD(false);
   let options = [
     {
-      content: 'Loudspeakers',
+      content: 'Loading Categories Please wait',
       onClick: event => {
         toggleDD();
-        location(`/products/${event.target.innerText}`);
+        // location(`/`);
       },
-    },
-    {
-      content: 'Microphones',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Crossover Networks Active Crossovers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Mixers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Amplifiers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'P.A. Amplifiers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Wallmount Loudspeakers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Loudspeaker Systems',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
-    {
-      content: 'Compression Drivers',
-      onClick: event => {
-        toggleDD();
-        location(`/products/${event.target.innerText}`);
-      },
-    },
+    }
   ];
+  
+  let options2=[]
+  const url = `${Appstore.apilink}/returncategories`
+  const { data, refetch, isLoading } = useQuery(
+    ['getCategories'],
+    async () => {
+      return axios
+        .get(url)
+        .then(
+          response => {
+            return response.data.data
+          },
+   
+        )
+    }
+  )
+
+  if (!data) {
+    let timer;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      refetch();
+    }, 4000);
+  }
+
+  if(!isLoading && data){
+data.map((e)=>{
+options2.push({content:e.catname,
+  onClick: event => {
+    toggleDD();
+    navigate(`/products/${e.catid}/${e.catname}`);
+  },})
+  console.log(e,"data for categories")
+})
+
+console.log(options2,"data for categories")
+  }
   useEffect(()=>{
     if(!showDD)
     setShowDD(true)
@@ -110,25 +92,13 @@ const Desktopdropdown = observer(() => {
           About
         </Button>
       </Link>
-      {/* <Link> */}
-      {/* <Link to="/products"> */}
-      {/* <Button
-          variant="ghost"
-        >
-          Products22
-        </Button> */}
+   
       {showDD ? (
-        <Dropdown options={options} initial={200} exit={4} value="Products" />
-      ) : (
-        ''
+       <Dropdown options={data?options2:options} initial={200} exit={4} value="Products" />
+        ) : (
+          ''
       )}
-      {/* </Link> */}
-      {/* <Select
-        className="productsSection"
-        variant="unstyled"
-        placeholder="Products"
-      /> */}
-      {/* </Link> */}
+    
 
       <Link to="/participation">
         <Button

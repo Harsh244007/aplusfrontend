@@ -1,4 +1,4 @@
-import { makeAutoObservable, toJS } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 class AppStore {
   isTesting =
     window.location.href.includes('Testing') ||
@@ -10,6 +10,8 @@ class AppStore {
   footer = false;
   device2 = 0;
   mode = 'dark';
+  apilink='http://localhost:3000'
+  imageLink='http://www.aplusaudios.com/assets/uploads/showcase/medium'
   bgImage = 3;
   constructor() {
     makeAutoObservable(this);

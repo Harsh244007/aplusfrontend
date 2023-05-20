@@ -16,16 +16,16 @@ import {
 } from '@chakra-ui/react';
 import './index.css';
 import Appstore from '../../Store/Appstore';
-import Dropdown from './dropdown';
+import DropdownMobile from './dropdown';
+import Dropdown from 'react-dropdown-animated';
 import { observer } from 'mobx-react';
 import Desktopdropdown from './desktopdropdown';
 import { SearchIcon } from '@chakra-ui/icons';
-import { Link } from 'react-router-dom';
-// import Logo from '../../assets/logo.svg';
-
+import { Link, useNavigate } from 'react-router-dom';
 import logomain from "../../assets/Aplus-logo-225x108.svg"
-// import Logo2 from '../../assets/logo2.svg';
 import { CiSearch } from 'react-icons/ci';
+import { useQuery } from 'react-query';
+import axios from 'axios';
 const Header = observer(({ BG = false }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   useEffect(() => {
@@ -34,9 +34,57 @@ const Header = observer(({ BG = false }) => {
   console.log(BG, 'backgroundof header');
   const searchIconColor = 'gray.700';
   const inputBg = 'gray.800';
-
+  const [showDD, setShowDD] = useState(true);
+  const navigate = useNavigate();
+  const toggleDD = () => setShowDD(false);
+  let options = [
+    {
+      content: 'Loading Categories Please wait',
+      onClick: event => {
+        toggleDD();
+        // location(`/`);
+      },
+    }
+  ];
   const targetRef = useRef('');
+  let options2=[]
+  const url = `${Appstore.apilink}/returncategories`
+  const { data, refetch, isLoading } = useQuery(
+    ['getCategories'],
+    async () => {
+      return axios
+        .get(url)
+        .then(
+          response => {
+            return response.data.data
+          },
+   
+        )
+    }
+  )
 
+  if (!data) {
+    let timer;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      refetch();
+    }, 4000);
+  }
+
+  if(!isLoading && data){
+data.map((e)=>{
+options2.push({content:e.catname,
+  onClick: event => {
+    toggleDD();
+    navigate(`/products/${e.catid}/${e.catname}`);
+  },})
+  console.log(e,"data for categories")
+})
+  }
+  useEffect(()=>{
+    if(!showDD)
+    setShowDD(true)
+  },[showDD])
   return (
     <Box className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : ''}`} as='section'>
       <Box className="header" textAlign="center">
@@ -62,8 +110,13 @@ const Header = observer(({ BG = false }) => {
                 <CiSearch className="inputheaderSearchIcon" />
               </InputRightElement>
             </InputGroup>
+            {showDD ? (
+       <Dropdown options={data?options2:options} initial={200} exit={4} value="Products" />
+        ) : (
+          ''
+      )}
             <Box className="desktopSlider">
-              <Dropdown />
+              <DropdownMobile />
             </Box>
           </Box>
         ) : (

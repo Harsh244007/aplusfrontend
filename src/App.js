@@ -30,6 +30,8 @@ import {
   SubFooter,
 } from './Components';
 import './App.css';
+import { useQuery } from 'react-query';
+import axios from 'axios';
 const App = observer(() => {
   useLayoutEffect(() => {
     const handleresize = async e => {
@@ -49,6 +51,9 @@ const App = observer(() => {
     if (!Appstore.isTesting) {
       console.log = () => {};
       console.info = () => {};
+      console.error = () => {};
+      console.warn = () => {};
+      console.debug = () => {};
     }
     handleresize();
     const scroller = async e => {
@@ -60,9 +65,21 @@ const App = observer(() => {
         Appstore.setFooter(false);
       }
     };
+const handleDelay=(e)=>{
+  let flag=true
+  return ()=>{
+    if(flag){
+      flag=false
+      e()
+      setTimeout(()=>{
+        flag=true
+      },1000)
+    }
+  }
 
+}
     window.addEventListener('resize', handleresize, { passive: true });
-    window.addEventListener('scroll', scroller, { passive: true });
+    window.addEventListener('scroll', handleDelay(scroller), { passive: true });
     return () => {
       window.removeEventListener('resize', handleresize);
       window.removeEventListener('scroll', scroller);
@@ -77,6 +94,28 @@ const App = observer(() => {
       .getElementsByClassName('mainHeader')
       .scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
+  
+  const url = `${Appstore.apilink}/returncategories`
+  const { data, refetch, isLoading } = useQuery(
+    ['getCategories'],
+    async () => {
+      return axios
+        .get(url)
+        .then(
+          response => {
+            return response.data.data
+          },
+   
+        )
+    }
+  )
+  if (!data) {
+    let timer;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      refetch();
+    }, 4000);
+  }
 
   return (
     <ChakraProvider theme={theme}>
@@ -88,7 +127,12 @@ const App = observer(() => {
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
         <Routes>
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<>
+            <Header BG={true} />
+            <Error />
+            
+          </>
+            } />
 
           <Route
             path="/"
@@ -153,7 +197,16 @@ const App = observer(() => {
             }
           />
               <Route
-            path="/products/:id"
+            path="/products/:id/:name"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                 <Header BG={true} />
+                <MainProducts />
+              </Suspense>
+            }
+          />
+                   <Route
+            path="/products/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
                  <Header BG={true} />
@@ -171,7 +224,16 @@ const App = observer(() => {
             }
           />
               <Route
-            path="/productDetails/:id"
+            path="/productDetails/:catid/:id/:name/:catName"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                 <Header BG={true} />
+                <MainProductDetails />
+              </Suspense>
+            }
+          />
+                 <Route
+            path="/productDetails/:catid/:id/:name/:catName/:subName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
                  <Header BG={true} />

@@ -182,6 +182,9 @@
 .MainHome .slick-slider button {
   display: unset !important;
 }
+.MainHome .slick-slider .slick-arrow ,.MainHome .slick-slider .slick-prev{
+  display: none !important;
+}
 .firstImage .buttonOfCTA {
   background: #13e7f5 !important;
   border-radius: 8px !important;

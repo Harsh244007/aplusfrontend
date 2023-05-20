@@ -1,16 +1,19 @@
-.mainProductsMain{
-     display: flex !important;
-     flex-wrap: wrap !important;
-     position: relative !important;
-     row-gap: 20px !important;
-     justify-content: space-around !important;
-     max-width: 1000px !important;
+.mainProductsMain {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  row-gap: 20px !important;
+  justify-content: space-around !important;
+  max-width: 1000px !important;
 }
-.mainProductsMain .featueProductsCard1{
-     align-items: center !important;
+.mainProductsMain .featueProductsCard1 {
+  align-items: center !important;
 }
-.goBackMain{
-     position: absolute !important;
-     left: 20px !important;
-     top: 20px !important;
+
+@media (min-width: 1022px) {
+  .goBackMain {
+    left: 30px !important;
+    top: 20px !important;
+    position: absolute !important;
+  }
 }

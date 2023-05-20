@@ -1,0 +1,88 @@
+.loader {
+  /* position: fixed; */
+  z-index: 100;
+  /* left: 50%;
+  top: 50%; */
+  height: 90%;
+  width: 90% !important;
+  max-width: 1200px;
+}
+.chakraloader {
+  max-width: 1200px;
+  /* position: absolute; */
+  z-index: 100;
+  /* top: 50%; */
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+}
+.animation-wrapper {
+  display: flex;
+  gap: 15px;
+  margin: auto;
+  z-index: 100;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: turquoise;
+  animation: move-the-circle 1s infinite;
+  transform-origin: center center;
+}
+
+@for $num from 1 through 8 {
+  .circle:nth-child(#{$num}) {
+    left: ($num - 1) * 30px;
+    animation-delay: $num * 0.1s;
+  }
+}
+
+@keyframes move-the-circle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: turquoise;
+  }
+  50% {
+    transform: translate(0, 50px) scale(0.4);
+    opacity: 0.5;
+    background-color: blue;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: turquoise;
+  }
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid !important;
+}
+
+.pagination button.active {
+  font-weight: 900;
+  border: 1px solid !important;
+  /* border-color: #101010; */
+  background: #ffe400;
+  color: #101010;
+}
