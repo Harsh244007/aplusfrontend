@@ -51,8 +51,8 @@ const App = observer(() => {
     if (!Appstore.isTesting) {
       console.log = () => {};
       console.info = () => {};
-      console.error = () => {};
-      console.warn = () => {};
+      // console.error = () => {};
+      // console.warn = () => {};
       console.debug = () => {};
     }
     handleresize();
