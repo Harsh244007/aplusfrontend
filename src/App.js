@@ -166,7 +166,7 @@ const handleDelay=(e)=>{
             }
           />
             <Route
-            path="/index.html"
+            path="/aplusfrontend/build/index.html"
             element={
               <>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
