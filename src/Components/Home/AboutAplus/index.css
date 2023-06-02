@@ -1,8 +1,8 @@
 .MainAboutUS {
   margin: auto !important;
-  padding: 141px 0px 141px 121px !important;
+  padding: 50px 0px 41px 121px !important;
   background-size: cover !important;
-  height: 755px !important;
+  height: 470px !important;
   background-repeat: no-repeat;
   color: #fff !important;
   display: flex !important;
@@ -15,7 +15,7 @@
     margin: auto !important;
     padding: 90px 10px 20px 60px !important;
     background-size: cover !important;
-    height: 655px !important;
+    height: 530px !important;
     background-repeat: no-repeat;
     color: #fff !important;
   
@@ -28,11 +28,19 @@
     margin: auto !important;
     padding: 60px 5px 20px 30px !important;
     background-size: cover !important;
-    height: 625px !important;
+    height: 500px !important;
     background-repeat: no-repeat;
     color: #fff !important;
   
     /* width: 1270px !important; */
+  }
+  .imagesaboutussa{
+    max-height: 150px;
+  }
+}
+@media (max-width:400px){
+  .imagesaboutussa{
+    max-height: 120px;
   }
 }
 .titleheaderabout {
@@ -80,11 +88,10 @@
 .imagesaboutussa {
   scroll-snap-align: center !important;
   margin: 10px !important;
-
+  height: 200px !important;
   border-radius: 10px !important;
   position: relative !important;
-  width: 475px !important;
-
+  width: 400px !important;
   object-fit: cover !important;
   /* animation-name: example; */
   background-color: aqua;
@@ -118,7 +125,7 @@ font-size: 88px !important;
 font-weight: 700 !important;
 width: 459px !important;
 position: absolute;
-left: 1080px;
+left: 880px;
 color: rgba(255,255,255,0.06) !important;
 margin-top: 90px !important;
 /* top: 300px; */

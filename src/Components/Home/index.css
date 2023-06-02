@@ -37,23 +37,23 @@
 }
 .firstboxlogo {
   align-self: center;
-  margin-bottom: 20px !important;
+  margin-bottom: 0px !important;
   text-align: left !important;
   display: flex !important;
   justify-content: center !important;
   /* align-items: center !important; */
   flex-direction: column !important;
 }
-.firstboxlogo2 {
-  margin-bottom: 139px !important;
-}
+/* .firstboxlogo2 { */
+/* margin-bottom: 139px !important; */
+/* } */
 .logoimage {
   display: flex !important;
   /* flex-wrap: wrap !important; */
   /* padding-top: 30px !important; */
   justify-content: center !important;
   align-items: center !important;
-  height: 589px !important;
+  height: 475px !important;
   /* padding-bottom: 10px; */
 }
 @media (max-width: 730px) {
@@ -83,7 +83,7 @@
 
   .belowImage {
     position: relative !important;
-    top: 53px !important;
+    top: 03px !important;
     box-shadow: 120px 80px 40px 20px #d3dcdc14;
   }
 }
@@ -107,15 +107,23 @@
     height: 80px !important;
     line-height: 30px !important;
   }
+}.MainHome .slick-dots {
+  width: 300px !important;
+  top: 435px !important;
 }
 @media (max-width: 1022px) {
   .firstboxlogo2 {
     margin-bottom: 0px !important;
   }
   .MAINHOME23 {
-    padding-top: 40px !important;
+    padding-top: 00px !important;
+  }
+  .MainHome .slick-dots {
+    width: 100% !important;
+    top: 435px !important;
   }
 }
+
 
 @media (min-width: 1022px) {
   .logoimage23 {
@@ -154,21 +162,12 @@
   color: black !important;
   opacity: 1 !important;
 }
-@media (max-width: 1022px) {
-  .logoimage {
-    flex-wrap: wrap !important;
-    padding-top: 50px !important;
-  }
-}
+
 .pink {
   color: #fa43d1 !important;
 }
 .orange {
   color: #fa8b32 !important;
-}
-.MainHome .slick-dots {
-  width: 300px !important;
-  top: 585px !important;
 }
 .MainHome .slick-dots li.slick-active button::before {
   color: #ff4e00 !important;
@@ -182,7 +181,8 @@
 .MainHome .slick-slider button {
   display: unset !important;
 }
-.MainHome .slick-slider .slick-arrow ,.MainHome .slick-slider .slick-prev{
+.MainHome .slick-slider .slick-arrow,
+.MainHome .slick-slider .slick-prev {
   display: none !important;
 }
 .firstImage .buttonOfCTA {
@@ -233,7 +233,8 @@
   font-family: 'Dosis' !important;
   font-style: normal !important;
   font-weight: 500 !important;
-  font-size: 24px !important;color: #FFFFFF !important;
+  font-size: 24px !important;
+  color: #ffffff !important;
   line-height: 30px !important;
   flex-direction: row !important;
   align-items: flex-start !important;
@@ -246,12 +247,26 @@
   -ms-border-radius: 8px !important;
   -o-border-radius: 8px !important;
 }
-.secondImage .LOGOTEXT{
+.secondImage .LOGOTEXT {
   color: black !important;
   font-weight: 500 !important;
   width: 600px !important;
 }
-.thirdImage .LOGOTEXT{
+.thirdImage .LOGOTEXT {
   font-weight: 500 !important;
   width: 600px !important;
+}
+@media (max-width: 1022px) {
+  .logoimage {
+    flex-wrap: wrap !important;
+    padding-top: 55px !important;
+  }
+
+  .firstImage .buttonOfCTA,
+  .secondImage .buttonOfCTA,
+  .thirdImage .buttonOfCTA {
+    height: 40px !important;
+    width: 160px !important;
+    font-size: 20px !important;
+  }
 }

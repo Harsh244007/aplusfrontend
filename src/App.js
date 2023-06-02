@@ -32,6 +32,7 @@ import {
 import './App.css';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+import CustomSwitch from './CustomProgressBar';
 const App = observer(() => {
   useLayoutEffect(() => {
     const handleresize = async e => {
@@ -126,7 +127,7 @@ const handleDelay=(e)=>{
         <Goup onClick={goupOnclick} />
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
-        <Routes>
+        <CustomSwitch>
           <Route path="*" element={<>
             <Header BG={true} />
             <Error />
@@ -301,7 +302,7 @@ const handleDelay=(e)=>{
               </Suspense>
             }
           />
-        </Routes>
+        </CustomSwitch>
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
         <Footer />

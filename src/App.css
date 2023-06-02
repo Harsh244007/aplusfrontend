@@ -42,6 +42,7 @@ body::-webkit-scrollbar-track {
 html {
   scrollbar-width: thin !important;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
   box-sizing: border-box !important;
   font-family: 'Dosis', sans-serif !important;
   box-shadow: inset !important;

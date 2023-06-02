@@ -39,7 +39,7 @@ const settings = {
   adaptiveHeight: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 300000,
   slidesToShow: 1,
   pauseonFocus: false,
   focusOnSelect: false,
@@ -89,7 +89,7 @@ const CaptionCarousel = observer(() => {
           return (
             <Box
               position={'relative'}
-              height={'619px'}
+              height={'475px'}
               key={index}
               className={`MAINHOME23 ${card.class}`}
               backgroundSize={'cover'}
@@ -100,7 +100,7 @@ const CaptionCarousel = observer(() => {
             >
               <Box
                 className="logoimage"
-                pt={card.rank == 1 ? '152px' : '30px'}
+                pt={card.rank == 1 ? '0px' : '0px'}
                 pb="10px"
               >
                 <Box
@@ -133,7 +133,7 @@ const CaptionCarousel = observer(() => {
                       color={'black'}
                       fontSize={'18px'}
                       className="buttonOfCTA"
-                      p={'10px'}
+                      p={'5px'}
                     >
                       View All Products
                     </Button>
@@ -142,6 +142,7 @@ const CaptionCarousel = observer(() => {
 
                 <Image
                   loading="lazy"
+                  maxW={"380px"}
                   className={
                     card.title == 'Design Projects 11' ? 'belowImage' : ''
                   }
