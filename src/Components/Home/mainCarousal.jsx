@@ -89,7 +89,7 @@ const CaptionCarousel = observer(() => {
           return (
             <Box
               position={'relative'}
-              height={'475px'}
+              height={'515px'}
               key={index}
               className={`MAINHOME23 ${card.class}`}
               backgroundSize={'cover'}
@@ -102,6 +102,8 @@ const CaptionCarousel = observer(() => {
                 className="logoimage"
                 pt={card.rank == 1 ? '0px' : '0px'}
                 pb="10px"
+                m="auto"
+                maxW={"1200px"}
               >
                 <Box
                   className={`firstboxlogo ${

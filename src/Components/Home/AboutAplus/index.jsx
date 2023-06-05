@@ -10,9 +10,11 @@ import fourth from '../../../assets/part/2.jpeg';
 const AboutUSMain = () => {
   return (
     <Box className="MainAboutUS" backgroundImage={main} as="section">
-      
-      <Heading className='secondheaderaboutus'>ABOUT US</Heading>
-      <Box>
+      <Box className='secondheaderaboutusBox'  maxW={"1400px"} m="auto">
+
+      <Heading className='secondheaderaboutus' >ABOUT US</Heading>
+      </Box>
+      <Box maxW='1200px' m="auto">
         <Heading className="titleheaderabout">About A-Plus</Heading>
         <Text className="textabout">
           A–Plus is one of India’s leading manufacturer of sound reinforcement

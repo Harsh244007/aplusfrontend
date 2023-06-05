@@ -5,7 +5,7 @@
   /* margin-top: 45px; */
 }
 .slick-dots {
-  top: 585px;
+  top: 615px;
   position: absolute !important;
   z-index: 110;
 }
@@ -109,7 +109,7 @@
   }
 }.MainHome .slick-dots {
   width: 300px !important;
-  top: 435px !important;
+  top: 465px !important;
 }
 @media (max-width: 1022px) {
   .firstboxlogo2 {
