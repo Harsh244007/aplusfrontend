@@ -3,20 +3,20 @@ import './index.css';
 import {
   Box,
   Container,
-  Flex,
+  // Flex,
   Heading,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
+  // Input,
+  // InputGroup,
+  // InputRightAddon,
+  // Avatar,
+  // keyframes,
+  // SimpleGrid,
   Button,
   Image,
-  Icon,
-  Stack,
+  // Icon,
+  // Stack,
   Text,
-  useColorModeValue,
+  // useColorModeValue,
 } from '@chakra-ui/react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import image from "../../../assets/aboutus.jpg"
@@ -57,7 +57,6 @@ const About = () => {
               src={image}
               alt="About us product Image"
               className="aboutusImage"
-              loading="lazy"
             />
           </Box>
         </Box>

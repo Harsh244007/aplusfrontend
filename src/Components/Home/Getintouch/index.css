@@ -9,12 +9,12 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 1400px;
-  margin-top: 50px;
+  max-width: 1000px;
+  /* margin-top: 50px; */
 }
 .firstBoxGETINTOUCH {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -91,12 +91,12 @@
 .textfirstofgetTou {
   margin: 0px !important;
   color: white !important;
-  font-family: 'Inter','sans-serif' !important;
+  font-family: 'Inter', 'sans-serif' !important;
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 18px !important;
   line-height: 28px !important;
-  width: 426.66px;
+  width: 326.66px;
 }
 .firstofgetintouch {
   display: flex;
@@ -116,12 +116,29 @@
   font-family: 'Jost', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 54px;
-  width: 426.66px;
+  font-size: 48px;
+  width: 326.66px;
   margin: 0px;
-  line-height: 74px !important;
+  line-height: 54px !important;
   color: #ffffff;
 }
 .headeringgetintouch2 {
   font-family: 'Dosis', 'sans-serif' !important;
+}
+.contactUsExtraText {
+  font-size: 26px !important;
+  opacity: 0.7;
+}
+.sendInquiryDesktop {
+  /* height: 56px; */
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+}
+@media (max-width: 1022px) {
+  .sendInquiryDesktop {
+    font-size: 40px;
+  }
 }

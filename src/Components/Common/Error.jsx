@@ -1,18 +1,7 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react'
-import Appstore from '../../Store/Appstore';
-import ProgressBar from '@badrap/bar-of-progress';
 const Error=()=> {
-  const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
-    });
-    setTimeout(() => {
-      progress.finish();
-    }, 2000);
   useEffect(() => {
     window.scrollTo(0, 0);
     // Appstore.setFooter(true)

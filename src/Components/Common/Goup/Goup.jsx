@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button,Box, Link } from '@chakra-ui/react';
+import React  from 'react';
+import { Button,Box } from '@chakra-ui/react';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 import './index.css';
 import Appstore from '../../../Store/Appstore';

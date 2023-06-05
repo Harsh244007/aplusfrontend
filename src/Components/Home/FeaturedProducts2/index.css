@@ -13,7 +13,7 @@
 .firstFeaturedProducts2 {
   margin: auto !important;
   /* width:700px !important; */
-  height: 434px !important;
+  height: 304px !important;
   /* gap: 20px !important; */
   column-gap: 70px !important;
   position: relative !important;
@@ -109,7 +109,7 @@
   width: 1177px;
   /* height: 177px; */
   left: -500px;
-  top: 600px;
+  top: 450px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -141,7 +141,7 @@
 }
 @media (max-width: 650px) {
   .MainFeatureProducts2 {
-    margin-bottom: 200px !important;
+    margin-bottom: 50px !important;
   }
   .firstfeaturedImage1 {
     margin: 30px !important;

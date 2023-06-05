@@ -2,29 +2,29 @@ import React from 'react';
 import './index.css';
 import {
   Box,
-  Container,
-  Flex,
+  // Container,
+  // Flex,
   Heading,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
-  Button,
+  // Input,
+  // InputGroup,
+  // InputRightAddon,
+  // Avatar,
+  // keyframes,
+  // SimpleGrid,
+  // Button,
   Image,
-  Icon,
+  // Icon,
   Stack,
   Text,
-  useColorModeValue,
+  // useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from 'react-icons/fc';
+// import {
+//   FcAbout,
+//   FcAssistant,
+//   FcCollaboration,
+//   FcDonate,
+//   FcManager,
+// } from 'react-icons/fc';
 
 import Appstore from '../../../Store/Appstore';
 import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';
@@ -127,7 +127,7 @@ const CategoriesProductCard = React.memo(({ icon }) => {
       <Heading className="headerfeatureprod">All Categories</Heading>
       <Text className="textfeatureprod">
         View All{' '}
-        {Appstore.device2 ? <AiOutlineArrowRight /> : <AiOutlineArrowDown />}
+        {Appstore.device ? <AiOutlineArrowRight /> : <AiOutlineArrowDown />}
       </Text>
       {/* <Stack align={'center'} p={5} background={`#F8FBFD`} rowGap={5}> */}
       <Image loading="lazy"

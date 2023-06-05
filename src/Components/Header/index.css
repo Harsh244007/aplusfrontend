@@ -113,6 +113,7 @@
     margin: 5px auto;
     padding-right: 0px;
     max-height: 60px;
+    min-width: 65px;
   }
   .header {
     justify-content: space-around;
@@ -291,4 +292,12 @@
   -moz-border-radius: 0px !important;
   -ms-border-radius: 0px !important;
   -o-border-radius: 0px !important;
+}
+@media (max-width: 420px) {
+  .header{
+    gap: 0px;
+  }
+  .headerSecondPart{
+    gap: 0px;
+  }
 }

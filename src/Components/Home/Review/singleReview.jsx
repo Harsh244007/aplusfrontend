@@ -1,20 +1,20 @@
 import {
-  Avatar,
+  // Avatar,
   Box,
-  Heading,
+  // Heading,
   Stack,
   Text,
-  useColorModeValue,
+  // useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
 import './index.css';
-import Appstore from '../../../Store/Appstore';
+// import Appstore from '../../../Store/Appstore';
 
 const SingleReview = ({ cards }) => {
-  const maxh1=420
-  const maxh2=420
-  const minh1=420
-  const minh2=420
+  // const maxh1=420
+  // const maxh2=420
+  // const minh1=420
+  // const minh2=420
   
   // console.log(cards, 'cards on');
   return (

@@ -20,7 +20,7 @@ import DropdownMobile from './dropdown';
 import Dropdown from 'react-dropdown-animated';
 import { observer } from 'mobx-react';
 import Desktopdropdown from './desktopdropdown';
-import { SearchIcon } from '@chakra-ui/icons';
+// import { SearchIcon } from '@chakra-ui/icons';
 import { Link, useNavigate } from 'react-router-dom';
 import logomain from "../../assets/Aplus-logo-225x108.svg"
 import { CiSearch } from 'react-icons/ci';
@@ -92,7 +92,7 @@ options2.push({content:e.catname,
         {/* </Box>
       <Box className="secondHeader"> */}
         {Appstore.device === 0 ? (
-          <Box display="flex" flexDir={'row'} gap={15}>
+          <Box display="flex" className='headerSecondPart' flexDir={'row'} gap={15}>
             <InputGroup
               display={'flex'}
               alignItems={'center'}

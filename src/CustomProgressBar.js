@@ -13,7 +13,7 @@ const CustomSwitch = ({ children }) => {
     if (location.pathname === prevLoc) {
       setPrevLoc('');
     }
-  }, [location]);
+  }, [location,prevLoc]);
 
   useEffect(() => {
     setProgress(false);

@@ -7,7 +7,7 @@ import Appstore from '../../Store/Appstore';
 import Dropdown from 'react-dropdown-animated';
 import axios from 'axios';
 import { useQuery } from 'react-query';
-// import 'react-dropdown/style.css';
+
 const Desktopdropdown = observer(() => {
   //   const options = ['Products', 'Loudspeaker', 'Microphone','Crossover Networks Active Crossover', 'Mixer', 'Amplifier'
   // ,'P.A. Amplifier', 'Wallmount Loudspeaker', 'Loudspeaker System','Compression Drivers'];

@@ -1,39 +1,32 @@
 import React from 'react';
 import './index.css';
 import {
-  Box,
+  // Box,
   Container,
   Flex,
-  Heading,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
-  Button,
-  Image,
-  Icon,
-  Stack,
-  Text,
-  useColorModeValue,
+  // Heading,
+  // Input,
+  // InputGroup,
+  // InputRightAddon,
+  // Avatar,
+  // keyframes,
+  // SimpleGrid,
+  // Button,
+  // Image,
+  // Icon,
+  // Stack,
+  // Text,
+  // useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from 'react-icons/fc';
-import first from "../../../assets/Rectangle 16.svg"
+import first from "../../../assets/Rectangle 16.png"
 import second from "../.././../assets/Rectangle 162.svg"
-import third from "../../../assets/Rectangle 163.svg"
-import four from "../.././../assets/Rectangle 164.svg"
-import fifth from "../../../assets/Rectangle 165.svg"
-import six from "../.././../assets/Rectangle 166.svg"
+import third from "../../../assets/Rectangle 163.png"
+import four from "../.././../assets/Rectangle 164.png"
+import fifth from "../../../assets/Rectangle 165.png"
+import six from "../.././../assets/Rectangle 166.png"
 import seven from "../../../assets/Rectangle 167.svg"
-import eight from "../.././../assets/Rectangle 168.svg"
-import main from "../../../assets/image18.svg"
+import eight from "../.././../assets/Rectangle 168.png"
+import main from "../../../assets/image18.png"
 import nine from "../.././../assets/Rectangle 169.svg"
 import {CategoriesProductCard, SingleProductCard} from './singleproduct';
 const FeatureProducts = () => {

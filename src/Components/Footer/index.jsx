@@ -18,8 +18,8 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsPhone } from 'react-icons/bs';
 import { TbDeviceLandlinePhone } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
-import Appstore from '../../Store/Appstore';
-import { CheckIcon } from '@chakra-ui/icons';
+// import Appstore from '../../Store/Appstore';
+// import { CheckIcon } from '@chakra-ui/icons';
 import {
   FaInstagram,
   FaFacebook as FaTwitter,

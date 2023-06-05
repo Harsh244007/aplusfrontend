@@ -8,16 +8,16 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Heading,
+  // Heading,
   HStack,
-  LinkProps,
+  // LinkProps,
   Stack,
   useDisclosure,
 } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
-import Appstore from '../../Store/Appstore';
+// import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
 
 const HoverLink = props => (

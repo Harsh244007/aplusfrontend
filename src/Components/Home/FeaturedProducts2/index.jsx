@@ -2,29 +2,9 @@ import React from 'react';
 import './index.css';
 import {
   Box,
-  Container,
-  Flex,
-  Heading,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
-  Button,
   Image,
-  Icon,
-  Stack,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from 'react-icons/fc';
 import first from '../../../assets/firstFeatureImage.svg';
 import third from '../../../assets/secondFeatureMainImage.svg';
 import four from '../.././../assets/secondFeatureImageBG.svg';

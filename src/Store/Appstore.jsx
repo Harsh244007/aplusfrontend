@@ -8,7 +8,6 @@ class AppStore {
   isLocalhost = window.location.href.includes('localhost');
   device = 0;
   footer = false;
-  device2 = 0;
   mode = 'dark';
   apilink='http://localhost:3000'
   imageLink='http://www.aplusaudios.com/assets/uploads/showcase/medium'
@@ -20,8 +19,6 @@ class AppStore {
   setMode = data => (this.mode = data);
   setBgImage = data => (this.bgImage = data);
   setDevice = data => (this.device = data);
-  setDevice2 = data => (this.device2 = data);
   setFooter = data => (this.footer = data);
 }
-
 export default new AppStore();

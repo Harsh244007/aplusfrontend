@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Box,
-  IconButton,
+  // IconButton,
   useBreakpointValue,
-  Stack,
+  // Stack,
   Button,
-  Heading,
+  // Heading,
   Text,
-  Container,
+  // Container,
   Image,
 } from '@chakra-ui/react';
 // import BGIMG from '../../assets/homeBg.svg';
@@ -17,18 +17,18 @@ import Slider from 'react-slick';
 // import logoimage from '../../assets/image14.png';
 // import logoimage from '../../assets/Group15426.svg';
 import { Link } from 'react-router-dom';
-import MainBG2 from '../../assets/mainbg2.svg';
-import MainBG3 from '../../assets/MainBG4.svg';
+// import MainBG2 from '../../assets/mainbg2.svg';
+// import MainBG3 from '../../assets/MainBG4.svg';
 // import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // import MainBG3 from '../../assets/Group15427.png';
-import Appstore from '../../Store/Appstore';
+// import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
 // import Header from '../Header';
 import firstMainBG from '../../assets/firstmain.svg';
 import secondMainBG from '../../assets/secondMainBg.svg';
 import seconMain from '../../assets/secondMainHome.svg';
-import thirdMainBG from '../../assets/thirdMainBG.svg';
-import firstMain from '../../assets/firstMain2.svg';
+import thirdMainBG from '../../assets/thirdMainBG.png';
+import firstMain from '../../assets/firstMain2.png';
 import thirdMain from '../../assets/thirdMainHome.svg';
 const settings = {
   dots: true,
@@ -47,8 +47,8 @@ const settings = {
 };
 
 const CaptionCarousel = observer(() => {
-  const top = useBreakpointValue({ base: '90%', md: '90%' });
-  const side = useBreakpointValue({ base: '30%', md: '40px' });
+  // const top = useBreakpointValue({ base: '90%', md: '90%' });
+  // const side = useBreakpointValue({ base: '30%', md: '40px' });
   const [slider, setSlider] = React.useState(null);
   const cards = [
     {

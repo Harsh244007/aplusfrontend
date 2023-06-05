@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Box,
-  IconButton,
+  // IconButton,
   useBreakpointValue,
-  Stack,
+  // Stack,
   Heading,
-  Text,
-  Container,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// And react-slick as our Carousel Lib
-import Slider from 'react-slick';
 import SingleReview from './singleReview';
 import './index.css';
-import Appstore from '../../../Store/Appstore';
-// Settings for the slider
 const settings = {
   dots: false,
   arrows: false,
@@ -148,19 +140,7 @@ const ReviewCarousel = () => {
         'My Father Sh.Ismail Bhai started selling A Plus in 1999 and ever since there is no looking back,We have made A Plus one of the TOP brand In Madhya Pradesh the 15" drivers and loudspeaker systems are a rage in the Market good mark up good product.',
       city2: 'Indore, Madhya Pradesh',
     },
-    // {
-    //   name: 'Mr. Husain Kachachawala - Sanjari Electronics',
-    //   text: 'My Father Sh.Ismail Bhai started selling A Plus in 1999 and ever since there is no looking back,We have made A Plus one of the TOP brand In Madhya Pradesh the 15" drivers and loudspeaker systems are a rage in the Market good mark up good product.',
-    //   city: 'Indore, Madhya Pradesh',
-    //   name1: 'Mr. Ritesh Jain - Jain Radios',
-    //   text1:
-    //     'As the brand says we A Plus is A Plus 25years of association with Yogeshji even before A Plus was born makes us the oldest dealer in the Family we are proud of our Association with them.',
-    //   city1: 'Bhopal, Madhya Pradesh',
-    //   name2: 'Mr. Deepak Batra - J.R.C',
-    //   text2:
-    //     'We have been selling A Plus for 20 years through consistent development in technology we have grown with the BRAND A Plus.',
-    //   city2: 'New Delhi, Delhi',
-    // },
+
     {
       name: 'Mr. Deepak Batra - J.R.C',
       text: 'We have been selling A Plus for 20 years through consistent development in technology we have grown with the BRAND A Plus.',

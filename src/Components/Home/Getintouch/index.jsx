@@ -3,38 +3,18 @@ import './index.css';
 import {
   Box,
   Container,
-  Flex,
   Heading,
   Input,
   InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
   Button,
-  Image,
-  Icon,
-  Stack,
   Text,
-  useColorModeValue,
-  Textarea,
-  InputLeftElement,
 } from '@chakra-ui/react';
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from 'react-icons/fc';
-import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
-import { RxAvatar } from 'react-icons/rx';
 import image from '../../../assets/woman-writing-on-paper-3228878.png';
 const Getintouch = () => {
   return (
     <Box className="MainGetingTouch" as="section">
      
-      <Box className="mainget" p={10} mt={5}>
+      <Box className="mainget" p={10}>
         <Box className="firstofgetintouch" background={`url(${image})`}>
           <Heading className="headerfirsofget">
             We are here to help you in all your needs.
@@ -48,17 +28,18 @@ const Getintouch = () => {
         <Container
           bg={'#001620'}
           className="containergetintouch"
-          maxW={'573px'}
+          maxW={'503px'}
           p={'20px 0px'}
         >
           <Box p={10} className="firstBoxGETINTOUCH">
-            <Heading className='headeringgetintouch2' fontFamily={"'Dosis','sans-serif'"} fontSize={'48px'} color={'white'} fontWeight={'500px'}>
-              Send inquiry
+            <Heading className='sendInquiryDesktop' fontFamily={"'Dosis','sans-serif'"} color={"white"}>
+              Send Inquiry
             </Heading>
             <Text
               mb={'20px'}
-              fontSize={'16px'}
-              fontFamily={"'Inter','sans-serif'"}
+              className='contactUsExtraText'
+              // fontSize={'26px'}
+              // fontFamily={"'Inter','sans-serif'"}
               color={'white'}
               fontWeight={'500px'}
             >

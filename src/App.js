@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Appstore from './Store/Appstore';
 import { hot } from 'react-hot-loader/root';
 import { observer } from 'mobx-react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { HideLandingLoader } from './Components/Common/commonfn';
 import {
   Error,
@@ -15,15 +15,16 @@ import {
   Goup,
   FeatureProducts2,
   AboutMain,
-  Header,MainProductDetails,
+  Header,
+  MainProductDetails,
   Dj,
   MainProducts,
   Home,
   Participation,
-  SubHome,
+  // SubHome,
   CTAFooter,
   FeatureProducts,
-  Contact,
+  // Contact,
   AboutUSMain,
   Products,
   Reviews,
@@ -41,11 +42,6 @@ const App = observer(() => {
         Appstore.setDevice(0);
       } else {
         Appstore.setDevice(1);
-      }
-      if (width < 1021) {
-        Appstore.setDevice2(0);
-      } else {
-        Appstore.setDevice2(1);
       }
     };
 
@@ -66,24 +62,23 @@ const App = observer(() => {
         Appstore.setFooter(false);
       }
     };
-const handleDelay=(e)=>{
-  let flag=true
-  return ()=>{
-    if(flag){
-      flag=false
-      e()
-      setTimeout(()=>{
-        flag=true
-      },1000)
-    }
-  }
-
-}
+    const handleDelay = e => {
+      let flag = true;
+      return () => {
+        if (flag) {
+          flag = false;
+          e();
+          setTimeout(() => {
+            flag = true;
+          }, 1000);
+        }
+      };
+    };
     window.addEventListener('resize', handleresize, { passive: true });
     window.addEventListener('scroll', handleDelay(scroller), { passive: true });
     return () => {
       window.removeEventListener('resize', handleresize);
-      window.removeEventListener('scroll', scroller);
+      // window.removeEventListener('scroll', scroller);
     };
   }, []);
   useEffect(() => {
@@ -95,21 +90,13 @@ const handleDelay=(e)=>{
       .getElementsByClassName('mainHeader')
       .scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
-  
-  const url = `${Appstore.apilink}/returncategories`
-  const { data, refetch, isLoading } = useQuery(
-    ['getCategories'],
-    async () => {
-      return axios
-        .get(url)
-        .then(
-          response => {
-            return response.data.data
-          },
-   
-        )
-    }
-  )
+
+  const url = `${Appstore.apilink}/returncategories`;
+  const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
+    return axios.get(url).then(response => {
+      return response.data.data;
+    });
+  });
   if (!data) {
     let timer;
     clearTimeout(timer);
@@ -120,20 +107,21 @@ const handleDelay=(e)=>{
 
   return (
     <ChakraProvider theme={theme}>
-      <Suspense fallback={<Skeleton height={50} width="100%" />}>
-    
-      </Suspense>
+      <Suspense fallback={<Skeleton height={50} width="100%" />}></Suspense>
       <Suspense fallback={<Skeleton height={50} width="100%" />}>
         <Goup onClick={goupOnclick} />
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
         <CustomSwitch>
-          <Route path="*" element={<>
-            <Header BG={true} />
-            <Error />
-            
-          </>
-            } />
+          <Route
+            path="*"
+            element={
+              <>
+                <Header BG={true} />
+                <Error />
+              </>
+            }
+          />
 
           <Route
             path="/"
@@ -166,7 +154,7 @@ const handleDelay=(e)=>{
               </>
             }
           />
-            <Route
+          <Route
             path="/aplusfrontend/build/index.html"
             element={
               <>
@@ -198,23 +186,25 @@ const handleDelay=(e)=>{
             }
           />
 
-          <Route path="/about-us" element={
-            
-            <Suspense fallback={<Skeleton height={450} width="100%" />}>
-
-        
-           <Header BG={true} />
-          <AboutMain />
-          </Suspense>
-          } />
+          <Route
+            path="/about-us"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                <Header BG={true} />
+                <AboutMain />
+              </Suspense>
+            }
+          />
 
           <Route
             path="/contact"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header BG={true} />
+                <Header BG={true} />
                 <Box className="contactgetintouchmain" as="sections">
-                  <Getintouch />
+                  <Box mt="50px">
+                    <Getintouch />
+                  </Box>
                 </Box>
               </Suspense>
             }
@@ -223,52 +213,52 @@ const handleDelay=(e)=>{
             path="/products"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProducts />
               </Suspense>
             }
           />
-              <Route
+          <Route
             path="/products/:id/:name"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProducts />
               </Suspense>
             }
           />
-                   <Route
+          <Route
             path="/products/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProducts />
               </Suspense>
             }
           />
-            <Route
+          <Route
             path="/productDetails"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProductDetails />
               </Suspense>
             }
           />
-              <Route
+          <Route
             path="/productDetails/:catid/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProductDetails />
               </Suspense>
             }
           />
-                 <Route
+          <Route
             path="/productDetails/:catid/:id/:name/:catName/:subName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 <Header BG={true} />
+                <Header BG={true} />
                 <MainProductDetails />
               </Suspense>
             }
@@ -277,7 +267,7 @@ const handleDelay=(e)=>{
             path="/participation"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header BG={true} />
+                <Header BG={true} />
                 <Participation />
               </Suspense>
             }
@@ -287,7 +277,7 @@ const handleDelay=(e)=>{
             path="/Mumbai-Expo-2018"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header BG={true} />
+                <Header BG={true} />
                 <Mumbai />
               </Suspense>
             }
@@ -297,7 +287,7 @@ const handleDelay=(e)=>{
             path="/DJ-Expo-2018"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header BG={true} />
+                <Header BG={true} />
                 <Dj />
               </Suspense>
             }
@@ -309,7 +299,7 @@ const handleDelay=(e)=>{
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
         <SubFooter />
-        
+
         <CTAFooter />
       </Suspense>
     </ChakraProvider>

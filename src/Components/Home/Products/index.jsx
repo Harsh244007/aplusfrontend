@@ -2,27 +2,13 @@ import React, { useEffect } from 'react';
 import './index.css';
 import {
   Box,
-  Container,
   Flex,
   Heading,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Avatar,
-  keyframes,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
   Image,
 } from '@chakra-ui/react';
-import { HideLandingLoader } from '../../Common/commonfn';
-import Appstore from '../../../Store/Appstore';
 import First from '../../../assets/uber.svg';
 import third from '../../../assets/uber2.svg';
 import second from '../../../assets/ola.svg';
-import { useParams } from 'react-router-dom';
-
 const Products = () => {
 
   return (
@@ -32,10 +18,11 @@ const Products = () => {
         justifyContent="center"
         alignItems="center"
         w="full"
-        flexWrap="wrap"
+        // flexWrap="wrap"
+        className='productsOverflow'
         gap={10}
-        p={'0px 15px 40px 10px'}
-        overflow="hidden"
+        p={'0px 15px 5px 10px'}
+        // overflow="hidden"
       >
         <SinglePhoto image={First} name="Guitar" />
         <SinglePhoto image={second}  name="Radio" />
@@ -79,7 +66,7 @@ function SinglePhoto({ image, name }) {
         borderRadius="50%"
         position="absolute"
         alt={name}
-        top={0}
+        top={"15px"}
       />
     </Box>
   );

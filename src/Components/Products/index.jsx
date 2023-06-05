@@ -1,36 +1,40 @@
 import React, { useEffect } from 'react';
 import './index.css';
 import { Box, Button, Heading, Skeleton } from '@chakra-ui/react';
-import ProgressBar from '@badrap/bar-of-progress';
 import { SingleProductCard } from '../Home/FeaturedProducts/singleproduct';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import Appstore from '../../Store/Appstore';
-import Pagination from "../Common/pagination"
+import Pagination from '../Common/pagination';
 import { useState } from 'react';
 const MainProducts = () => {
-  const [state, updateState] = React.useState();
-const forceUpdate = React.useCallback(() => updateState({}), []);
+  //   const [state, updateState] = React.useState();
+  // const forceUpdate = React.useCallback(() => updateState({}), []);
 
-let { id, name } = useParams();
-
+  let { id, name } = useParams();
 
   const url = `${Appstore.apilink}/returncategory/${id}`;
-  const { data, status,refetch,isRefetching,isIdle,isPreviousData ,isFetchedAfterMount , isLoading } = useQuery(
-    ['getMultipleCategories'],
-    async () => {
-      return axios.get(url).then(response => {
-        return response.data.data;
-      });
-    }
-  );
+  const {
+    data,
+    status,
+    refetch,
+    isRefetching,
+    isIdle,
+    isPreviousData,
+    isFetchedAfterMount,
+    isLoading,
+  } = useQuery(['getMultipleCategories'], async () => {
+    return axios.get(url).then(response => {
+      return response.data.data;
+    });
+  });
   useEffect(() => {
-    forceUpdate()
-    refetch()
+    // forceUpdate()
+    refetch();
     window.scrollTo(0, 0);
     // Appstore.setFooter(true)
-  }, [name]);
+  }, [name, refetch]);
   if (!data) {
     let timer;
     clearTimeout(timer);
@@ -38,43 +42,55 @@ let { id, name } = useParams();
       refetch();
     }, 4000);
   }
-  useEffect(()=>{
-    if(data==[]) refetch()
-  })
+  useEffect(() => {
+    if (data == []) refetch();
+  });
 
-  console.log(isLoading,status, 'data id of all products');
+  console.log(isLoading, status, 'data id of all products');
   if (!id) {
     id = 'Loudspeaker';
   }
-  const [cpage, setCpage] = useState(1)
-  const [postsPerPage, setPostsPerPage] = useState(12)
-  const lastposti = cpage * postsPerPage
-  const firstposti = lastposti - postsPerPage
-  let currentposts
+  const [cpage, setCpage] = useState(1);
+  const postsPerPage = 12;
+  const lastposti = cpage * postsPerPage;
+  const firstposti = lastposti - postsPerPage;
+  let currentposts;
   if (data) {
-    currentposts = data.slice(firstposti, lastposti)
+    currentposts = data.slice(firstposti, lastposti);
   }
 
-  useEffect(()=>{
-    window.scrollTo(0,0)
-},[cpage])
-  console.log(isRefetching,isPreviousData ,status,isIdle,isFetchedAfterMount , 'id of product section');
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [cpage]);
+  console.log(
+    isRefetching,
+    isPreviousData,
+    status,
+    isIdle,
+    isFetchedAfterMount,
+    'id of product section'
+  );
   return (
     <Box
       className="mainProductsMain"
       as="section"
       p={'20px'}
-      flexDirection={"column"}
+      flexDirection={'column'}
       maxW={'1220px'}
       m={'auto'}
       mt={'100px'}
       // color={"#fff"}
     >
       <Link className="goBackMain" to={`/`}>
-        <Button loadingText={"Loading"} isLoading={data && !isRefetching?false:true}>Go Back</Button>
+        <Button
+          loadingText={'Loading'}
+          isLoading={data && !isRefetching ? false : true}
+        >
+          Go Back
+        </Button>
       </Link>
       <Heading textAlign={'center'}>{data ? name : `Loading ${name}`}</Heading>
-      {data && data !=[] &&!isRefetching ? (
+      {data && data != [] && !isRefetching ? (
         <Box
           display={'flex'}
           gap={'30px'}
@@ -92,22 +108,20 @@ let { id, name } = useParams();
               />
             );
           })}
-           
         </Box>
-   
       ) : (
         <Skeleton height={650} width="100%" />
       )}
-       {data && data !=[] ? (
-        
-             <Pagination
+      {data && data != [] ? (
+        <Pagination
           totalPosts={data && data.length}
           postsPerPage={postsPerPage}
           setCurrentPage={setCpage}
           currentPage={cpage}
-        /> ) : (
-          <Skeleton height={50} width="100%" />
-        )}
+        />
+      ) : (
+        <Skeleton height={50} width="100%" />
+      )}
     </Box>
   );
 };

@@ -6,7 +6,7 @@
   font-family: 'Dosis', sans-serif !important;
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 44px;
   color: #001620;
   line-height: 56px;
   margin: auto !important;
@@ -25,7 +25,7 @@
 }
 .MainReview {
   /* border-bottom: 1px solid; */
-  
+
   font-family: 'Dosis', sans-serif !important;
 }
 .MainReview h2 {
@@ -62,11 +62,7 @@
   height: 390px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-@media (max-width: 1022px) {
-  .boxofReview {
-    padding: 10px;
-  }
-}
+
 .CardsName {
   color: #ff4e00 !important;
 }
@@ -129,15 +125,52 @@
   /* scroll-snap-align: start !important; */
 }
 .imagereview1 {
-  animation: primary 15s alternate infinite;
+  animation: primary 10s ease-in-out infinite;
   scroll-snap-align: start !important;
-  /* position: absolute; */
-  /* animation-direction: alternate; */
+  /* left: 00px; */
   z-index: 10 !important;
 }
-/* .imagereview1:hover,
-.imagereview1:active {
-  animation-play-state: paused;
+
+/* @keyframes primary {
+  0% {
+    left: 0px;
+  }
+  14% {
+    left: 0px;
+  }
+  15% {
+    left: -308px;
+  }
+  29% {
+    left: -308px;
+  }
+  30% {
+    left: -616px;
+  }
+  44% {
+    left: -616px;
+  }
+  45% {
+
+  }
+  59% {
+    left: calc(-308 * 4);
+  }
+  60% {
+    left: calc(-308 * 5);
+  }
+  74% {
+    left: calc(-308 * 5);
+  }
+  75% {
+    left: calc(-308 * 6);
+  }
+  95% {
+    left: calc(-308 * 6);
+  }
+  100% {
+    left: -10px;
+  }
 } */
 @keyframes primary {
   from {
@@ -155,3 +188,22 @@
   z-index: 100 !important;
   animation-play-state: paused !important;
 } */
+@media (max-width: 1022px) {
+  .boxofReview {
+    padding: 10px;
+  }
+  .headerProducts2 {
+    font-size: 30px;
+    max-width: 380px;
+    margin: auto;
+    width: unset;
+    line-height: 36px;
+  }
+  .TEXTOFREVIEW2 {
+    font-size: 20px !important;
+  }
+  .boxofReview,
+  .boxofReview2 {
+    height: 300px !important;
+  }
+}

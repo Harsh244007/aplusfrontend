@@ -116,13 +116,16 @@
     margin-bottom: 0px !important;
   }
   .MAINHOME23 {
-    padding-top: 00px !important;
+    padding-top: 40px !important;
+    height: 540px !important;
   }
   .MainHome .slick-dots {
     width: 100% !important;
-    top: 435px !important;
+    top: 485px !important;
+    margin-left: 37px;
   }
 }
+
 
 
 @media (min-width: 1022px) {

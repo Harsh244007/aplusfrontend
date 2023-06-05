@@ -5,13 +5,12 @@ import {
   Button,
   Heading,
   Image,
-  List,
-  ListItem,
+  // List,
+  // ListItem,
   Skeleton,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import ProgressBar from '@badrap/bar-of-progress';
 import { SingleProductCard } from '../Home/FeaturedProducts/singleproduct';
 import { Link, useParams } from 'react-router-dom';
 import Pagination from '../Common/pagination';
@@ -25,11 +24,11 @@ const MainProductDetails = () => {
   const {
     data,
     refetch,
-    status,
+    // status,
     isRefetching,
-    isPreviousData,
-    isFetchedAfterMount,
-    isLoading,
+    // isPreviousData,
+    // isFetchedAfterMount,
+    // isLoading,
   } = useQuery(['getSingleProducts'], async () => {
     return axios.get(url).then(response => {
       return response.data.data[0];
@@ -38,7 +37,8 @@ const MainProductDetails = () => {
   useEffect(() => {
     refetch();
     window.scrollTo(0, 0);
-  }, [name]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name,refetch]);
   if (!data) {
     let timer;
     clearTimeout(timer);
@@ -53,7 +53,7 @@ const MainProductDetails = () => {
   const {
     data: data2,
     refetch: refetch2,
-    isLoading: isloading2,
+    // isLoading: isloading2,
   } = useQuery(['getMultipleCategories'], async () => {
     return axios.get(url2).then(response => {
       return response.data.data;
@@ -68,7 +68,7 @@ const MainProductDetails = () => {
     }, 4000);
   }
   const [cpage, setCpage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(4);
+  const postsPerPage = 4;
   const lastposti = cpage * postsPerPage;
   const firstposti = lastposti - postsPerPage;
   let currentposts;
@@ -136,7 +136,7 @@ const MainProductDetails = () => {
           <Box className="secondBox" w={'750px'}>
             <Box>
               <Text
-              fontWeight={'bold'}
+                fontWeight={'bold'}
                 fontSize={{ base: '16px', lg: '18px' }}
                 color={color}
                 // fontWeight={'500'}
@@ -151,24 +151,23 @@ const MainProductDetails = () => {
                   <>
                     {desc.map((e, i) => {
                       if (i % 4 == 0 && i != 0) {
-                        console.log(e,desc[i - 3],"main data")
+                        console.log(e, desc[i - 3], 'main data');
                         return (
                           <Box key={i}>
                             <Text as={'span'} fontWeight={'bold'}>
-                              {desc[i - 3].replace(/{|}/g,"")}
+                              {desc[i - 3].replace(/{|}/g, '')}
                             </Text>{' '}
-                            {desc[i - 1].replace(/{|}/g,"")}
+                            {desc[i - 1].replace(/{|}/g, '')}
                           </Box>
-                        )
+                        );
                       }
                     })}
                   </>
                 ) : (
                   ''
                 )}
-                
               </Box>
-                {/* <ListItem>
+              {/* <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Between lugs:
                   </Text>{' '}

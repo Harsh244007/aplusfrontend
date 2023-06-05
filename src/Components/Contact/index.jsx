@@ -22,23 +22,12 @@ import {
   MdEmail,
   MdLocationOn,
   MdFacebook,
-  MdOutlineEmail,
+  // MdOutlineEmail,
 } from 'react-icons/md';
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 import { useEffect } from 'react';
-import Appstore from '../../Store/Appstore';
-
-import ProgressBar from "@badrap/bar-of-progress";
+// import Appstore from '../../Store/Appstore';
 export default function Contact() {
-  const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
-    });
-    setTimeout(() => {
-      progress.finish();
-    }, 2000);
   useEffect(() => {
     window.scrollTo(0, 0);
     // Appstore.setFooter(true)

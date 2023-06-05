@@ -2,22 +2,21 @@ import React, { useEffect } from 'react';
 import './index.css';
 import {
   Box,
-  Center,
-  Container,
-  Flex,
+  // Center,
+  // Container,
+  // Flex,
   Heading,
   Image,
-  Input,
+  // Input,
   Button,
-  InputRightAddon,
-  InputRightElement,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
+  // InputRightAddon,
+  // InputRightElement,
+  // SimpleGrid,
+  // Stack,
+  // Text,
+  // useColorModeValue,
 } from '@chakra-ui/react';
-import Appstore from '../../Store/Appstore';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import firstImage from '../../assets/part/2.jpeg';
 import secondImage from '../../assets/part/22.jpeg';
 import thirdImage from '../../assets/part/23.jpeg';
@@ -26,18 +25,8 @@ import fifthImage from '../../assets/part/25.jpeg';
 import sixImage from '../../assets/part/26.jpeg';
 import sevenImage from '../../assets/part/27.jpeg';
 import eightImage from '../../assets/part/28.jpeg';
-import ProgressBar from '@badrap/bar-of-progress';
 
 const Dj = () => {
-  const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
-    });
-    setTimeout(() => {
-      progress.finish();
-    }, 2000);
   useEffect(() => {
     window.scrollTo(0, 0);
     // Appstore.setFooter(true)
@@ -48,7 +37,11 @@ const Dj = () => {
   };
   return (
     <Box className="MainParticipation" as="section">
-      <Button left={20} position={'absolute'} onClick={gotonext}>
+      <Button 
+          width="100px"
+          float={'left'}
+          position={'inherit'}
+           onClick={gotonext}>
         Go Back
       </Button>
 
