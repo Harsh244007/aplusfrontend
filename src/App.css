@@ -11,7 +11,7 @@
   font-family: 'Dosis', sans-serif !important;
   color: black !important;
   overflow-y: hidden !important;
-  transition: all .3s !important;
+  /* transition: all .3s !important; */
   transition: all 0.5s ease-in !important;
   transition-timing-function: ease-in-out !important;
   -webkit-transition: all .3s !important;

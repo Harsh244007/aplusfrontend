@@ -38,7 +38,7 @@ const settings = {
   infinite: true,
   adaptiveHeight: true,
   autoplay: true,
-  speed: 500,
+  speed: 1000,
   autoplaySpeed: 300000,
   slidesToShow: 1,
   pauseonFocus: false,
@@ -91,10 +91,8 @@ const CaptionCarousel = observer(() => {
               position={'relative'}
               height={'515px'}
               key={index}
+              sx={{'--bgimg':`url(${card.BGimage})`}}
               className={`MAINHOME23 ${card.class}`}
-              backgroundSize={'cover'}
-              backgroundImage={`url(${card.BGimage})`}
-              backgroundPosition={'bottom'}
               width={'full'}
               overflow={'hidden'}
             >

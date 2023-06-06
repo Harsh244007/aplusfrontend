@@ -70,12 +70,12 @@ const App = observer(() => {
           e();
           setTimeout(() => {
             flag = true;
-          }, 1000);
+          }, 200);
         }
       };
     };
-    window.addEventListener('resize', handleresize, { passive: true });
-    window.addEventListener('scroll', handleDelay(scroller), { passive: true });
+    window.addEventListener('resize', handleDelay(handleresize), { passive: true });
+    window.addEventListener('scroll', scroller, { passive: true });
     return () => {
       window.removeEventListener('resize', handleresize);
       // window.removeEventListener('scroll', scroller);

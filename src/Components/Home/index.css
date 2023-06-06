@@ -107,7 +107,8 @@
     height: 80px !important;
     line-height: 30px !important;
   }
-}.MainHome .slick-dots {
+}
+.MainHome .slick-dots {
   width: 300px !important;
   top: 465px !important;
 }
@@ -125,8 +126,6 @@
     margin-left: 37px;
   }
 }
-
-
 
 @media (min-width: 1022px) {
   .logoimage23 {
@@ -281,3 +280,18 @@
   background-color: red !important;
   position: absolute !important;
 } */
+.MAINHOME23::before {
+  opacity: 0.85 !important;
+  content: '';
+  z-index: -10 !important;
+  background-size: cover !important;
+  background-position: bottom !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  position: absolute !important;
+  left: 0 !important;
+  /* background: rgba(0, 0, 0, 0.5); */
+
+  background-image: var(--bgimg) !important;
+}

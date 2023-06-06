@@ -177,6 +177,9 @@ const ReviewCarousel = () => {
           {cards.map((card, index) => (
             <SingleReview key={index} cards={card} />
             ))}
+            {cards.map((card, index) => (
+              <SingleReview key={index} cards={card} />
+              ))}
             </Box>
     </Box>
   );
