@@ -30,6 +30,7 @@
 .featueProductsCard1 {
   display: flex !important;
   /* justify-content; */
+  position:  relative !important;
   flex-direction: column;
   align-items: flex-start;
   /* text-align: center; */
@@ -72,10 +73,58 @@
   }
 }
 .featueProductsCard2{
+  
   background: linear-gradient(90deg,rgba(71,118,230,0.1) 0%, rgba(142,84,233,0.1) 100%) !important;
 }
 .featueProductsCard1 h2:hover,.featueProductsCard1 h2:active{
   
-    /* font-size: 24px !important; */
-  color: #ff4e00 !important;
+  transition: all 0.3s ease-in-out !important;
+    font-size: 24px !important;
+  /* color: #ff4e00 !important; */
+}
+.featueProductsCard1SecondBox {
+  position: absolute !important;
+  text-align: center !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  width: 100% !important;
+  /* text-overflow: clip; */
+  /* overflow: hidden; */
+  top: 88% !important;
+  left: 50% !important;
+  /* opacity: 0.5 !important; */
+  transform: translate(-50%, -50%) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.featueProductsCard1:hover .featueProductsCard1SecondBox {
+  top: 50% !important;
+  left: 50% !important;
+  min-height: 30% !important;
+  color: white !important;
+  /* opacity: 1 !important; */
+}
+.featueProductsCard1:hover{
+  height: 99%;
+  width: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2) !important;
+  background: rgba(4,125,67,0.7) !important;
+}
+.featueProductsCard1:hover h2{
+  white-space: normal !important;
+}
+.featueProductsCard1:hover .overlay {
+  opacity: 1;
+
+}
+.overlay {
+  background: rgba(4,125,67,0.7);
+  position: absolute;
+  height: 280px !important;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
 }

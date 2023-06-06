@@ -31,16 +31,6 @@ import nine from "../.././../assets/Rectangle 169.svg"
 import {CategoriesProductCard, SingleProductCard} from './singleproduct';
 const FeatureProducts = () => {
   return (
-    // <Box className="MainFeatureProducts" as="section">
-    //   <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-    //     <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-    //       Featured products
-    //     </Heading>
-    //     <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-    //       Explore our leading audio manufacturing products to elevate your AV
-    //       solutions and deliver high-quality experiences to your customers.
-    //     </Text>
-    //   </Stack>
       <Container p={10} maxW={'6xl'} mt={5} as='section'>
         <Flex
           flexWrap="wrap"
