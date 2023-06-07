@@ -89,7 +89,7 @@ const CaptionCarousel = observer(() => {
           return (
             <Box
               position={'relative'}
-              height={'515px'}
+              height={'100vh'}
               key={index}
               sx={{'--bgimg':`url(${card.BGimage})`}}
               className={`MAINHOME23 ${card.class}`}
