@@ -43,7 +43,7 @@ const App = observer(() => {
         Appstore.setDevice2(0);
       } else {
         Appstore.setDevice2(1);
-        Appstore.setDevice(1);
+        Appstore.setDevice(0);
       }
       if (width < 600) {
         Appstore.setDevice2(0);

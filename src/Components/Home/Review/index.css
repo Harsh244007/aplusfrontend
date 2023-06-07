@@ -116,7 +116,7 @@
 .signleReviewBox {
   display: flex !important;
   /* max-width: 1060px !important; */
-  overflow-x: scroll !important;
+  overflow-x: hidden !important;
   overflow-y: hidden !important;
   scroll-behavior: smooth !important;
   position: relative !important;

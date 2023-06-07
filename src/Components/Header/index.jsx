@@ -22,7 +22,7 @@ import { observer } from 'mobx-react';
 import Desktopdropdown from './desktopdropdown';
 // import { SearchIcon } from '@chakra-ui/icons';
 import { Link, useNavigate } from 'react-router-dom';
-import logomain from "../../assets/Aplus-logo-225x108.svg"
+import logomain from '../../assets/Aplus-logo-225x108.svg';
 import { CiSearch } from 'react-icons/ci';
 import { useQuery } from 'react-query';
 import axios from 'axios';
@@ -44,24 +44,16 @@ const Header = observer(({ BG = false }) => {
         toggleDD();
         // location(`/`);
       },
-    }
+    },
   ];
   const targetRef = useRef('');
-  let options2=[]
-  const url = `${Appstore.apilink}/returncategories`
-  const { data, refetch, isLoading } = useQuery(
-    ['getCategories'],
-    async () => {
-      return axios
-        .get(url)
-        .then(
-          response => {
-            return response.data.data
-          },
-   
-        )
-    }
-  )
+  let options2 = [];
+  const url = `${Appstore.apilink}/returncategories`;
+  const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
+    return axios.get(url).then(response => {
+      return response.data.data;
+    });
+  });
 
   if (!data) {
     let timer;
@@ -71,28 +63,37 @@ const Header = observer(({ BG = false }) => {
     }, 4000);
   }
 
-  if(!isLoading && data){
-data.map((e)=>{
-options2.push({content:e.catname,
-  onClick: event => {
-    toggleDD();
-    navigate(`/products/${e.catid}/${e.catname}`);
-  },})
-  console.log(e,"data for categories")
-})
+  if (!isLoading && data) {
+    data.map(e => {
+      options2.push({
+        content: e.catname,
+        onClick: event => {
+          toggleDD();
+          navigate(`/products/${e.catid}/${e.catname}`);
+        },
+      });
+      console.log(e, 'data for categories');
+    });
   }
-  useEffect(()=>{
-    if(!showDD)
-    setShowDD(true)
-  },[showDD])
+  useEffect(() => {
+    if (!showDD) setShowDD(true);
+  }, [showDD]);
   return (
-    <Box className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : ''}`} as='section'>
+    <Box
+      className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : ''}`}
+      as="section"
+    >
       <Box className="header" textAlign="center">
         <HeaderLogo colorMode={colorMode} Logo={logomain} />
         {/* </Box>
       <Box className="secondHeader"> */}
-        {Appstore.device === 0 ? (
-          <Box display="flex" className='headerSecondPart' flexDir={'row'} gap={15}>
+        {Appstore.device ? (
+          <Box
+            display="flex"
+            className="headerSecondPart"
+            flexDir={'row'}
+            gap={15}
+          >
             <InputGroup
               display={'flex'}
               alignItems={'center'}
@@ -111,10 +112,15 @@ options2.push({content:e.catname,
               </InputRightElement>
             </InputGroup>
             {showDD ? (
-       <Dropdown options={data?options2:options} initial={200} exit={4} value="Products" />
-        ) : (
-          ''
-      )}
+              <Dropdown
+                options={data ? options2 : options}
+                initial={200}
+                exit={4}
+                value="Products"
+              />
+            ) : (
+              ''
+            )}
             <Box className="desktopSlider">
               <DropdownMobile />
             </Box>
@@ -130,7 +136,7 @@ options2.push({content:e.catname,
                 w={'230px'}
                 placeholder="Search"
               />
-              <InputRightElement  marginBottom={'6px'} right={'6px'}>
+              <InputRightElement marginBottom={'6px'} right={'6px'}>
                 <CiSearch className="inputheaderSearchIcon" />
               </InputRightElement>
             </InputGroup>
@@ -143,15 +149,13 @@ options2.push({content:e.catname,
 
 export default React.memo(Header);
 
-function HeaderLogo({ colorMode, Logo}) {
+function HeaderLogo({ colorMode, Logo }) {
   return (
     <Box className="titleText">
       <Link to="/">
-        <Image loading="lazy"
-          src={Logo}
-          alt="Aplus Audios"/>
+        <Image loading="lazy" src={Logo} alt="Aplus Audios" />
         {/* //   <Heading className={`HeaderText`} */}
-          {/* // src={`${colorMode != 'dark' ? Logo : Logo2}`}
+        {/* // src={`${colorMode != 'dark' ? Logo : Logo2}`}
           // alt="Aplus Audios"
         // >
         //   A-Plus */}
