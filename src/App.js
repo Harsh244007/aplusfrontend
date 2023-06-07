@@ -39,9 +39,14 @@ const App = observer(() => {
     const handleresize = async e => {
       const width = window.innerWidth;
       if (width < 1021) {
-        Appstore.setDevice(0);
-      } else {
         Appstore.setDevice(1);
+        Appstore.setDevice2(0);
+      } else {
+        Appstore.setDevice2(1);
+        Appstore.setDevice(1);
+      }
+      if (width < 600) {
+        Appstore.setDevice2(0);
       }
     };
 
@@ -74,7 +79,7 @@ const App = observer(() => {
         }
       };
     };
-    window.addEventListener('resize', handleDelay(handleresize), { passive: true });
+    window.addEventListener('resize', handleresize, { passive: true });
     window.addEventListener('scroll', scroller, { passive: true });
     return () => {
       window.removeEventListener('resize', handleresize);

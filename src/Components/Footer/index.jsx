@@ -25,6 +25,7 @@ import {
   FaFacebook as FaTwitter,
   FaLinkedinIn,
 } from 'react-icons/fa';
+import { observer } from 'mobx-react';
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -80,7 +81,7 @@ const ListHeader = ({ children }) => {
   );
 };
 
-const Footer = () => {
+const Footer = observer(() => {
   return (
     <Box className="mainFooter" as="section" bg={'#001620'} color={'#fff'}>
       <Container as={Stack} maxW={'6xl'} py={10}>
@@ -199,5 +200,5 @@ const Footer = () => {
       </Container>
     </Box>
   );
-};
+});
 export default React.memo(Footer);

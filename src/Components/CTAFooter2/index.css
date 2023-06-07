@@ -56,7 +56,10 @@
   background: #27ae60 !important;
   color: white !important;
 }
-@media (min-width:1022px) {
+@media (min-width:600px) {
+  .callUsClass{
+    display: none;
+  }
   .mainCTAFooter {
     bottom: 5px !important;
     /* right: 10px !important; */

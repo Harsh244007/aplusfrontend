@@ -7,6 +7,7 @@ class AppStore {
       : false;
   isLocalhost = window.location.href.includes('localhost');
   device = 0;
+  device2 = 0;
   footer = false;
   mode = 'dark';
   apilink='http://localhost:3000'
@@ -19,6 +20,7 @@ class AppStore {
   setMode = data => (this.mode = data);
   setBgImage = data => (this.bgImage = data);
   setDevice = data => (this.device = data);
+  setDevice2 = data => (this.device2 = data);
   setFooter = data => (this.footer = data);
 }
 export default new AppStore();
