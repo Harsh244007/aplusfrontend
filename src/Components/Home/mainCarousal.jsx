@@ -29,6 +29,7 @@ import secondMainBG from '../../assets/secondMainBg.svg';
 import seconMain from '../../assets/secondMainHome.svg';
 import thirdMainBG from '../../assets/thirdMainBG.png';
 import firstMain from '../../assets/firstMain2.png';
+// import Flickity from 'react-flickity-component'
 import thirdMain from '../../assets/thirdMainHome.svg';
 const settings = {
   dots: true,
@@ -82,6 +83,34 @@ const CaptionCarousel = observer(() => {
     },
   ];
 
+
+
+  // var options = {
+  //   accessibility: true,
+  //   prevNextButtons: true,
+  //   pageDots: true,
+  //   setGallerySize: false,
+  //   arrowShape: {
+  //     x0: 10,
+  //     x1: 60,
+  //     y1: 50,
+  //     x2: 60,
+  //     y2: 45,
+  //     x3: 15
+  //   }
+  // };
+  
+  // var carousel = document.querySelector('[data-carousel]');
+  // var slides = document.getElementsByClassName('carousel-cell');
+  // var flkty = new Flickity(carousel, options);
+  
+  // flkty.on('scroll', function () {
+  //   flkty.slides.forEach(function (slide, i) {
+  //     var image = slides[i];
+  //     var x = (slide.target + flkty.x) * -1/3;
+  //     image.style.backgroundPosition = x + 'px';
+  //   });
+  // });
   return (
     <>
       <Slider {...settings} ref={slider => setSlider(slider)}>
@@ -89,7 +118,7 @@ const CaptionCarousel = observer(() => {
           return (
             <Box
               position={'relative'}
-              height={'100vh'}
+              height={'90vh'}
               key={index}
               sx={{'--bgimg':`url(${card.BGimage})`}}
               className={`MAINHOME23 ${card.class}`}
@@ -153,6 +182,32 @@ const CaptionCarousel = observer(() => {
           );
         })}
       </Slider>
+      {/* <Box class="hero-slider" data-carousel>
+  <Box class="carousel-cell" style="background-image:url(https://68.media.tumblr.com/57836ee52bc9355ad7c5fed5abf91ccc/tumblr_oiboo6MaRS1slhhf0o1_1280.jpg);">
+    <Box class="overlay"></Box>
+    <Box class="inner">
+      <h3 class="subtitle">Slide 1</h3>
+      <h2 class="title">Flickity Parallax</h2>
+      <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me more</a>
+    </Box>
+  </Box>
+<Box class="carousel-cell" style="background-image:url(https://68.media.tumblr.com/c40636a5a0d4aa39c335c8db40d2144f/tumblr_omc7z7Xv8N1slhhf0o1_1280.jpg);">
+    <Box class="overlay"></Box>
+    <Box class="inner">
+      <h3 class="subtitle">Slide 2</h3>
+      <h2 class="title">Flickity Parallax</h2>
+      <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me more</a>
+    </Box>
+  </Box>
+<Box class="carousel-cell" style="background-image:url(https://68.media.tumblr.com/3beb13a4167aa8b5c4743eac17bf351c/tumblr_o8nyvtiHfC1slhhf0o1_1280.jpg);">
+    <Box class="overlay"></Box>
+    <Box class="inner">
+      <h3 class="subtitle">Slide 3</h3>
+      <h2 class="title">Flickity Parallax</h2>
+      <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me more</a>
+    </Box>
+  </Box>
+</Box> */}
     </>
   );
 });
