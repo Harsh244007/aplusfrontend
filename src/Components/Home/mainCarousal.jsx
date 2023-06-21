@@ -5,7 +5,7 @@ import {
   Text,
   Image,
 } from '@chakra-ui/react';
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
@@ -93,7 +93,7 @@ const CaptionCarousel = observer(() => {
         transform={'translate(0%, -50%)'}
         zIndex={2}
         onClick={() => slider?.slickPrev()}>
-        <BiLeftArrowAlt />
+        <AiOutlineLeftCircle />
       </IconButton>
       {/* Right Icon */}
       <IconButton
@@ -107,7 +107,7 @@ const CaptionCarousel = observer(() => {
         transform={'translate(0%, -50%)'}
         zIndex={2}
         onClick={() => slider?.slickNext()}>
-        <BiRightArrowAlt />
+        <AiOutlineRightCircle />
       </IconButton>
       <Slider {...settings} ref={slider => setSlider(slider)}>
         {cards.map((card, index) => {
