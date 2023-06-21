@@ -171,7 +171,7 @@ const CaptionCarousel = observer(() => {
 
                 <Image
                   loading="lazy"
-                  maxW={"380px"}
+                  maxW={"480px"}
                   className={
                     card.title == 'Design Projects 11' ? 'belowImage' : ''
                   }
