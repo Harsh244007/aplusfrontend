@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './index.css';
-import { IoMdArrowDown } from "react-icons/io";
+import { AiOutlineDownCircle } from "react-icons/ai";
 import {
   Box,
   Button,
@@ -34,7 +34,7 @@ const Home = () => {
       <CaptionCarousel />
       {!Appstore.device ?
         <Button className="scroll-button" onClick={handleScroll}>
-          <IoMdArrowDown />
+          <AiOutlineDownCircle />
         </Button>
         : ""}
     </Box>
