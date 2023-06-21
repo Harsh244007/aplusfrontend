@@ -404,8 +404,17 @@
   background-color: rgba(255, 255, 255, 0) !important;
   z-index: 10005 !important;
 }
-.scroll-button svg{
+.scroll-button svg,.side-button svg{
 fill: rgba(255, 255, 255, 0.5);
   height: 30px !important;
   width: 30px !important;
+}
+.scroll-button svg,.side-button svg{
+fill: rgba(255, 255, 255, 0.5);
+  height: 35px !important;
+  width: 35px !important;
+}
+.side-button{ 
+   background-color: rgba(255, 255, 255, 0) !important;
+  padding: 0px !important;  z-index: 10005 !important;
 }

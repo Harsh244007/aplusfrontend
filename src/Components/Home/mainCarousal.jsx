@@ -1,33 +1,22 @@
 import React from 'react';
 import {
   Box,
-  Button,
+  Button, IconButton, useBreakpointValue,
   Text,
   Image,
 } from '@chakra-ui/react';
-// import BGIMG from '../../assets/homeBg.svg';
-// import BGIMG2 from '../../assets/image133.svg';
-// import BGIMG3 from '../../assets/image132.svg';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
-// import logoimage from '../../assets/image14.png';
-// import logoimage from '../../assets/Group15426.svg';
 import { Link } from 'react-router-dom';
-// import MainBG2 from '../../assets/mainbg2.svg';
-// import MainBG3 from '../../assets/MainBG4.svg';
-// import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// import MainBG3 from '../../assets/Group15427.png';
-// import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
-// import Header from '../Header';
 import firstMainBG from '../../assets/firstmain.svg';
 import secondMainBG from '../../assets/secondMainBg.svg';
 import seconMain from '../../assets/secondMainHome.svg';
 import thirdMainBG from '../../assets/thirdMainBG.png';
 import firstMain from '../../assets/firstMain2.png';
-// import Flickity from 'react-flickity-component'
 import thirdMain from '../../assets/thirdMainHome.svg';
 const settings = {
-  dots: true,
+  dots: false,
   arrows: true,
   swipeToSlide: true,
   lazyLoad: true,
@@ -77,9 +66,49 @@ const CaptionCarousel = observer(() => {
       rank: 3,
     },
   ];
-
+  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const side = useBreakpointValue({ base: '30%', md: '10px' });
   return (
     <>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+      {/* Left Icon */}
+      <IconButton
+        aria-label="left-arrow"
+        // colorScheme="messenger"
+        borderRadius="full"
+        position="absolute"
+        className='side-button'
+        left={side}
+        top={top}
+        transform={'translate(0%, -50%)'}
+        zIndex={2}
+        onClick={() => slider?.slickPrev()}>
+        <BiLeftArrowAlt />
+      </IconButton>
+      {/* Right Icon */}
+      <IconButton
+        aria-label="right-arrow"
+        // colorScheme="messenger"
+        borderRadius="full"
+        position="absolute"
+        className='side-button'
+        right={side}
+        top={top}
+        transform={'translate(0%, -50%)'}
+        zIndex={2}
+        onClick={() => slider?.slickNext()}>
+        <BiRightArrowAlt />
+      </IconButton>
       <Slider {...settings} ref={slider => setSlider(slider)}>
         {cards.map((card, index) => {
           return (
