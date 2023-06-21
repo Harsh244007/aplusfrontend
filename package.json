@@ -32,7 +32,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && yarn push",
-    "postbuild": "react-spa-prerender",
     "push": "git add . && git commit -m '8j' && git push",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
