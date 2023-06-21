@@ -92,10 +92,11 @@ const CaptionCarousel = observer(() => {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider?.slickPrev()}>
+        onClick={() => slider.slickPrev()}>
         <AiOutlineLeftCircle />
       </IconButton>
       {/* Right Icon */}
+
       <IconButton
         aria-label="right-arrow"
         // colorScheme="messenger"
@@ -106,7 +107,7 @@ const CaptionCarousel = observer(() => {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider?.slickNext()}>
+        onClick={() => slider.slickNext()}>
         <AiOutlineRightCircle />
       </IconButton>
       <Slider {...settings} ref={slider => setSlider(slider)}>
