@@ -100,7 +100,7 @@
   animation-name: example;
   scroll-snap-align: start !important;
   animation-timing-function: ease-in-out !important;
-  animation-duration: 15s !important;
+  animation-duration: 25s !important;
   animation-direction: alternate !important;
   display: flex !important;
   position: relative !important;
