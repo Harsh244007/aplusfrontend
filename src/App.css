@@ -26,7 +26,6 @@ body::-webkit-scrollbar {
   height: 0px !important;
   background: #001620 !important;
 }
-
 #root::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
