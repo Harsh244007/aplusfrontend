@@ -1,7 +1,4 @@
 .headerProducts2 {
-  /* text-transform: uppercase; */
-  font-weight: 600;
-  font-size: 48px;
   width: 380px;
   font-family: 'Dosis', sans-serif !important;
   font-style: normal;
@@ -117,6 +114,7 @@
   display: flex !important;
   /* max-width: 1060px !important; */
   overflow-x: hidden !important;
+  overflow: hidden !important;
   overflow-y: hidden !important;
   scroll-behavior: smooth !important;
   position: relative !important;
@@ -131,10 +129,6 @@
   /* left: 00px; */
   transition: all 0.5s ease-in-out !important;
   z-index: 10 !important;
-}
-.signleReviewBox:hover .imagereview1,
-.signleReviewBox:active .imagereview1 {
-  animation-play-state: paused;
 }
 /* @keyframes primary {
   0% {
