@@ -90,7 +90,6 @@
   position: relative !important;
   width: 400px !important;
   object-fit: cover !important;
-  /* animation-name: example; */
   background-color: aqua;
   /* animation-duration: 3s; */
   /* -webkit-animation: primary1 15s alternate infinite !important; */
@@ -139,5 +138,13 @@ left: 880px; */
 @media (min-width: 1300px) {
   .secondheaderaboutusBox {
     right: 0px;
+  }
+}
+@media (max-width:1022px){
+  .secondheaderaboutusBox{
+    display: none;
+  }
+  .ImagesAboutUs{
+    width: auto !important;
   }
 }

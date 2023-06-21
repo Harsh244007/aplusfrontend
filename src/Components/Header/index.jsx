@@ -80,7 +80,7 @@ const Header = observer(({ BG = false }) => {
   }, [showDD]);
   return (
     <Box
-      className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : ''}`}
+      className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : 'mainHeader2'}`}
       as="section"
     >
       <Box className="header" textAlign="center">
