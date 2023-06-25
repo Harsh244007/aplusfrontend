@@ -116,6 +116,7 @@ const CaptionCarousel = observer(() => {
             <Box
               position={'relative'}
               height={'90vh'}
+              maxHeight={"700px"}
               key={index}
               sx={{'--bgimg':`url(${card.BGimage})`}}
               className={`MAINHOME23 ${card.class}`}

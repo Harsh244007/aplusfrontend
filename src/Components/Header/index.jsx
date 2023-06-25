@@ -32,8 +32,6 @@ const Header = observer(({ BG = false }) => {
     Appstore.setMode(localStorage.getItem(colorMode));
   }, [colorMode]);
   console.log(BG, 'backgroundof header');
-  const searchIconColor = 'gray.700';
-  const inputBg = 'gray.800';
   const [showDD, setShowDD] = useState(true);
   const navigate = useNavigate();
   const toggleDD = () => setShowDD(false);
@@ -46,7 +44,6 @@ const Header = observer(({ BG = false }) => {
       },
     },
   ];
-  const targetRef = useRef('');
   let options2 = [];
   const url = `${Appstore.apilink}/returncategories`;
   const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
@@ -94,7 +91,7 @@ const Header = observer(({ BG = false }) => {
             flexDir={'row'}
             gap={15}
           >
-            <InputGroup
+            {/* <InputGroup
               display={'flex'}
               alignItems={'center'}
               className="inputheaderSearchMain"
@@ -110,7 +107,7 @@ const Header = observer(({ BG = false }) => {
               <InputRightElement marginBottom={'6px'} right={'6px'}>
                 <CiSearch className="inputheaderSearchIcon" />
               </InputRightElement>
-            </InputGroup>
+            </InputGroup> */}
             {showDD ? (
               <Dropdown
                 options={data ? options2 : options}

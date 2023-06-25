@@ -20,12 +20,7 @@ import './index.css';
 // import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
 
-const HoverLink = props => (
-  <Link rounded="base" _hover={{ bg: 'gray.200' }} p={2} {...props} />
-);
-
 const Navigation = observer(({ onClose }) => {
-  const navigate = useNavigate();
 
   return (
     <Stack as="nav">
