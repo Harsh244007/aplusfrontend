@@ -64,6 +64,25 @@ const CaptionCarousel = observer(() => {
   const handlePrevious = () => {
     activeIndex == 0 ? setActiveIndex(len) : setActiveIndex((prev) => prev - 1);
   };
+  const [startX, setStartX] = useState(null);
+  const handleSwipeStart = (event) => {
+    setStartX(event.touches[0].clientX)
+  }
+  const handleSwipeMove = (event) => {
+    if (startX !== null) {
+      const currentX = event.touches[0].clientX
+      const difference = startX - currentX
+      if (difference > 0) {
+        // Swiped left
+        setActiveIndex((prevIndex) => (prevIndex === len ? 0 : prevIndex + 1))
+      }
+      if (difference < 0) {
+        // Swiped right
+        setActiveIndex((prevIndex) => (prevIndex == 0 ? len : prevIndex - 1))
+      }
+      setStartX(null)
+    }
+  }
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '10px' });
   return (
@@ -115,6 +134,7 @@ const CaptionCarousel = observer(() => {
             <Box
               position={'relative'}
               key={index}
+              onTouchStart={handleSwipeStart} onTouchMove={handleSwipeMove}
               height={'80vh'}
               maxHeight={"700px"}
               sx={{'--bgimg':`url(${card.BGimage})`}}
