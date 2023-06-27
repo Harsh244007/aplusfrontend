@@ -83,25 +83,12 @@ const CaptionCarousel = observer(() => {
       setStartX(null)
     }
   }
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const top = useBreakpointValue({ base: '92%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '10px' });
   return (
     <>
-      {/* <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      /> */}
-      {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        // colorScheme="messenger"
         borderRadius="full"
         position="absolute"
         className='side-button'

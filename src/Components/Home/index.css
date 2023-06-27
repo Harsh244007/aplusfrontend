@@ -68,6 +68,7 @@
   }
   .LOGOTEXT {
     padding: 10px !important;
+    padding-top: 20px !important;
     font-size: 30px !important;
     max-width: 450px !important;
     max-height: 130px !important;
@@ -455,7 +456,7 @@ fill: rgba(255, 255, 255, 0.5);
 
 @keyframes slideIn2 {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(+100%);
     opacity: 0;
   }
   100% {
