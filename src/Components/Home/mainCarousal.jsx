@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button, IconButton, useBreakpointValue,
@@ -6,7 +6,6 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai';
-import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import firstMainBG from '../../assets/firstmain.svg';
@@ -15,26 +14,9 @@ import seconMain from '../../assets/secondMainHome.svg';
 import thirdMainBG from '../../assets/thirdMainBG.png';
 import firstMain from '../../assets/firstMain2.png';
 import thirdMain from '../../assets/thirdMainHome.svg';
-const settings = {
-  dots: false,
-  arrows: true,
-  swipeToSlide: true,
-  lazyLoad: true,
-  infinite: true,
-  adaptiveHeight: true,
-  autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 300000,
-  slidesToShow: 1,
-  pauseonFocus: false,
-  focusOnSelect: false,
-  slidesToScroll: 1,
-};
+
 
 const CaptionCarousel = observer(() => {
-  // const top = useBreakpointValue({ base: '90%', md: '90%' });
-  // const side = useBreakpointValue({ base: '30%', md: '40px' });
-  const [slider, setSlider] = React.useState(null);
   const cards = [
     {
       title: 'Design Projects 2',
@@ -66,11 +48,27 @@ const CaptionCarousel = observer(() => {
       rank: 3,
     },
   ];
+  const len = cards.length - 1;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [activeIndex, len]);
+
+  const handleNext = () => {
+    activeIndex == len ? setActiveIndex(0) : setActiveIndex((prev) => prev + 1);
+  };
+  const handlePrevious = () => {
+    activeIndex == 0 ? setActiveIndex(len) : setActiveIndex((prev) => prev - 1);
+  };
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '10px' });
   return (
     <>
-      <link
+      {/* <link
         rel="stylesheet"
         type="text/css"
         charSet="UTF-8"
@@ -80,7 +78,7 @@ const CaptionCarousel = observer(() => {
         rel="stylesheet"
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
+      /> */}
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
@@ -92,7 +90,8 @@ const CaptionCarousel = observer(() => {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider.slickPrev()}>
+        onClick={handlePrevious}
+      >
         <AiOutlineLeftCircle />
       </IconButton>
       {/* Right Icon */}
@@ -107,19 +106,19 @@ const CaptionCarousel = observer(() => {
         top={top}
         transform={'translate(0%, -50%)'}
         zIndex={2}
-        onClick={() => slider.slickNext()}>
+        onClick={handleNext}>
         <AiOutlineRightCircle />
       </IconButton>
-      <Slider {...settings} ref={slider => setSlider(slider)}>
+      {/* <Slider {...settings} ref={slider => setSlider(slider)}> */}
         {cards.map((card, index) => {
           return (
             <Box
               position={'relative'}
-              height={'90vh'}
-              maxHeight={"700px"}
               key={index}
+              height={'80vh'}
+              maxHeight={"700px"}
               sx={{'--bgimg':`url(${card.BGimage})`}}
-              className={`MAINHOME23 ${card.class}`}
+              className={`MAINHOME23 ${card.class} ${activeIndex == index && "active"}`}
               width={'full'}
               overflow={'hidden'}
             >
@@ -153,7 +152,7 @@ const CaptionCarousel = observer(() => {
                       </span>
                     </Text>
                   )}
-                  <Link to="/products">
+                  <Link className='atagCarousalMain' to="/products">
                     <Button
                       display={'block'}
                       background={'white'}
@@ -180,7 +179,7 @@ const CaptionCarousel = observer(() => {
           );
         })}
      
-      </Slider>
+      {/* </Slider> */}
     </>
   );
 });
