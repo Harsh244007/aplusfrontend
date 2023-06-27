@@ -300,3 +300,6 @@
     gap: 0px;
   }
 }
+.headerModal{
+  z-index:100000 !important;
+}
