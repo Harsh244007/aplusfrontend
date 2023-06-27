@@ -17,17 +17,68 @@ import {
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
+
+import Dropdown from 'react-dropdown-animated';
 // import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
+import Appstore from '../../Store/Appstore';
+import { useState } from 'react';
+import { useQuery } from 'react-query';
+import axios from 'axios';
 
 const Navigation = observer(({ onClose }) => {
+  const [showDD, setShowDD] = useState(true);
+  const navigate = useNavigate();
+  const toggleDD = () => setShowDD(false);
+  let options = [
+    {
+      content: 'Loading Categories Please wait',
+      onClick: event => {
+        toggleDD();
+        // location(`/`);
+      },
+    },
+  ];
+  let options2 = [];
+  const url = `${Appstore.apilink}/returncategories`;
+  const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
+    return axios.get(url).then(response => {
+      return response.data.data;
+    });
+  });
 
+  if (!data) {
+    let timer;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      refetch();
+    }, 4000);
+  }
+
+  if (!isLoading && data) {
+    data.map(e => {
+      options2.push({
+        content: e.catname,
+        onClick: event => {
+          toggleDD();
+          navigate(`/products/${e.catid}/${e.catname}`);
+        },
+      });
+      console.log(e, 'data for categories');
+    });
+  }
   return (
     <Stack as="nav">
       <Link to="/" onClick={() => onClose()}>
         Home
       </Link>
 
+      <Dropdown
+        options={data ? options2 : options}
+        initial={200}
+        exit={4}
+        value="Products"
+      />
       <Link
         to="/about-us"
         onClick={() => {

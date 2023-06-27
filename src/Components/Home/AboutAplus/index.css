@@ -67,12 +67,10 @@
 .ImagesAboutUs {
   display: flex !important;
   height: 296px !important;
-  scroll-snap-type: x mandatory !important;
   width: 1160px !important;
   overflow: hidden !important;
   scrollbar-width: none !important;
   row-gap: 20px !important;
-  scroll-snap-align: start !important;
   overflow-x: hidden !important;
   max-width: 2400px !important;
   overflow-y: hidden !important;
@@ -82,7 +80,6 @@
   display: none;
 }
 .imagesaboutussa {
-  scroll-snap-align: center !important;
   margin: 10px !important;
   height: 200px !important;
   border-radius: 10px !important;
@@ -97,7 +94,6 @@
 
 .imagesaboutussa {
   animation-name: example;
-  scroll-snap-align: start !important;
   animation-timing-function: ease-in-out !important;
   animation-duration: 25s !important;
   animation-direction: alternate !important;

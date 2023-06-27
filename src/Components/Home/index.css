@@ -363,7 +363,7 @@
   letter-spacing: 3px;
   color: #fff;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.1.5s ease;
 }
 .hero-slider .carousel-cell .inner .btn:hover {
   background: #fff;
@@ -425,39 +425,39 @@ fill: rgba(255, 255, 255, 0.5);
 }
 .active{
     display: inline-block;
-    animation: fadeIn 1.5s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
+    0% {opacity: 0.7;}
     100% {opacity: 1;}
 }
 .active .LOGOTEXT {
-  animation: slideIn 2s ease-in-out;
+  animation: slideIn 1.5s ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0.5;
 }
 
 @keyframes slideIn {
   0% {
     transform: translateY(-100%);
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-.active img {
-  animation: slideIn2 2s ease-in-out;
+  .active img {
+  animation: slideIn2 1.5s ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0.5;
 }
 
 @keyframes slideIn2 {
   0% {
-    transform: translateX(+100%);
-    opacity: 0;
+    transform: translateX(100%);
+    opacity: 0.5;
   }
   100% {
     transform: translateX(0);
@@ -470,4 +470,37 @@ fill: rgba(255, 255, 255, 0.5);
     justify-content: center;
     align-items: center;
   }
+  .active img {
+  animation: slideIn3 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0.5;
 }
+  @keyframes slideIn3 {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+}
+@media (min-width:1022px){
+  .active .atagCarousalMain {
+  animation: slideIn3 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0.5;
+}
+  @keyframes slideIn3 {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+}
+

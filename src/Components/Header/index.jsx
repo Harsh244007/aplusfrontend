@@ -1,17 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ColorModeSwitcher } from '../Common/ColorModeSwitcher';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Heading,
-  IconButton,
   Image,
-  Img,
   Input,
   InputGroup,
-  InputLeftAddon,
-  InputLeftElement,
   InputRightElement,
-  Text,
   useColorMode,
 } from '@chakra-ui/react';
 import './index.css';
@@ -108,7 +101,7 @@ const Header = observer(({ BG = false }) => {
                 <CiSearch className="inputheaderSearchIcon" />
               </InputRightElement>
             </InputGroup> */}
-            {showDD ? (
+            {/* {showDD ? (
               <Dropdown
                 options={data ? options2 : options}
                 initial={200}
@@ -117,7 +110,7 @@ const Header = observer(({ BG = false }) => {
               />
             ) : (
               ''
-            )}
+            )} */}
             <Box className="desktopSlider">
               <DropdownMobile />
             </Box>

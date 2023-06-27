@@ -54,7 +54,7 @@ const CaptionCarousel = observer(() => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 8000);
+    }, 800000);
     return () => clearInterval(interval);
   }, [activeIndex, len]);
 
