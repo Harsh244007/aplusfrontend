@@ -31,11 +31,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn push",
+    "build": "react-scripts build",
     "push": "git add . && git commit -m '8j' && git push",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "react-spa-prerender"
+    "postbuild": "react-spa-prerender && yarn push"
   },
   "eslintConfig": {
     "extends": "react-app"
