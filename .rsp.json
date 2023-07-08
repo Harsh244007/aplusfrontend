@@ -1,5 +1,5 @@
 {
-  "port": 3000,
+  "port": 32204,
   "buildDirectory": "./build",
   "engine": {
     "launchOptions": {
@@ -12,5 +12,5 @@
       "timeout": 0
     }
   },
-  "routes": ["/","/about-us","/contact","/products","/productDetails","/participation","/Mumbai-Expo-2018","/DJ-Expo-2018"]
+  "routes": ["/","/about-us","/participation","/Mumbai-Expo-2018","/DJ-Expo-2018"]
 }

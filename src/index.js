@@ -17,16 +17,16 @@ const queryClient = new QueryClient({
   },
  })
 
- if(container.hasChildNodes()){
-  hydrateRoot(
-    <BrowserRouter >
-    <QueryClientProvider client={queryClient}>
-      <App />
-      </QueryClientProvider>
-    </BrowserRouter>
-  ,container);
+//  if(container.hasChildNodes()){
+//   hydrateRoot(
+//     <BrowserRouter >
+//     <QueryClientProvider client={queryClient}>
+//       <App />
+//       </QueryClientProvider>
+//     </BrowserRouter>
+//   ,container);
   
- }else{
+//  }else{
   root.render(
     <BrowserRouter >
     <QueryClientProvider client={queryClient}>
@@ -35,4 +35,4 @@ const queryClient = new QueryClient({
     </BrowserRouter>
   );
   
- }
+//  }
