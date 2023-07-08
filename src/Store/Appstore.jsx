@@ -10,7 +10,7 @@ class AppStore {
   device2 = 0;
   footer = false;
   mode = 'dark';
-  apilink='http://localhost:3000'
+  apilink='https://api.aplusaudios.com'
   imageLink='http://www.aplusaudios.com/assets/uploads/showcase/medium'
   bgImage = 3;
   constructor() {

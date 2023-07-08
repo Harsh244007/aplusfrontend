@@ -303,3 +303,8 @@
 .headerModal{
   z-index:100000 !important;
 }
+.dropdown-container,.dropdown-button{
+  display: flex;
+  place-items: center;
+  height: 40px;
+}
