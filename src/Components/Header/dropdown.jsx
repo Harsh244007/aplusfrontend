@@ -27,9 +27,9 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 
 const Navigation = observer(({ onClose }) => {
-  const [showDD, setShowDD] = useState(true);
+  // const [showDD, setShowDD] = useState(true);
   const navigate = useNavigate();
-  const toggleDD = () => setShowDD(false);
+  const toggleDD = () => onClose();
   let options = [
     {
       content: 'Loading Categories Please wait',
@@ -59,12 +59,13 @@ const Navigation = observer(({ onClose }) => {
     data.map(e => {
       options2.push({
         content: e.catname,
-        onClick: event => {
-          toggleDD();
-          navigate(`/products/${e.catid}/${e.catname}`);
+        onClick: async( event) => {
+          await toggleDD();
+          console.log(e, 'toggle dd closed');
+          return navigate(`/products/${e.catid}/${e.catname}`);
         },
       });
-      console.log(e, 'data for categories');
+      return false
     });
   }
   return (
