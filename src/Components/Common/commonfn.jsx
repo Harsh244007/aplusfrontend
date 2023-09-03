@@ -1,12 +1,15 @@
 export const HideLandingLoader = () => {
-  document.querySelector('.Spinner_Background').style.display = 'none';
+  // document.querySelector('.Spinner_Background').style.display = 'none';
   var spinner = document.querySelector('body').classList;
-  
+  document.body.style.overflow = "auto"
   spinner.add('Spinner_Default');
   if (spinner.contains('Spinner_Default')) {
-    // setTimeout(() => {
-      spinner.remove('Spinner_Default');
-    // }, 10000);
+    spinner.remove('Spinner_Default');
+    document.querySelector(".loaderImageMain").style.display="none"
+    document.querySelector(".Spinner_Background").style.display="none"
   }
-  document.querySelector('html').style.overflow = '';
+  document.querySelector('html').style.overflow = 'auto';
 };
+// }, 10000);
+
+// setTimeout(() => {

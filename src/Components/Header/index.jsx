@@ -15,7 +15,7 @@ import { observer } from 'mobx-react';
 import Desktopdropdown from './desktopdropdown';
 // import { SearchIcon } from '@chakra-ui/icons';
 import { Link, useNavigate } from 'react-router-dom';
-import logomain from '../../assets/Aplus-logo-225x108.svg';
+import logomain from '../../assets/Aplus-logo-675x324-white.png';
 import { CiSearch } from 'react-icons/ci';
 import { useQuery } from 'react-query';
 import axios from 'axios';

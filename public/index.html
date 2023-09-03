@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <metha title="A-Plus Audios"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
@@ -17,7 +18,7 @@
       charset="UTF-8"
       href="./AssetsCss/first.min.css"
     />
-    <title>Aplus-Audios</title>
+    <title>A-Plus Audios</title>
     <meta name="keywords" content="Aplus speaker,best sound system" />
   </head>
   <style>
@@ -25,17 +26,15 @@
       margin: 0;
       font-family: 'Dosis', sans-serif !important;
       -webkit-font-smoothing: antialiased;
+      overflow: hidden;
       -moz-osx-font-smoothing: grayscale;
     }
     .Spinner_Default {
       overflow: hidden;
     }
     .Spinner_Background {
-      width: 100%;
-      height: 100%;
-      /* animation: slideout 2s ease-in; */
-      /* top: 100%; */
-      /* transform: scale(0.8); */
+      width: 100vw;
+      height: 100vh;
       position: fixed;
       overflow: hidden;
       flex-direction: column;
@@ -43,9 +42,19 @@
       align-items: center;
       display: flex;
       justify-content: center;
-      background-color: #fff;
+      background-color: #282727;
+      /* background-image:url("./Background_1900x900.jpg") ; */
+      /* animation: blur 2s ease-in; */
+      /* animation-fill-mode: forwards; */
+      /* filter: blur(0px); */
     }
-    .Spinner_Background2 {
+    @keyframes blur {
+      from {
+        filter: blur(0px);
+      }
+      to {
+        filter: blur(5px);
+      }
     }
     .Spinner_Background2 img {
       z-index: 1000;
@@ -53,13 +62,52 @@
     .child-menu {
       display: none;
     }
-    .loaderImage {
-      width: 310px !important;
-      /* transform: scale(1.1) !important; */
-      padding-bottom: -30px !important;
-      transform-origin: top !important;
-      height: 100px !important;
+    .loaderImageMain {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+/* opacity: 0; */
       animation: typing 2s ease-in;
+      /* animation-fill-mode: forwards; */
+      color: white;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+    }
+    .loaderImageMain p {
+      width: max-content;
+      height: max-content;
+      font-size: 80px;
+      text-align: center;
+      z-index: 30002;
+      color: whitesmoke;
+    }
+    .loaderImage {
+      width: 550px !important;
+      /* transform: scale(1.4) !important; */
+      /* padding-bottom: -30px !important; */
+      transform-origin: top !important;
+      object-fit: contain;
+      height: 350px !important;
+      /* position: fixed; */
+      overflow: visible;
+      z-index: 30001;
+      /* margin-bottom: -100px; */
+      /* mix-blend-mode: color-burn; */
+      /* top: 50%;
+      left: 50%;
+      bottom: 50%;
+      right: 50%; */
+    }
+    .loaderImage1 {
+      margin-bottom: -257px;
+      margin-top: -12px;
+    }
+    .loaderImage2 {
+      width: 400px !important;
+      height: 300px !important;
     }
     @keyframes slideout {
       /* 0% { */
@@ -176,12 +224,22 @@
         </li>
       </ul>
     </div>
+    <div class="loaderImageMain">
+      <img
+        class="loaderImage loaderImage1"
+        src="./Aplus-logo-675x324-white.png"
+        alt="A plus"
+      /><img
+      class="loaderImage loaderImage2"
+      src="./Tagline.png"
+      alt="Professional Audio Solutions"
+    />
+    </div>
     <div class="Spinner_Background">
       <!-- <div class="Spinner_Background2"> -->
-      <img class="loaderImage" src="./apluslogo.jpg" alt="A plus" />
-      <div class="text-typing">
+      <!-- <div class="text-typing">
         <p class="loaderText">Professional Audio Solutions</p>
-      </div>
+      </div> -->
     </div>
     <!-- </div> -->
     <script defer="defer">

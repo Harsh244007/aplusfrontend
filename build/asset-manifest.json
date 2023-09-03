@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.381cb75c.css",
-    "main.js": "/static/js/main.1f9b1404.js",
-    "static/css/365.f070487b.chunk.css": "/static/css/365.f070487b.chunk.css",
-    "static/js/365.a77c284c.chunk.js": "/static/js/365.a77c284c.chunk.js",
+    "main.js": "/static/js/main.c56690fc.js",
+    "static/css/731.af38a475.chunk.css": "/static/css/731.af38a475.chunk.css",
+    "static/js/731.8ecc7bc8.chunk.js": "/static/js/731.8ecc7bc8.chunk.js",
     "static/css/83.8549be54.chunk.css": "/static/css/83.8549be54.chunk.css",
     "static/js/83.2a9b3034.chunk.js": "/static/js/83.2a9b3034.chunk.js",
     "static/js/460.4659d699.chunk.js": "/static/js/460.4659d699.chunk.js",
@@ -86,10 +86,10 @@
     "static/media/aboutus.jpg": "/static/media/aboutus.9c326b930e6fdaf93eb6.jpg",
     "static/media/Rectangle 168.png": "/static/media/Rectangle 168.d2909767730fb586b213.png",
     "static/media/Rectangle 16.png": "/static/media/Rectangle 16.a040effd6765a271925b.png",
+    "static/media/Aplus-logo-675x324-white.png": "/static/media/Aplus-logo-675x324-white.3bbce33726f6a5550a71.png",
     "static/media/Rectangle 164.png": "/static/media/Rectangle 164.7248044713066c9010dc.png",
     "static/media/uber2.svg": "/static/media/uber2.2377d2b23c848253ed2ff2fd28113470.svg",
     "static/media/ola.svg": "/static/media/ola.98994af678c2371073104d7665972c72.svg",
-    "static/media/Aplus-logo-225x108.svg": "/static/media/Aplus-logo-225x108.0e192340d6e8a8c2862722d4641dd8e1.svg",
     "static/media/uber.svg": "/static/media/uber.4590dcbe6e7f266928e1b5f540152285.svg",
     "index.html": "/index.html",
     "static/media/LeftArrow.svg": "/static/media/LeftArrow.1f35303917930ec05a257dc3e7195a28.svg",
@@ -97,9 +97,9 @@
     "static/media/thirdFeatureImageBG.svg": "/static/media/thirdFeatureImageBG.95d12b30b687bfe5782cce09e1bb8cee.svg",
     "static/media/secondFeatureImageBG.svg": "/static/media/secondFeatureImageBG.d92e4f15f8f9ca53d633fcfc3220bdba.svg",
     "main.381cb75c.css.map": "/static/css/main.381cb75c.css.map",
-    "main.1f9b1404.js.map": "/static/js/main.1f9b1404.js.map",
-    "365.f070487b.chunk.css.map": "/static/css/365.f070487b.chunk.css.map",
-    "365.a77c284c.chunk.js.map": "/static/js/365.a77c284c.chunk.js.map",
+    "main.c56690fc.js.map": "/static/js/main.c56690fc.js.map",
+    "731.af38a475.chunk.css.map": "/static/css/731.af38a475.chunk.css.map",
+    "731.8ecc7bc8.chunk.js.map": "/static/js/731.8ecc7bc8.chunk.js.map",
     "83.8549be54.chunk.css.map": "/static/css/83.8549be54.chunk.css.map",
     "83.2a9b3034.chunk.js.map": "/static/js/83.2a9b3034.chunk.js.map",
     "460.4659d699.chunk.js.map": "/static/js/460.4659d699.chunk.js.map",
@@ -152,6 +152,6 @@
   },
   "entrypoints": [
     "static/css/main.381cb75c.css",
-    "static/js/main.1f9b1404.js"
+    "static/js/main.c56690fc.js"
   ]
 }
