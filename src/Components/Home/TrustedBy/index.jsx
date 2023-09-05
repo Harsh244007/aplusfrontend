@@ -9,11 +9,11 @@ import {
 import First from '../../../assets/uber.svg';
 import third from '../../../assets/uber2.svg';
 import second from '../../../assets/ola.svg';
-const Products = () => {
+const Trusted = () => {
 
   return (
     <Box className="MainProducts" as="section">
-      <Heading className="headerProducts2">Trusted by partners</Heading>
+      {/* <Heading className="headerProducts2">Trusted by partners</Heading>
       <Flex
         justifyContent="center"
         alignItems="center"
@@ -32,11 +32,11 @@ const Products = () => {
         <SinglePhoto image={First} name="Drum" />
         <SinglePhoto image={third} name="Guitar" />
         <SinglePhoto image={second} name="Radio" />
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
-export default React.memo(Products);
+export default React.memo(Trusted);
 
 function SinglePhoto({ image, name }) {
   const color = 'teal';

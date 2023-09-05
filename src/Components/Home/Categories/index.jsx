@@ -45,47 +45,47 @@ const FeatureProducts = () => {
           <SingleProductCard
             heading={'Loudspeaker'}
             icon={first}
-            href={'/products/Loudspeaker'}
+            href={'/products/1/Loudspeakers'}
           />{' '}
           <SingleProductCard
             heading={'Micophone'}
             icon={second}
-            href={'/products/Micophone'}
+            href={'/products/3/Microphones'}
           />{' '}
           <SingleProductCard
             heading={'Crossover Networks Active Crossover'}
             icon={third}
-            href={'/products/Crossover Networks Active Crossover'}
+            href={'/products/7/Crossover Networks'}
           />{' '}
           <SingleProductCard
             heading={'Mixer'}
             icon={four}
-            href={'/products/Mixer'}
+            href={'/products/4/Mixers'}
           />{' '}
           <SingleProductCard
             heading={'Amplifier'}
             icon={fifth}
-            href={'/products/Amplifier'}
+            href={'/products/5/Amplifiers'}
           />{' '}
           <SingleProductCard
             heading={'P.A. Amplifier'}
             icon={six}
-            href={'/products/PA Amplifier'}
+            href={'/products/5/Amplifiers'}
           />
           <SingleProductCard
             heading={'Wallmount Loudspeaker'}
             icon={seven}
-            href={'/products/Wallmount Loudspeaker'}
+            href={'/products/8/Wallmount Speakers'}
           />
           <SingleProductCard
             heading={'Loudspeaker System'}
             icon={eight}
-            href={'/products/Loudspeaker System'}
+            href={'/products/2/Loudspeaker System'}
           />
           <SingleProductCard
             heading={'Compression Drivers'}
             icon={nine}
-            href={'/products/Compression Drivers'}
+            href={'/products/6/Compression Drivers'}
           />
         </Flex>
       </Container>

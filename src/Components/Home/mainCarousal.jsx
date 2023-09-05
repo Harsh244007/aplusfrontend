@@ -21,6 +21,7 @@ const CaptionCarousel = observer(() => {
     {
       title: 'Design Projects 2',
       text: 'Behind ',
+      url:"/products/4/Mixers",
       text2: 'Great Studio Monitor',
       text3: 'Every Great Mix ',
       text4: 'There Is A ',
@@ -30,6 +31,7 @@ const CaptionCarousel = observer(() => {
       rank: 1,
     },
     {
+      url:"/products/5/Amplifiers",
       title: 'Design Projects 1',
       text: 'Unleash Superior Sound With Our ',
       text2: 'Amplifiers.',
@@ -39,6 +41,7 @@ const CaptionCarousel = observer(() => {
       rank: 2,
     },
     {
+      url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
       text: 'New level of Sound delivery with ',
       text2: 'Aplus Audios',
@@ -159,7 +162,7 @@ const CaptionCarousel = observer(() => {
                       </span>
                     </Text>
                   )}
-                  <Link className='atagCarousalMain' to="/products">
+                  <Link className='atagCarousalMain' to={card.url}>
                     <Button
                       display={'block'}
                       background={'white'}

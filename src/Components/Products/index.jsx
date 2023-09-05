@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './index.css';
 import { Box, Button, Heading, Skeleton } from '@chakra-ui/react';
-import { SingleProductCard } from '../Home/FeaturedProducts/singleproduct';
+import { SingleProductCard } from '../Home/Categories/singleproduct';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
@@ -43,7 +43,7 @@ const MainProducts = () => {
     }, 4000);
   }
   useEffect(() => {
-    if (data == []) refetch();
+    if (data && data.length === 0) refetch();
   });
 
   console.log(isLoading, status, 'data id of all products');
@@ -90,7 +90,7 @@ const MainProducts = () => {
         </Button>
       </Link>
       <Heading textAlign={'center'}>{data ? name : `Loading ${name}`}</Heading>
-      {data && data != [] && !isRefetching ? (
+      {data && data.length!==0 && !isRefetching ? (
         <Box
           display={'flex'}
           gap={'30px'}
@@ -112,7 +112,7 @@ const MainProducts = () => {
       ) : (
         <Skeleton height={650} width="100%" />
       )}
-      {data && data != [] ? (
+      {data && data.length !==0 ? (
         <Pagination
           totalPosts={data && data.length}
           postsPerPage={postsPerPage}

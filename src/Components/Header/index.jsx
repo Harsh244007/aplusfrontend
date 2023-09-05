@@ -40,9 +40,18 @@ const Header = observer(({ BG = false }) => {
   let options2 = [];
   const url = `${Appstore.apilink}/returncategories`;
   const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
-    return axios.get(url).then(response => {
-      return response.data.data;
-    });
+    const cachedCategories = localStorage.getItem('cachedCategories');
+
+    if (cachedCategories) {
+      return JSON.parse(cachedCategories);
+    } else {
+      const response = await axios.get(url);
+      const responseData = response.data.data;
+
+      localStorage.setItem('cachedCategories', JSON.stringify(responseData));
+
+      return responseData;
+    }
   });
 
   if (!data) {
@@ -54,7 +63,7 @@ const Header = observer(({ BG = false }) => {
   }
 
   if (!isLoading && data) {
-    data.map(e => {
+    data.forEach(e => {
       options2.push({
         content: e.catname,
         onClick: event => {
@@ -70,7 +79,9 @@ const Header = observer(({ BG = false }) => {
   }, [showDD]);
   return (
     <Box
-      className={`mainHeader ${Appstore.footer || BG ? 'mainHeader2' : 'mainHeader2'}`}
+      className={`mainHeader ${
+        Appstore.footer || BG ? 'mainHeader2' : 'mainHeader2'
+      }`}
       as="section"
     >
       <Box className="header" textAlign="center">

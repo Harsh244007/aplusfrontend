@@ -26,7 +26,7 @@ import {
   FeatureProducts,
   // Contact,
   AboutUSMain,
-  Products,
+  Trusted,
   Reviews,
   SubFooter,
 } from './Components';
@@ -154,7 +154,7 @@ const App = observer(() => {
                   <Reviews />
                 </Suspense>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Products />
+                  <Trusted />
                 </Suspense>
               </>
             }
@@ -185,7 +185,7 @@ const App = observer(() => {
                   <Reviews />
                 </Suspense>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Products />
+                  <Trusted />
                 </Suspense>
               </>
             }
@@ -216,7 +216,7 @@ const App = observer(() => {
                   <Reviews />
                 </Suspense>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Products />
+                  <Trusted />
                 </Suspense>
               </>
             }

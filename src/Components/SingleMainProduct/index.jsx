@@ -11,7 +11,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { SingleProductCard } from '../Home/FeaturedProducts/singleproduct';
+import { SingleProductCard } from '../Home/Categories/singleproduct';
 import { Link, useParams } from 'react-router-dom';
 import Pagination from '../Common/pagination';
 import Appstore from '../../Store/Appstore';
@@ -114,7 +114,7 @@ const MainProductDetails = () => {
       <Heading textAlign={'center'}>
         {data && !isRefetching ? data.pro_name : `Loading ${name}`}
       </Heading>
-      {data && data != [] && !isRefetching ? (
+      {data && data.length !==0 && !isRefetching ? (
         <Box
           display={'flex'}
           gap={'30px'}

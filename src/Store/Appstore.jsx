@@ -11,7 +11,7 @@ class AppStore {
   footer = false;
   mode = 'dark';
   apilink='https://api.aplusaudios.com'
-  imageLink='http://www.aplusaudios.com/assets/uploads/showcase/medium'
+  imageLink='http://www.aplusaudios.com/assets/images'
   bgImage = 3;
   constructor() {
     makeAutoObservable(this);

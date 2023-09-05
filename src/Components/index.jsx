@@ -7,9 +7,9 @@ const CTAFooter = lazy(() => import('./CTAFooter2/index'));
 const Home = lazy(() => import('./Home/index'));
 const SubHome = lazy(() => import('./SubHome/index'));
 const SubFooter = lazy(() => import('./Footer/subIndex'));
-const Products = lazy(() => import('./Home/Products/index'));
+const Trusted = lazy(() => import('./Home/TrustedBy/index'));
 const Reviews = lazy(() => import('./Home/Review/index'));
-const FeatureProducts = lazy(() => import('./Home/FeaturedProducts/index'));
+const FeatureProducts = lazy(() => import('./Home/Categories/index'));
 const FeatureProducts2 = lazy(() => import('./Home/FeaturedProducts2/index'));
 const About = lazy(() => import('./Home/About-us/index'));
 const Getintouch = lazy(() => import('./Home/Getintouch/index'));
@@ -36,7 +36,7 @@ export {
   Participation,
   AboutMain,
   SubHome,
-  Products,
+  Trusted,
   FeatureProducts,
   About,
   Getintouch,
