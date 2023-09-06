@@ -15,9 +15,9 @@ import thirdMainBG from '../../assets/thirdMainBG.png';
 import firstMain from '../../assets/firstMain2.png';
 import thirdMain from '../../assets/thirdMainHome.svg';
 import newmainBg1 from "../../assets/newBGHome1.jpg"
-import newmainBg2 from "../../assets/newBGHome2.jpg"
-import newmainBg3 from "../../assets/newBGHome3.jpg"
-import newmainBg4 from "../../assets/newBGHome4.jpg"
+import newmainBg2 from "../../assets/newBGHome1.jpg"
+import newmainBg3 from "../../assets/newBGHome1.jpg"
+import newmainBg4 from "../../assets/newBGHome1.jpg"
 import newMain7 from "../../assets/newMainHome1.png"
 import newMain8 from "../../assets/newMainHome2.png"
 import newMain3 from "../../assets/newMainHome3.png"
