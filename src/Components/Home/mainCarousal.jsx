@@ -29,12 +29,12 @@ import newMain2 from "../../assets/newMainHome8.png"
 const CaptionCarousel = observer(() => {
   const cards = [
     {
-      title: 'Design Projects 2',
-      text: 'Behind ',
+      title: 'Design Projects 11',
+      text: 'Experience ',
       url:"/products/4/Mixers",
-      text2: 'Great Studio Monitor',
-      text3: 'Every Great Mix ',
-      text4: 'There Is A ',
+      text3: 'Sound ',
+      text4: 'Like Never ',
+      text2: 'Before.',
       image: newMain1,
       class: 'thirdImage',
       BGimage: newmainBg1,
@@ -42,9 +42,9 @@ const CaptionCarousel = observer(() => {
     },
     {
       url:"/products/5/Amplifiers",
-      title: 'Design Projects 1',
-      text: 'Unleash Superior Sound With Our ',
-      text2: 'Amplifiers.',
+      title: 'Design Projects 11',
+      text: 'Amplify Your Sound ',
+      text2: 'with Precision and Power.',
       image: newMain2,
       class: 'secondImage',
       BGimage: newmainBg2,
@@ -53,8 +53,8 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: 'New level of Sound delivery with ',
-      text2: 'Aplus Audios',
+      text: 'Crafting Sonic Excellence ',
+      text2: 'for Your Vision.',
       image: newMain3,
       class: 'firstImage',
       BGimage: newmainBg3,
@@ -64,19 +64,18 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: 'New level of Sound delivery with ',
-      text2: 'Aplus Audios',
+      text: ' Your Voice, Perfected ',
+      text2: 'Discover True Audio Quality.',
       image: newMain4,
       class: 'firstImage',
       BGimage: newmainBg4,
       rank: 4,
     },   {
       title: 'Design Projects 2',
-      text: 'Behind ',
+      text: 'Mix ',
       url:"/products/4/Mixers",
-      text2: 'Great Studio Monitor',
-      text3: 'Every Great Mix ',
-      text4: 'There Is A ',
+      text3: 'and Master Your ',
+      text2: 'Sound Like Pros.',
       image: newMain5,
       class: 'thirdImage',
       BGimage: newmainBg1,
@@ -85,8 +84,8 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/5/Amplifiers",
       title: 'Design Projects 1',
-      text: 'Unleash Superior Sound With Our ',
-      text2: 'Amplifiers.',
+      text: 'Big Sound, Small Package: ',
+      text2: 'Take Music Anywhere.',
       image: newMain6,
       class: 'secondImage',
       BGimage: newmainBg2,
@@ -214,7 +213,7 @@ const CaptionCarousel = observer(() => {
                     <Text className="LOGOTEXT">
                       {card.text}
                       <span className="pink">{card.text3}</span>
-                      {card.text}
+                      {/* {card.text} */}
                       {card.text4}
                       <span className="orange">{card.text2}</span>
                     </Text>
