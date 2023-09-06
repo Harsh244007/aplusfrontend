@@ -54,9 +54,9 @@ data.map((e)=>{
 options2.push({content:e.catname,
   onClick: event => {
     toggleDD();
-    startTransition(()=>{
+    // startTransition(()=>{
       navigate(`/products/${e.catid}/${e.catname}`);
-    })
+    // })
   },})
   console.log(e,"data for categories")
 })

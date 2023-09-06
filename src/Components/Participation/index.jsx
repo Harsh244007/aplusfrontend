@@ -27,15 +27,15 @@ const Participation = () => {
   }, []);
   const navigate = useNavigate();
   const gotonext = () => {
-    startTransition(() => {
+    // startTransition(() => {
       navigate('/Mumbai-Expo-2018');
-    });
+    // });
   };
 
   const gotonext2 = () => {
-    startTransition(() => {
+    // startTransition(() => {
       navigate('/DJ-Expo-2018');
-    });
+    // });
   };
   return (
     <Box className="MainParticipation" as="section">

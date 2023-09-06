@@ -33,10 +33,10 @@ const Dj = () => {
   }, []);
   const navigate = useNavigate();
   const gotonext = () => {
-    startTransition(()=>{
+    // startTransition(()=>{
 
     navigate('/participation');
-    })
+    // })
   };
   return (
     <Box className="MainParticipation" as="section">

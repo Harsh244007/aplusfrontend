@@ -69,9 +69,8 @@ const Header = observer(({ BG = false }) => {
         onClick: event => {
           toggleDD();
           
-    startTransition(()=>{
           navigate(`/products/${e.catid}/${e.catname}`);
-    })
+
         },
       });
       console.log(e, 'data for categories');

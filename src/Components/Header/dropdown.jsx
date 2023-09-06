@@ -62,7 +62,7 @@ const Navigation = observer(({ onClose }) => {
         onClick: async( event) => {
           await toggleDD();
           console.log(e, 'toggle dd closed');
-          return startTransition(()=>{navigate(`/products/${e.catid}/${e.catname}`)});
+          return navigate(`/products/${e.catid}/${e.catname}`);
         },
       });
       return false
