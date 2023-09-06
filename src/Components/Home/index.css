@@ -23,7 +23,7 @@
 .LOGOTEXT {
   width: 516px !important;
   /* max-height: 170px !important; */
-  color: white !important;
+  color: rgb(39, 39, 39) !important;
   font-family: 'Dosis', sans-serif !important;
   font-style: normal !important;
   font-weight: 500 !important;

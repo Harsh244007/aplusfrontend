@@ -18,14 +18,14 @@ import newmainBg1 from "../../assets/newBGHome1.jpg"
 import newmainBg2 from "../../assets/newBGHome2.jpg"
 import newmainBg3 from "../../assets/newBGHome3.jpg"
 import newmainBg4 from "../../assets/newBGHome4.jpg"
-import newMain1 from "../../assets/newMainHome1.png"
-import newMain2 from "../../assets/newMainHome2.png"
+import newMain7 from "../../assets/newMainHome1.png"
+import newMain8 from "../../assets/newMainHome2.png"
 import newMain3 from "../../assets/newMainHome3.png"
 import newMain4 from "../../assets/newMainHome4.png"
 import newMain5 from "../../assets/newMainHome5.png"
 import newMain6 from "../../assets/newMainHome6.png"
-import newMain7 from "../../assets/newMainHome7.png"
-import newMain8 from "../../assets/newMainHome8.png"
+import newMain1 from "../../assets/newMainHome7.png"
+import newMain2 from "../../assets/newMainHome8.png"
 const CaptionCarousel = observer(() => {
   const cards = [
     {
@@ -95,7 +95,7 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: 'New level of Sound delivery with ',
+      text: 'blank',
       text2: 'Aplus Audios',
       image: newMain7,
       class: 'firstImage',
@@ -106,7 +106,7 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: 'New level of Sound delivery with ',
+      text: 'blank',
       text2: 'Aplus Audios',
       image: newMain8,
       class: 'firstImage',
@@ -120,7 +120,7 @@ const CaptionCarousel = observer(() => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 800000);
+    }, window.location.href.includes("localhost")?700000:3000);
     return () => clearInterval(interval);
   }, [activeIndex, len]);
 
@@ -202,6 +202,7 @@ const CaptionCarousel = observer(() => {
                 m="auto"
                 maxW={"1200px"}
               >
+                {card.text !== "blank"?
                 <Box
                   className={`firstboxlogo ${
                     card.title == 'Design Projects 11' ? 'firstboxlogo2' : ''
@@ -215,7 +216,8 @@ const CaptionCarousel = observer(() => {
                       {card.text4}
                       <span className="orange">{card.text2}</span>
                     </Text>
-                  ) : (
+                  ) : 
+                  card.text !== "blank"? (
                     <Text className="LOGOTEXT">
                       {card.text}
                       <span
@@ -224,7 +226,8 @@ const CaptionCarousel = observer(() => {
                         {card.text2}
                       </span>
                     </Text>
-                  )}
+                  ):""}
+                  
                   <Link className='atagCarousalMain' to={card.url}>
                     <Button
                       display={'block'}
@@ -238,6 +241,7 @@ const CaptionCarousel = observer(() => {
                     </Button>
                   </Link>
                 </Box>
+                  :""}
 
                 <Image
                   loading="lazy"
