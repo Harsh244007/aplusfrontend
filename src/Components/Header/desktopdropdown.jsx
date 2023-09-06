@@ -61,7 +61,7 @@ options2.push({content:e.catname,
 console.log(options2,"data for categories")
   }
   useEffect(()=>{
-    // if(!showDD)setShowDD(true)
+    if(!showDD)setShowDD(true)
   },[showDD])
   return (
     <Stack

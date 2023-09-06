@@ -11,7 +11,6 @@ import {
   // SimpleGrid,
   // Stack,
   Text,
-  // useColorModeValue,
 } from '@chakra-ui/react';
 import first from '../../assets/Rectangle 21.png';
 

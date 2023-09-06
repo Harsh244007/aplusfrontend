@@ -159,37 +159,6 @@ const App = observer(() => {
               </>
             }
           />
-          <Route
-            path="/aplusfrontend/build/index.html"
-            element={
-              <>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header />
-                  <Home />
-                </Suspense>
-
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <FeatureProducts />
-                </Suspense>
-
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <AboutUSMain />
-                </Suspense>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <FeatureProducts2 />
-                </Suspense>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Getintouch />
-                </Suspense>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Reviews />
-                </Suspense>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Trusted />
-                </Suspense>
-              </>
-            }
-          />
               <Route
             path="/index.html"
             element={

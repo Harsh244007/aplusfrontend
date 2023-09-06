@@ -44,7 +44,7 @@ const MainProducts = () => {
   }
   useEffect(() => {
     if (data && data.length === 0) refetch();
-  });
+  },[data]);
 
   console.log(isLoading, status, 'data id of all products');
   if (!id) {

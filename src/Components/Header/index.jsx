@@ -75,7 +75,7 @@ const Header = observer(({ BG = false }) => {
     });
   }
   useEffect(() => {
-    // if (!showDD) setShowDD(true);
+    if (!showDD) setShowDD(true);
   }, [showDD]);
   return (
     <Box
