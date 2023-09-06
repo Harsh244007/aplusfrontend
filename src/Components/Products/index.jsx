@@ -90,7 +90,7 @@ const MainProducts = () => {
         </Button>
       </Link>
       <Heading textAlign={'center'}>{data ? name : `Loading ${name}`}</Heading>
-      {data && data.length!==0 && !isRefetching ? (
+      {/* {data && data.length!==0 && !isRefetching ? (
         <Box
           display={'flex'}
           gap={'30px'}
@@ -111,8 +111,12 @@ const MainProducts = () => {
         </Box>
       ) : (
         <Skeleton height={650} width="100%" />
-      )}
-      {data && data.length !==0 ? (
+      )} */}
+
+
+<h2 style={{margin:"auto",fontSize:"24px"}}>This page is under construction</h2>
+
+      {/* {data && data.length !==0 ? (
         <Pagination
           totalPosts={data && data.length}
           postsPerPage={postsPerPage}
@@ -121,7 +125,7 @@ const MainProducts = () => {
         />
       ) : (
         <Skeleton height={50} width="100%" />
-      )}
+      )} */}
     </Box>
   );
 };

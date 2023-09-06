@@ -111,7 +111,7 @@ const MainProductDetails = () => {
           Go Back
         </Button>
       </Link>
-      <Heading textAlign={'center'}>
+      {/* <Heading textAlign={'center'}>
         {data && !isRefetching ? data.pro_name : `Loading ${name}`}
       </Heading>
       {data && data.length !==0 && !isRefetching ? (
@@ -167,7 +167,58 @@ const MainProductDetails = () => {
                   ''
                 )}
               </Box>
-              {/* <ListItem>
+             
+            </Box>
+          </Box>
+        </Box>
+      ) : (
+        <Skeleton height={650} width="100%" />
+      )}
+      {data2 && data2.length != 0 ? (
+        <Box m={'auto'} gap={'30px'}>
+          <Heading>You might be interested in</Heading>
+          <Box
+            display={'flex'}
+            flexWrap={'wrap'}
+            gap={'30px'}
+            justifyContent={'space-evenly'}
+          >
+            {currentposts.map(e => {
+              console.log(e, 'data for all products');
+              let name = e.pro_name.replace(' ', '').replace(' ', '');
+              console.log(name, e.pro_name, 'name of single product');
+              return (
+                <SingleProductCard
+                  referLink={false}
+                  heading={e.pro_name ? e.pro_name : 'LoudSpeaker'}
+                  icon={`${Appstore.imageLink}/${e.pro_image}`}
+                  href={`/productDetails/${e.catid}/${e.showcaseid}/${name}/${catName}`}
+                />
+              );
+            })}
+          </Box>
+          {data2 && data2 != [] ? (
+            <Pagination
+              totalPosts={data2 && data2.length}
+              postsPerPage={postsPerPage}
+              setCurrentPage={setCpage}
+              currentPage={cpage}
+            />
+          ) : (
+            <Skeleton height={50} width="100%" />
+          )}
+        </Box>
+      ) : (
+        <Skeleton height={450} width="100%" />
+      )} */}
+      
+
+      <h2 style={{margin:"auto",fontSize:"24px"}}>This page is under construction</h2>
+    </Box>
+  );
+};
+export default React.memo(MainProductDetails);
+ {/* <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Between lugs:
                   </Text>{' '}
@@ -205,50 +256,3 @@ const MainProductDetails = () => {
                   </Text>{' '}
                   5 bar (50 metres / 167 feet){' '}
                 </ListItem> */}
-            </Box>
-          </Box>
-        </Box>
-      ) : (
-        <Skeleton height={650} width="100%" />
-      )}
-      {data2 && data2 != [] ? (
-        <Box m={'auto'} gap={'30px'}>
-          <Heading>You might be interested in</Heading>
-          <Box
-            display={'flex'}
-            flexWrap={'wrap'}
-            gap={'30px'}
-            justifyContent={'space-evenly'}
-          >
-            {currentposts.map(e => {
-              console.log(e, 'data for all products');
-              let name = e.pro_name.replace(' ', '').replace(' ', '');
-              console.log(name, e.pro_name, 'name of single product');
-              return (
-                <SingleProductCard
-                  referLink={false}
-                  heading={e.pro_name ? e.pro_name : 'LoudSpeaker'}
-                  icon={`${Appstore.imageLink}/${e.pro_image}`}
-                  href={`/productDetails/${e.catid}/${e.showcaseid}/${name}/${catName}`}
-                />
-              );
-            })}
-          </Box>
-          {data2 && data2 != [] ? (
-            <Pagination
-              totalPosts={data2 && data2.length}
-              postsPerPage={postsPerPage}
-              setCurrentPage={setCpage}
-              currentPage={cpage}
-            />
-          ) : (
-            <Skeleton height={50} width="100%" />
-          )}
-        </Box>
-      ) : (
-        <Skeleton height={450} width="100%" />
-      )}
-    </Box>
-  );
-};
-export default React.memo(MainProductDetails);
