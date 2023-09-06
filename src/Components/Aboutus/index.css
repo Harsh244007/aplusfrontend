@@ -11,6 +11,9 @@ padding: 30px 0px;
   padding-top: 30px;
   margin-bottom: 15px !important;
 }
+.MainAboutMain img{
+  border-radius: 10px !important;
+}
 .firstBoxAbout,
 .SecondBoxAbout,
 .thirdBoxAbout {
@@ -81,7 +84,9 @@ padding: 15px 0px;
   width: 322.4px !important;
   height: 200px !important;
   z-index: -100 !important;
-  background: #fa43d1 !important;
+  /* background: #fa43d1 !important; */
+  
+  background: #05e8ba !important;
   opacity: 0.3 !important;
   border-radius: 8px !important;
   transform: rotate(6.04deg) !important;

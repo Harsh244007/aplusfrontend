@@ -15,8 +15,8 @@
 .callcta {
     /*background: greenyellow !important;
   */
-    background: #ff4e00 !important;
-    color: white !important;
+    background: #13e7f5 !important;
+    color: black !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,8 +55,8 @@
     width: 150px;
     max-width: 180px;
     height: 45px;
-    background: #27ae60 !important;
-    color: white !important;
+    background: #13e7f5 !important;
+    color: black !important;
 }
 
 @media (min-width:600px) {
@@ -79,7 +79,8 @@
     .whatsappcta {
         padding: 13px 10px !important;
         width: 45px !important;
-        background: #001620 !important;
+        background: #13e7f5 !important;
+        color: black !important;
         border-radius: 50% !important;
         justify-content: flex-end !important;
         box-shadow: 2px 2px 3px #757474 !important;

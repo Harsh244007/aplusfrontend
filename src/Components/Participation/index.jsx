@@ -36,16 +36,17 @@ const Participation = () => {
   return (
     <Box className="MainParticipation" as="section">
       <Heading>Our Participation</Heading>
-      <Text maxW="1100px" p={5} m="auto" textAlign="center">
+      <Text maxW="900px" fontSize={"19px"} p={5} m="auto" textAlign="left">
         The reason for our success and devotion to this industry is our
         knowledge of our customer’s expectations and desires. It is our mission
-        to look at our business through their eyes, hence . The reason for our
+        to look at our business through their eyes.<br/> 
+        {/* hence . The reason for our
         success and devotion to this industry is our knowledge of our customer’s
         expectations and desires. It is our mission to look at our business
         through their eyes, hence . The reason for our success and devotion to
         this industry is our knowledge of our customer’s expectations and
         desires. It is our mission to look at our business through their eyes,
-        hence{' '}
+        hence{' '} */}
       </Text>
       <Box className="firstBoxparticipation">
         <Box onClick={gotonext}>

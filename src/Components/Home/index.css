@@ -26,13 +26,36 @@
   color: rgb(39, 39, 39) !important;
   font-family: 'Dosis', sans-serif !important;
   font-style: normal !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 48px !important;
   line-height: 80px !important;
   margin-bottom: 10px !important;
 }
 .LOGOTEXT span {
-  color: #3ab6fc;
+  color: #26ccd7;
+  font-weight: 600 !important;
+}
+.thirdImage .LOGOTEXT span {
+  color: black;
+  font-weight: 600px;
+}
+
+.fifthImage .LOGOTEXT,
+.firstImage .LOGOTEXT {
+  color: #26ccd7 !important;
+  font-weight: 500px !important;
+}
+.sixthImage .LOGOTEXT > span {
+  color: black !important;
+}
+.fifthImage .LOGOTEXT span,
+.firstImage .LOGOTEXT span {
+  color: black !important;
+  font-weight: 500px;
+}
+
+.thirdImage .LOGOTEXT p:first-child {
+  color: #26ccd7;
   font-weight: 600 !important;
 }
 .firstboxlogo {
@@ -203,7 +226,7 @@
 
   font-family: 'Dosis' !important;
   font-style: normal !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 24px !important;
   line-height: 30px !important;
   width: 194px !important;
@@ -214,14 +237,16 @@
   -o-border-radius: 8px !important;
 }
 .secondImage .buttonOfCTA {
-  background: #fa903a !important;
+  /* background: #fa903a !important; */
+
+  background: #13e7f5 !important;
   border-radius: 8px !important;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   font-family: 'Dosis' !important;
   font-style: normal !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 24px !important;
   line-height: 30px !important;
   /* padding: 12px 16px !important; */
@@ -234,14 +259,88 @@
   -o-border-radius: 8px !important;
 }
 .thirdImage .buttonOfCTA {
-  background: #d90f48 !important;
+  /* background: #d90f48 !important; */
+
+  background: #13e7f5 !important;
   border-radius: 8px !important;
   display: flex !important;
   font-family: 'Dosis' !important;
   font-style: normal !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 24px !important;
-  color: #ffffff !important;
+  /* color: #ffffff !important; */
+  line-height: 30px !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  /* align-items: flex-start !important; */
+  /* padding: 12px 16px !important; */
+  gap: 10px !important;
+  width: 194px !important;
+  height: 54px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
+.fourthImage .buttonOfCTA {
+  /* background: #d90f48 !important; */
+
+  background: #13e7f5 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  font-family: 'Dosis' !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  /* color: #ffffff !important; */
+  line-height: 30px !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  /* align-items: flex-start !important; */
+  /* padding: 12px 16px !important; */
+  gap: 10px !important;
+  width: 194px !important;
+  height: 54px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
+.fifthImage .buttonOfCTA {
+  /* background: #d90f48 !important; */
+
+  background: #13e7f5 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  font-family: 'Dosis' !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  /* color: #ffffff !important; */
+  line-height: 30px !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  /* align-items: flex-start !important; */
+  /* padding: 12px 16px !important; */
+  gap: 10px !important;
+  width: 194px !important;
+  height: 54px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
+.sixthImage .buttonOfCTA {
+  /* background: #d90f48 !important; */
+
+  background: #13e7f5 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  font-family: 'Dosis' !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  /* color: #ffffff !important; */
   line-height: 30px !important;
   align-items: center !important;
   flex-direction: row !important;
@@ -257,11 +356,11 @@
 }
 .secondImage .LOGOTEXT {
   color: black !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   width: 600px !important;
 }
 .thirdImage .LOGOTEXT {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   width: 600px !important;
 }
 @media (max-width: 1022px) {
@@ -287,7 +386,7 @@
   position: absolute !important;
 } */
 .MAINHOME23::before {
-  opacity: 0.85 !important;
+  /* opacity: 0.85 !important; */
   content: '';
   z-index: -10 !important;
   background-size: cover !important;
@@ -406,37 +505,50 @@
   background-color: rgba(255, 255, 255, 0) !important;
   z-index: 10005 !important;
 }
-.scroll-button svg,.side-button svg{
-fill: rgba(42, 42, 42, 0.7);
+@media (max-width: 1022px) {
+  .scroll-button {
+    display: none !important;
+  }
+}
+.scroll-button svg,
+.side-button svg {
+  fill: rgba(42, 42, 42, 0.7);
   height: 30px !important;
   width: 30px !important;
 }
-.scroll-button svg,.side-button svg{
-fill: rgba(30, 30, 30, 0.7);
+.scroll-button svg,
+.side-button svg {
+  fill: rgba(30, 30, 30, 0.7);
   height: 35px !important;
   width: 35px !important;
 }
-.side-button{ 
-   background-color: rgba(255, 255, 255, 0) !important;
-  padding: 0px !important;  z-index: 10005 !important;
+.side-button {
+  background-color: rgba(255, 255, 255, 0) !important;
+  padding: 0px !important;
+  z-index: 10005 !important;
 }
-.MAINHOME23{
-    display: none;
+.MAINHOME23 {
+  display: none;
 }
-.active{
-    display: inline-block;
-    animation: fadeIn 1s ease-in forwards;
+.active {
+  display: inline-block;
+  animation: fadeIn 1s ease-in forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0.7;}
-    100% {opacity: 1;}
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .active .LOGOTEXT {
   animation: slideIn 1.5s ease-in-out;
   font-size: 48px !important;
   animation-fill-mode: forwards;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @keyframes slideIn {
@@ -449,10 +561,10 @@ fill: rgba(30, 30, 30, 0.7);
     opacity: 1;
   }
 }
-  .active img {
-  animation: slideIn2 1.5s ease-in-out;
+.active img {
+  /* animation: slideIn2 1.5s ease-in-out; */
   animation-fill-mode: forwards;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 @keyframes slideIn2 {
@@ -465,83 +577,82 @@ fill: rgba(30, 30, 30, 0.7);
     opacity: 1;
   }
 }
-@media (max-width:730px){
-  .atagCarousalMain{
+@media (max-width: 730px) {
+  .atagCarousalMain {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .active img {
-  animation: slideIn3 1.5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 0.5;
-}
+    /* animation: slideIn3 1.5s ease-in-out; */
+    animation-fill-mode: forwards;
+    /* opacity: 0.5; */
+  }
   @keyframes slideIn3 {
-  0% {
-    transform: translateY(100px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
+    0% {
+      transform: translateY(100px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
 }
-}
-@media (min-width:1022px){
+@media (min-width: 1022px) {
   .active .atagCarousalMain {
-  animation: slideIn3 1.5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 0.5;
-}
+    /* animation: slideIn3 1.5s ease-in-out; */
+    animation-fill-mode: forwards;
+    /* opacity: 0.5; */
+  }
   @keyframes slideIn3 {
-  0% {
-    transform: translateY(100px);
-    opacity: 0.5;
+    0% {
+      transform: translateY(100px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
+
+  .MAINHOME23 {
+    padding-left: 40px !important;
+    padding-right: 20px !important;
   }
 }
 
-.MAINHOME23 {
-  padding-left: 40px !important;
-  padding-right: 20px !important;
-}
-}
-
-.flex-Col{
+.flex-Col {
   display: flex;
   flex-direction: column;
   gap: 2px;
   justify-content: center !important;
 }
-@media (max-width:1022px){
+@media (max-width: 1022px) {
   .active .LOGOTEXT {
     animation: slideIn 1.5s ease-in-out;
     font-size: 26px !important;
   }
-  
-.flex-Col{
-  gap: 10px;
-}
+
+  .flex-Col {
+    gap: 10px;
+  }
 }
 
-@media (min-width:700px){
-  .bigImage{
+@media (min-width: 700px) {
+  .bigImage {
     max-width: 600px !important;
   }
 }
 
-@media (min-width:1100px){
-  .bigImage{
+@media (min-width: 1100px) {
+  .bigImage {
     max-width: 1050px !important;
   }
 }
 
-
-@media (min-width:900px){
-  .bigImage{
+@media (min-width: 900px) {
+  .bigImage {
     max-width: 840px !important;
   }
 }

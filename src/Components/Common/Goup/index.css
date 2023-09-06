@@ -2,11 +2,11 @@
   position: fixed !important;
   bottom: 14px !important;
   left: 15px !important;
-  z-index: 100 !important;
-  background: antiquewhite !important;
+  z-index: 10050 !important;
+  background: #dbf3f5 !important;
   color: black !important;
   border: none !important;
 }
 .goupButton:active,.goupButton:focus,.goupButton:hover {
-  background-color: rgb(253, 187, 102) !important;
+  background-color: #13e7f5  !important;
 }

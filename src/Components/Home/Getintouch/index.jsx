@@ -19,10 +19,8 @@ const Getintouch = () => {
           <Heading className="headerfirsofget">
             We are here to help you in all your needs.
           </Heading>
-          <Text className="textfirstofgetTou">
-            Our team is happy to answer your sales questions. Fill out the form
-            and we'll be in touch as soon as possible
-          </Text>
+          {/* <Text className="textfirstofgetTou">
+          </Text> */}
         </Box>
 
         <Container
@@ -43,8 +41,9 @@ const Getintouch = () => {
               color={'white'}
               fontWeight={'500px'}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+          
+            Our team is happy to answer your sales questions. Fill out the form
+            and we'll be in touch as soon as possible
             </Text>
             <Box className="emailinput" w={'full'}>
               {/* <Text>Your full name</Text> */}
@@ -103,8 +102,8 @@ const Getintouch = () => {
             <Box display="flex" justifyContent="flex-end">
               <Button
                 // textAlign="right"
-                color="white"
-                background="#FF4E00"
+                color="black"
+                background="#13e7f5"
                 className="buttonSubmit"
                 h={'64px'}
                 w={'full'}
@@ -119,7 +118,7 @@ const Getintouch = () => {
               </Button>
             </Box>
             <Text m={'auto'} color={'white'}>
-              Get in touch with us {'-->'}
+              Get in touch today
             </Text>
           </Box>{' '}
         </Container>

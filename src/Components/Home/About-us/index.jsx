@@ -41,7 +41,7 @@ const About = () => {
               color="white"
               display="flex"
               gap="13px"
-              background="#6876e2"
+              background="#13e7f5"
               w={150}
               className="buttonSubmit"
               h={50}

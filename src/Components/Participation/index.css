@@ -19,7 +19,7 @@
   border-radius: 0.25rem;
 }
 .linkinparticipation {
-  color: orangered;
+  color: #26ccd7 !important;
 }
 @media (max-width: 902px) {
   .firstImagparticipation {
@@ -60,7 +60,7 @@
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   padding: 0.25rem;
-  background-color: #ff4e00;
+  background-color: #26ccd7;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
 }

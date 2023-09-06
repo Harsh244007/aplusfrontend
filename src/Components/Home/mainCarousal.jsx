@@ -20,18 +20,18 @@ import newmainBg3 from "../../assets/newBGHome1.jpg"
 import newmainBg4 from "../../assets/newBGHome1.jpg"
 import newMain7 from "../../assets/newMainHome1.png"
 import newMain8 from "../../assets/newMainHome2.png"
-import newMain3 from "../../assets/newMainHome3.png"
+import newMain6 from "../../assets/newMainHome3.png"
 import newMain4 from "../../assets/newMainHome4.png"
-import newMain5 from "../../assets/newMainHome5.png"
-import newMain6 from "../../assets/newMainHome6.png"
+import newMain2 from "../../assets/newMainHome5.png"
+import newMain5 from "../../assets/newMainHome6.png"
 import newMain1 from "../../assets/newMainHome7.png"
-import newMain2 from "../../assets/newMainHome8.png"
+import newMain3 from "../../assets/newMainHome8.png"
 const CaptionCarousel = observer(() => {
   const cards = [
     {
       title: 'Design Projects 11',
       text: 'Experience ',
-      url:"/products/4/Mixers",
+      url:"/products/1/Loudspeakers",
       text3: 'Sound ',
       text4: 'Like Never ',
       text2: 'Before.',
@@ -41,10 +41,10 @@ const CaptionCarousel = observer(() => {
       rank: 1,
     },
     {
+      text: 'Amplify Your Sound with ',
+      text2: 'Precision and Power.',
       url:"/products/5/Amplifiers",
       title: 'Design Projects 11',
-      text: 'Amplify Your Sound ',
-      text2: 'with Precision and Power.',
       image: newMain2,
       class: 'secondImage',
       BGimage: newmainBg2,
@@ -53,41 +53,41 @@ const CaptionCarousel = observer(() => {
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: 'Crafting Sonic Excellence ',
-      text2: 'for Your Vision.',
+      text: 'Big Sound, Small Package: ',
+      text2: 'Take Music Anywhere.',
       image: newMain3,
       class: 'firstImage',
       BGimage: newmainBg3,
       rank: 3,
     },
-    
     {
       url:"/products/1/Loudspeakers",
       title: 'Design Projects 11',
-      text: ' Your Voice, Perfected ',
-      text2: 'Discover True Audio Quality.',
+      text: ' Discover ',
+      text2: 'True Audio Quality.',
       image: newMain4,
-      class: 'firstImage',
+      class: 'fourthImage',
       BGimage: newmainBg4,
       rank: 4,
     },   {
       title: 'Design Projects 2',
-      text: 'Mix ',
+      text: 'Mix and Master',
       url:"/products/4/Mixers",
-      text3: 'and Master Your ',
+      text3: ' Your ',
       text2: 'Sound Like Pros.',
       image: newMain5,
-      class: 'thirdImage',
+      class: 'fifthImage',
       BGimage: newmainBg1,
       rank: 1,
     },
     {
       url:"/products/5/Amplifiers",
       title: 'Design Projects 1',
-      text: 'Big Sound, Small Package: ',
-      text2: 'Take Music Anywhere.',
       image: newMain6,
-      class: 'secondImage',
+      text: 'Crafting ',
+      text3: 'Sonic Excellence ',
+      text2: 'for Your Vision.',
+      class: 'sixthImage',
       BGimage: newmainBg2,
       rank: 2,
     },
@@ -211,11 +211,11 @@ const CaptionCarousel = observer(() => {
                 >
                   {card.text3 ? (
                     <Text className="LOGOTEXT">
-                      {card.text}
-                      <span className="pink">{card.text3}</span>
+                      <p className>{card.text}
+                      <span >{card.text3}</span ></p>
                       {/* {card.text} */}
                       {card.text4}
-                      <span className="orange">{card.text2}</span>
+                      <span >{card.text2}</span >
                     </Text>
                   ) : 
                   card.text !== "blank"? (

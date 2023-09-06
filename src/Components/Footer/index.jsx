@@ -32,8 +32,8 @@ const SocialButton = ({ children, label, href }) => {
     <a target="_blank" href={href}>
       <chakra.button
         // bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-        bg="#6876e2"
-        color="white"
+        bg="#13e7f5"
+        color="black"
         rounded={'full'}
         w={8}
         h={8}
@@ -93,10 +93,7 @@ const Footer = observer(() => {
               </Link>
 
               <Text className="b2babout" fontSize={17}>
-                We b2b business consulting firm interdum ipsum egestas urna amet
-                fringilla, et placerat ex venenatis. Aliquet luctus pharetra.
-                Proin sed fringilla lectusar sit amet tellus in mollis. Proin
-                nec egestas nibh, eget egestas urna.
+              A–Plus is one of India’s leading manufacturer of sound reinforcement products that deliver the most faithful and natural reproduction of sound in a variety of applications.
               </Text>
             </Box>
 
