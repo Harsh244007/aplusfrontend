@@ -407,12 +407,12 @@
   z-index: 10005 !important;
 }
 .scroll-button svg,.side-button svg{
-fill: rgba(255, 255, 255, 0.5);
+fill: rgba(42, 42, 42, 0.7);
   height: 30px !important;
   width: 30px !important;
 }
 .scroll-button svg,.side-button svg{
-fill: rgba(255, 255, 255, 0.5);
+fill: rgba(30, 30, 30, 0.7);
   height: 35px !important;
   width: 35px !important;
 }
@@ -510,11 +510,21 @@ fill: rgba(255, 255, 255, 0.5);
 }
 }
 
+.flex-Col{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center !important;
+}
 @media (max-width:1022px){
   .active .LOGOTEXT {
     animation: slideIn 1.5s ease-in-out;
     font-size: 26px !important;
   }
+  
+.flex-Col{
+  gap: 10px;
+}
 }
 
 @media (min-width:700px){

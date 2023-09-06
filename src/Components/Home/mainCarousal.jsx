@@ -198,7 +198,7 @@ const CaptionCarousel = observer(() => {
               overflow={'hidden'}
             >
               <Box
-                className="logoimage"
+                className={`logoimage ${card.text === "blank"?"flex-Col":""}`}
                 pt={card.rank == 1 ? '0px' : '0px'}
                 pb="10px"
                 m="auto"
@@ -208,7 +208,7 @@ const CaptionCarousel = observer(() => {
                 <Box
                   className={`firstboxlogo ${
                     card.title == 'Design Projects 11' ? 'firstboxlogo2' : ''
-                  }`}
+                  } `}
                 >
                   {card.text3 ? (
                     <Text className="LOGOTEXT">
@@ -264,9 +264,9 @@ const CaptionCarousel = observer(() => {
                       className="buttonOfCTA"
                       p={'5px'}
                     >
-                      View All Products
+                      Explore more
                     </Button>
-                  </Link>:"}"
+                  </Link>:""}
               </Box>
             </Box>
           );
@@ -276,4 +276,4 @@ const CaptionCarousel = observer(() => {
     </>
   );
 });
-export default React.memo(CaptionCarousel
+export default React.memo(CaptionCarousel);
