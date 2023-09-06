@@ -14,8 +14,18 @@ import seconMain from '../../assets/secondMainHome.svg';
 import thirdMainBG from '../../assets/thirdMainBG.png';
 import firstMain from '../../assets/firstMain2.png';
 import thirdMain from '../../assets/thirdMainHome.svg';
-
-
+import newmainBg1 from "../../assets/newBGHome1.jpg"
+import newmainBg2 from "../../assets/newBGHome2.jpg"
+import newmainBg3 from "../../assets/newBGHome3.jpg"
+import newmainBg4 from "../../assets/newBGHome4.jpg"
+import newMain1 from "../../assets/newMainHome1.png"
+import newMain2 from "../../assets/newMainHome2.png"
+import newMain3 from "../../assets/newMainHome3.png"
+import newMain4 from "../../assets/newMainHome4.png"
+import newMain5 from "../../assets/newMainHome5.png"
+import newMain6 from "../../assets/newMainHome6.png"
+import newMain7 from "../../assets/newMainHome7.png"
+import newMain8 from "../../assets/newMainHome8.png"
 const CaptionCarousel = observer(() => {
   const cards = [
     {
@@ -25,9 +35,9 @@ const CaptionCarousel = observer(() => {
       text2: 'Great Studio Monitor',
       text3: 'Every Great Mix ',
       text4: 'There Is A ',
-      image: thirdMain,
+      image: newMain1,
       class: 'thirdImage',
-      BGimage: thirdMainBG,
+      BGimage: newmainBg1,
       rank: 1,
     },
     {
@@ -35,9 +45,9 @@ const CaptionCarousel = observer(() => {
       title: 'Design Projects 1',
       text: 'Unleash Superior Sound With Our ',
       text2: 'Amplifiers.',
-      image: seconMain,
+      image: newMain2,
       class: 'secondImage',
-      BGimage: secondMainBG,
+      BGimage: newmainBg2,
       rank: 2,
     },
     {
@@ -45,11 +55,64 @@ const CaptionCarousel = observer(() => {
       title: 'Design Projects 11',
       text: 'New level of Sound delivery with ',
       text2: 'Aplus Audios',
-      image: firstMain,
+      image: newMain3,
       class: 'firstImage',
-      BGimage: firstMainBG,
+      BGimage: newmainBg3,
       rank: 3,
     },
+    
+    {
+      url:"/products/1/Loudspeakers",
+      title: 'Design Projects 11',
+      text: 'New level of Sound delivery with ',
+      text2: 'Aplus Audios',
+      image: newMain4,
+      class: 'firstImage',
+      BGimage: newmainBg4,
+      rank: 4,
+    },   {
+      title: 'Design Projects 2',
+      text: 'Behind ',
+      url:"/products/4/Mixers",
+      text2: 'Great Studio Monitor',
+      text3: 'Every Great Mix ',
+      text4: 'There Is A ',
+      image: newMain5,
+      class: 'thirdImage',
+      BGimage: newmainBg1,
+      rank: 1,
+    },
+    {
+      url:"/products/5/Amplifiers",
+      title: 'Design Projects 1',
+      text: 'Unleash Superior Sound With Our ',
+      text2: 'Amplifiers.',
+      image: newMain6,
+      class: 'secondImage',
+      BGimage: newmainBg2,
+      rank: 2,
+    },
+    {
+      url:"/products/1/Loudspeakers",
+      title: 'Design Projects 11',
+      text: 'New level of Sound delivery with ',
+      text2: 'Aplus Audios',
+      image: newMain7,
+      class: 'firstImage',
+      BGimage: newmainBg3,
+      rank: 3,
+    },
+    
+    {
+      url:"/products/1/Loudspeakers",
+      title: 'Design Projects 11',
+      text: 'New level of Sound delivery with ',
+      text2: 'Aplus Audios',
+      image: newMain8,
+      class: 'firstImage',
+      BGimage: newmainBg4,
+      rank: 4,
+    }
   ];
   const len = cards.length - 1;
   const [activeIndex, setActiveIndex] = useState(0);
