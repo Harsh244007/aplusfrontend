@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { startTransition, useEffect } from 'react';
 import './index.css';
 import {
   Box,
@@ -27,19 +27,24 @@ const Participation = () => {
   }, []);
   const navigate = useNavigate();
   const gotonext = () => {
-    navigate('/Mumbai-Expo-2018');
+    startTransition(() => {
+      navigate('/Mumbai-Expo-2018');
+    });
   };
 
   const gotonext2 = () => {
-    navigate('/DJ-Expo-2018');
+    startTransition(() => {
+      navigate('/DJ-Expo-2018');
+    });
   };
   return (
     <Box className="MainParticipation" as="section">
       <Heading>Our Participation</Heading>
-      <Text maxW="900px" fontSize={"19px"} p={5} m="auto" textAlign="left">
+      <Text maxW="900px" fontSize={'19px'} p={5} m="auto" textAlign="left">
         The reason for our success and devotion to this industry is our
         knowledge of our customer’s expectations and desires. It is our mission
-        to look at our business through their eyes.<br/> 
+        to look at our business through their eyes.
+        <br />
         {/* hence . The reason for our
         success and devotion to this industry is our knowledge of our customer’s
         expectations and desires. It is our mission to look at our business
@@ -50,7 +55,8 @@ const Participation = () => {
       </Text>
       <Box className="firstBoxparticipation">
         <Box onClick={gotonext}>
-          <Image loading="lazy"
+          <Image
+            loading="lazy"
             className="firstImagparticipation"
             // boxSize="300px"
             width={'454px'}
@@ -63,7 +69,8 @@ const Participation = () => {
           <Link className="linkinparticipation">View More</Link>
         </Box>
         <Box onClick={gotonext2}>
-          <Image loading="lazy"
+          <Image
+            loading="lazy"
             className="firstImagparticipation"
             // boxSize="300px"
             width={'454px'}

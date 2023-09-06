@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { startTransition, useEffect, useState } from 'react';
 import {
   Box,
   Image,
@@ -68,7 +68,10 @@ const Header = observer(({ BG = false }) => {
         content: e.catname,
         onClick: event => {
           toggleDD();
+          
+    startTransition(()=>{
           navigate(`/products/${e.catid}/${e.catname}`);
+    })
         },
       });
       console.log(e, 'data for categories');

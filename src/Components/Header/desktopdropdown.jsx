@@ -7,6 +7,7 @@ import Appstore from '../../Store/Appstore';
 import Dropdown from 'react-dropdown-animated';
 import axios from 'axios';
 import { useQuery } from 'react-query';
+import { startTransition } from 'react';
 
 const Desktopdropdown = observer(() => {
   //   const options = ['Products', 'Loudspeaker', 'Microphone','Crossover Networks Active Crossover', 'Mixer', 'Amplifier'
@@ -53,7 +54,9 @@ data.map((e)=>{
 options2.push({content:e.catname,
   onClick: event => {
     toggleDD();
-    navigate(`/products/${e.catid}/${e.catname}`);
+    startTransition(()=>{
+      navigate(`/products/${e.catid}/${e.catname}`);
+    })
   },})
   console.log(e,"data for categories")
 })

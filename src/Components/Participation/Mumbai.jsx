@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { startTransition, useEffect } from 'react';
 import './index.css';
 import {
   Box,
@@ -30,7 +30,10 @@ const Mumbai = () => {
   }, []);
   const navigate = useNavigate();
   const gotonext = () => {
+    
+    startTransition(()=>{
     navigate('/participation');
+    })
   };
   return (
     <Box className="MainParticipation" as="section">

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, startTransition } from 'react';
 import {
   Box,
   Button,
@@ -62,7 +62,7 @@ const Navigation = observer(({ onClose }) => {
         onClick: async( event) => {
           await toggleDD();
           console.log(e, 'toggle dd closed');
-          return navigate(`/products/${e.catid}/${e.catname}`);
+          return startTransition(()=>{navigate(`/products/${e.catid}/${e.catname}`)});
         },
       });
       return false
