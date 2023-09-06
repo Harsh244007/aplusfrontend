@@ -21,9 +21,9 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 const Header = observer(({ BG = false }) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  useEffect(() => {
-    Appstore.setMode(localStorage.getItem(colorMode));
-  }, [colorMode]);
+  // useEffect(() => {
+  //   Appstore.setMode(localStorage.getItem(colorMode));
+  // }, [colorMode]);
   console.log(BG, 'backgroundof header');
   const [showDD, setShowDD] = useState(true);
   const navigate = useNavigate();
@@ -75,7 +75,7 @@ const Header = observer(({ BG = false }) => {
     });
   }
   useEffect(() => {
-    if (!showDD) setShowDD(true);
+    // if (!showDD) setShowDD(true);
   }, [showDD]);
   return (
     <Box
