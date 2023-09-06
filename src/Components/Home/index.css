@@ -434,6 +434,7 @@ fill: rgba(255, 255, 255, 0.5);
 }
 .active .LOGOTEXT {
   animation: slideIn 1.5s ease-in-out;
+  font-size: 48px !important;
   animation-fill-mode: forwards;
   opacity: 0.5;
 }
@@ -501,6 +502,10 @@ fill: rgba(255, 255, 255, 0.5);
     transform: translateY(0px);
     opacity: 1;
   }
+}
+.active .LOGOTEXT {
+  animation: slideIn 1.5s ease-in-out;
+  font-size: 22px !important;
 }
 }
 
