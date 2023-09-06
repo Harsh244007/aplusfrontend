@@ -194,7 +194,7 @@
 
 .mainHeader button {
   font-weight: 400 !important;
-  font-size: 16px !important;
+  font-size: 32px !important;
   line-height: 23.12px;
   color: white;
   /* font-family: 'Jost','sans-serif' !important; */
@@ -326,4 +326,16 @@
   .dropdown-options {
     border-top: 0px !important;
   }
+}
+
+@media (max-width:1022px){
+
+  .header img{
+  width: 160px !important;
+  height: 53px !important;
+  
+}
+.mainHeaderDrawer {
+  height: 250px !important;
+ }
 }

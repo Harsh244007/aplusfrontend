@@ -93,7 +93,7 @@ console.log(options2,"data for categories")
       </Link>
    
       {showDD ? (
-       <Dropdown options={data?options2:options} initial={200} exit={4} value="Products" />
+       <Dropdown options={data?options2:options} initial={50} exit={4} value="Products" />
         ) : (
           ''
       )}

@@ -60,11 +60,17 @@ const App = observer(() => {
     handleresize();
     const scroller = async e => {
       const element = document.getElementsByClassName('mainHeader')[0];
-      if (window.scrollY > (element.offsetTop + element.offsetHeight) * 2) {
-        console.log('scroller');
-        Appstore.setFooter(true);
-      } else {
-        Appstore.setFooter(false);
+      try{
+
+        if (window.scrollY > (element && element.offsetTop + element && element.offsetHeight) * 2) {
+          console.log('scroller');
+          Appstore.setFooter(true);
+        } else {
+          Appstore.setFooter(false);
+        }
+      }
+      catch(e){
+        console.log(e)
       }
     };
     const handleDelay = e => {
