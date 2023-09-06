@@ -99,6 +99,7 @@ const CaptionCarousel = observer(() => {
       text2: 'Aplus Audios',
       image: newMain7,
       class: 'firstImage',
+      imageClass:'bigImage',
       BGimage: newmainBg3,
       rank: 3,
     },
@@ -109,6 +110,7 @@ const CaptionCarousel = observer(() => {
       text: 'blank',
       text2: 'Aplus Audios',
       image: newMain8,
+      imageClass:'bigImage',
       class: 'firstImage',
       BGimage: newmainBg4,
       rank: 4,
@@ -246,9 +248,9 @@ const CaptionCarousel = observer(() => {
                 <Image
                   loading="lazy"
                   maxW={"480px"}
-                  className={
-                    card.title == 'Design Projects 11' ? 'belowImage' : ''
-                  }
+                  className={`${
+                    card.title == 'Design Projects 11' ? 'belowImage' : ''} ${card.imageClass?card.imageClass:""}
+                  `}
                   src={card.image}
                 />
               </Box>
