@@ -517,14 +517,21 @@ fill: rgba(255, 255, 255, 0.5);
   }
 }
 
-@media (min-width:900px){
+@media (min-width:700px){
   .bigImage{
-    max-width: 700px !important;
+    max-width: 600px !important;
   }
 }
 
 @media (min-width:1100px){
   .bigImage{
-    max-width: 900px !important;
+    max-width: 1050px !important;
+  }
+}
+
+
+@media (min-width:900px){
+  .bigImage{
+    max-width: 840px !important;
   }
 }

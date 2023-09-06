@@ -253,6 +253,20 @@ const CaptionCarousel = observer(() => {
                   `}
                   src={card.image}
                 />
+                
+                {card.text === "blank"?
+                 <Link className='atagCarousalMain' to={card.url}>
+                    <Button
+                      display={'block'}
+                      background={'white'}
+                      color={'black'}
+                      fontSize={'18px'}
+                      className="buttonOfCTA"
+                      p={'5px'}
+                    >
+                      View All Products
+                    </Button>
+                  </Link>:"}"
               </Box>
             </Box>
           );
@@ -262,4 +276,4 @@ const CaptionCarousel = observer(() => {
     </>
   );
 });
-export default React.memo(CaptionCarousel);
+export default React.memo(CaptionCarousel
