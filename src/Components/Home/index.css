@@ -504,6 +504,10 @@ fill: rgba(255, 255, 255, 0.5);
   }
 }
 
+.MAINHOME23 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
 }
 
 @media (max-width:1022px){
