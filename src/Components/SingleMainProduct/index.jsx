@@ -19,17 +19,22 @@ import Appstore from '../../Store/Appstore';
 // import { useQuery } from 'react-query';
 // import axios from 'axios';
 const MainProductDetails = () => {
-  const [desc, setDesc] = useState();
-  let { id, catid, name, catName } = useParams();
+  const [desc, setDesc] = useState('');
+  let { id, catid, name } = useParams();
 
   useEffect(() => {
     // refetch();
     window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [name]);
-
-  const FilterResult = ProductsJSON.data.filter(e => e.pro_name === name);
-  console.log(FilterResult, 'filtered result');
+  }, [id]);
+  const FilterResult = ProductsJSON.data.filter(e => e.pro_name == name);
+  // console.log('filtered results1', FilterResult);
+  if (FilterResult.length === 0) {
+    const newFilterResult2 = ProductsJSON.data.filter(e => e.showcaseid == id);
+    FilterResult.push(newFilterResult2[0]);
+    // console.log('filtered results2', newFilterResult2);
+  }
+  console.log('filtered results3', FilterResult);
   const [cpage, setCpage] = useState(1);
   const postsPerPage = 4;
   const lastposti = cpage * postsPerPage;
@@ -39,20 +44,53 @@ const MainProductDetails = () => {
     currentposts = ProductsJSON.data.slice(firstposti, lastposti);
   }
   let color = useColorModeValue('yellow.500', 'yellow.300');
-  if (FilterResult && !desc) {
-    const regex = /s:(\d+):"(.*?)";/g;
-    let matches = [...FilterResult[0].pro_desc.matchAll(regex)];
-    const deserializedObjects = matches.map(match => {
-      const array = match[2];
-      const deserializedObject = `{${array}}`;
-      return deserializedObject;
-    });
-    setDesc(deserializedObjects);
-    console.log(
-      FilterResult[0].pro_desc.match(/s:(\d+):"(.*?)";/g)[0],
-      'data of single product'
-    );
-  }
+  // if (FilterResult.length != '0') {
+  //   if (FilterResult[0].pro_desc == '0' && FilterResult[0].description && FilterResult[0].description !="") {
+  //     // const regex = /s:(\d+):"(.*?)";/g;
+  //     // let matches = [...FilterResult[0].description.matchAll(regex)];
+  //     // const deserializedObjects = matches.map(match => {
+  //     //   const array = match[2];
+  //     //   const deserializedObject = `{${array}}`;
+  //     //   return deserializedObject;
+  //     // });
+  //     // setDesc(FilterResult[0].description.split('\r\n'));
+  //   //  setDesc();
+  //     // return FilterResult[0].description;
+  //   } else {
+  //     const regex = /s:(\d+):"(.*?)";/g;
+  //     let matches = [...FilterResult[0].pro_desc.matchAll(regex)];
+  //     const deserializedObjects = matches.map(match => {
+  //       const array = match[2];
+  //       const deserializedObject = `{${array}}`;
+  //       return deserializedObject;
+  //     });
+  //     setDesc(deserializedObjects);
+  //   }
+  // }
+  useEffect(() => setDesc(''), [id]);
+  useEffect(() => {
+    if (FilterResult.length !== 0 && desc == '') {
+      if (
+        FilterResult[0].pro_desc &&
+        FilterResult[0].pro_desc == '0' &&
+        FilterResult[0].description &&
+        FilterResult[0].description != ''
+      ) {
+        setDesc(FilterResult[0].description);
+        // Instead of setting desc here, you can directly render the data in your component
+      } else {
+        console.log(FilterResult, 'inside of useffect');
+        const regex = /s:(\d+):"(.*?)";/g;
+        let matches = [...FilterResult[0].pro_desc.matchAll(regex)];
+        const deserializedObjects = matches.map(match => {
+          const array = match[2];
+          const deserializedObject = `{${array}}`;
+          return deserializedObject;
+        });
+        setDesc(deserializedObjects);
+      }
+    }
+  }, [FilterResult]);
   return (
     <Box
       className="mainSubProductsMain"
@@ -63,13 +101,11 @@ const MainProductDetails = () => {
       m={'auto'}
       mt={'100px'}
     >
-      <Link
-        className="goBackMain"
-        to={`/products/${catid}/${FilterResult && FilterResult.pro_name}`}
-      >
+      <Link className="goBackMain" to={`/products/${catid}`}>
         <Button
+          onClick={() => setDesc('')}
           loadingText={'Loading'}
-          isLoading={FilterResult && FilterResult.pro_name ? false : true}
+          isLoading={FilterResult.length !== 0 ? false : true}
         >
           Go Back
         </Button>
@@ -87,7 +123,12 @@ const MainProductDetails = () => {
           justifyContent={'space-around'}
           alignItems={'center'}
         >
-          <Box w={'350px'} h={'350px'} border={'2px dashed #dedede'}>
+          <Box
+            className="singleProductImage"
+            w={'350px'}
+            h={'350px'}
+            border={'2px dashed #dedede'}
+          >
             <Image
               w={'346px'}
               alt={FilterResult[0].pro_image}
@@ -112,7 +153,7 @@ const MainProductDetails = () => {
               </Text>
 
               <Box spacing={2}>
-                {desc ? (
+                {desc && !desc.includes('\r\n') && !desc.includes(' | ') ? (
                   <>
                     {desc.map((e, i) => {
                       if (i % 4 == 0 && i != 0) {
@@ -128,6 +169,26 @@ const MainProductDetails = () => {
                       }
                     })}
                   </>
+                ) : desc.includes('\r\n') && !desc.includes(' | ') ? (
+                  desc.split('\r\n').map((e, i) => {
+                    return (
+                      <Box key={i}>
+                        <Text as={'span'} fontWeight={'bold'}>
+                          {e}
+                        </Text>{' '}
+                      </Box>
+                    );
+                  })
+                ) : desc.includes(' | ') ? (
+                  desc.split(' | ').map((e, i) => {
+                    return (
+                      <Box key={i}>
+                        <Text as={'span'} fontWeight={'bold'}>
+                          {e}
+                        </Text>{' '}
+                      </Box>
+                    );
+                  })
                 ) : (
                   ''
                 )}
@@ -154,16 +215,17 @@ const MainProductDetails = () => {
               return (
                 <SingleProductCard
                   referLink={false}
+                  onClick={() => setDesc('')}
                   heading={e.pro_name ? e.pro_name : 'LoudSpeaker'}
                   icon={`${Appstore.imageLink}/${e.pro_image}`}
-                  href={`/productDetails/${e.catid}/${e.showcaseid}/${name}/${catName}`}
+                  href={`/productDetails/${e.catid}/${e.showcaseid}/${name}`}
                 />
               );
             })}
           </Box>
           {ProductsJSON.data.length !== 0 ? (
             <Pagination
-              totalPosts={ProductsJSON.data.length/8}
+              totalPosts={ProductsJSON.data.length / 8}
               postsPerPage={postsPerPage}
               setCurrentPage={setCpage}
               currentPage={cpage}

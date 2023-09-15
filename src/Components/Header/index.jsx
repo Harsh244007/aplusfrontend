@@ -92,7 +92,7 @@ function InputBox({ searchQuery, handleSearchInputChange, searchResults }) {
 function SearchResults({ results, value }) {
   return (
     <div
-      className="search-results"
+      className="search-results" tabindex="0"
       style={{ maxHeight: '400px',minHeight: '40px', overflowY: 'auto' }}
     >
       {value !== '' && results.length === 0 ? (
@@ -100,7 +100,7 @@ function SearchResults({ results, value }) {
       ) : (
         results.map(result => (
           <div key={result.id}>
-            <Link to={`/product/${result.id}`}>
+            <Link to={`/productDetails/${result.catid}/${result.showcaseid}/${result.pro_name}`}>
               <img
                 src={`${Appstore.imageLink}/${result.pro_image}`}
                 alt={result.pro_name}

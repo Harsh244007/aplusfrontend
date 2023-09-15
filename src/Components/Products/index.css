@@ -17,3 +17,6 @@
     position: absolute !important;
   }
 }
+img {
+  mix-blend-mode: darken;
+}

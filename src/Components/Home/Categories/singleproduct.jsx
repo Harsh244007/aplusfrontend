@@ -22,12 +22,12 @@ import {
 import Appstore from '../../../Store/Appstore';
 import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-const SingleProductCard = React.memo(({ heading, description, icon, href ,referLink=false}) => {
-
+const SingleProductCard = React.memo(({ heading, description, icon, href ,referLink=false,onClick}) => {
+// if(onClick == undefine) onClick=()={()=>{}}
   return (
     <>
     {!referLink?
-    <Link to={href}>
+    <Link to={href} >
     <Box
       maxW="200px"
       // w={'full'}

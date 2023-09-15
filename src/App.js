@@ -60,17 +60,18 @@ const App = observer(() => {
     handleresize();
     const scroller = async e => {
       const element = document.getElementsByClassName('mainHeader')[0];
-      try{
-
-        if (window.scrollY > (element && element.offsetTop + element && element.offsetHeight) * 2) {
+      try {
+        if (
+          window.scrollY >
+          (element && element.offsetTop + element && element.offsetHeight) * 2
+        ) {
           console.log('scroller');
           Appstore.setFooter(true);
         } else {
           Appstore.setFooter(false);
         }
-      }
-      catch(e){
-        console.log(e)
+      } catch (e) {
+        console.log(e);
       }
     };
     const handleDelay = e => {
@@ -165,7 +166,7 @@ const App = observer(() => {
               </>
             }
           />
-              <Route
+          <Route
             path="/index.html"
             element={
               <>
@@ -239,6 +240,15 @@ const App = observer(() => {
             }
           />
           <Route
+            path="/products/:id/"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                <Header BG={true} />
+                <MainProducts />
+              </Suspense>
+            }
+          />
+          <Route
             path="/products/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
@@ -249,6 +259,15 @@ const App = observer(() => {
           />
           <Route
             path="/productDetails"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                <Header BG={true} />
+                <MainProductDetails />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/productDetails/:catid/:id/:name"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
                 <Header BG={true} />

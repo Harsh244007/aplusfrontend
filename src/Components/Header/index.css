@@ -387,6 +387,7 @@
   /* height: 62px; */
   width: 30%;
   aspect-ratio: 1/1;
+    mix-blend-mode: darken;
   /* flex-grow: 1; */
 }
 
