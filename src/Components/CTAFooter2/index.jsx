@@ -47,7 +47,7 @@ const CTAFooter = observer(() => {
             </Button>
           </a>
       </Box>
-        <a target="_blank" href="https://wa.me/+919810290979/?text=Hello%20There%20I%20saw%20Your%20products%20in%20your%20website%20I%20would%20like%20to%20know%20more%20about%20it">
+        <a target="_blank" href="https://wa.me/+919810290979/?text=Hello%0aThere%20I%20saw%20Your%20products%20in%20your%20website%20I%20would%20like%20to%20know%20more%20about%20it">
           <Button className="whatsappcta">
             <FaWhatsapp />
           </Button>

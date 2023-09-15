@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import {
   Box,
@@ -10,19 +10,67 @@ import {
   Text,
 } from '@chakra-ui/react';
 import image from '../../../assets/woman-writing-on-paper-3228878.png';
+
 const Getintouch = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+
+  const handleInputChange = e => {
+    const { name, value } = e.target;
+    if (name === 'name') {
+      setName(value);
+    } else if (name === 'email') {
+      setEmail(value);
+      setError('');
+    } else if (name === 'message') {
+      setMessage(value);
+    }
+  };
+
+  const handleSendInquiry = () => {
+    if (!name || !email || !message) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    let nameChar = '';
+    const newCharSpace = name.split(' ');
+      for (let i = 0; i < newCharSpace.length; i++) {
+        nameChar = nameChar+newCharSpace[i] + '%20';
+      }
+    let messageChar = '';
+    const newMessageSpace = message.split(' ');
+      for (let i = 0; i < newMessageSpace.length; i++) {
+        messageChar = messageChar+newMessageSpace[i] + '%20';
+      }
+
+    const url = `https://wa.me/+919810290979/?text=Hello%20There%0a%0aI%20have%20a%20regarding%20your%20products%20In%20your%20website%0a%0aName%20:%20${nameChar}%0aEmail%20:%20${email}%0aMessage%20:%20${messageChar}`;
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+    window.open(url);
+  };
+
+  const isValidEmail = email => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
   return (
     <Box className="MainGetingTouch" as="section">
-     
       <Box className="mainget" p={10}>
         <Box className="firstofgetintouch" background={`url(${image})`}>
           <Heading className="headerfirsofget">
             We are here to help you in all your needs.
           </Heading>
-          {/* <Text className="textfirstofgetTou">
-          </Text> */}
         </Box>
-
         <Container
           bg={'#001620'}
           className="containergetintouch"
@@ -30,89 +78,74 @@ const Getintouch = () => {
           p={'20px 0px'}
         >
           <Box p={10} className="firstBoxGETINTOUCH">
-            <Heading className='sendInquiryDesktop' fontFamily={"'Dosis','sans-serif'"} color={"white"}>
+            <Heading
+              className="sendInquiryDesktop"
+              fontFamily={"'Dosis','sans-serif'"}
+              color={'white'}
+            >
               Send Inquiry
             </Heading>
             <Text
               mb={'20px'}
-              className='contactUsExtraText'
-              // fontSize={'26px'}
-              // fontFamily={"'Inter','sans-serif'"}
+              className="contactUsExtraText"
               color={'white'}
               fontWeight={'500px'}
             >
-          
-            Our team is happy to answer your sales questions. Fill out the form
-            and we'll be in touch as soon as possible
+              Our team is happy to answer your sales questions. Fill out the
+              form and we'll be in touch as soon as possible.
             </Text>
             <Box className="emailinput" w={'full'}>
-              {/* <Text>Your full name</Text> */}
               <InputGroup>
-                {/* <InputLeftElement pointerEvents="none" children={<RxAvatar />} /> */}
                 <Input
                   variant="filled"
                   h="64px"
-                  // borderRadius={'41px'}
-
                   borderRadius={'41px'}
                   placeholder="Your Name"
+                  name="name"
+                  value={name}
+                  onChange={handleInputChange}
                 />
               </InputGroup>
             </Box>
             <Box className="emailinput" w={'full'}>
-              {/* <Text>Your work email</Text> */}
               <InputGroup>
-                {/* <InputLeftElement pointerEvents="none" children={<EmailIcon />} /> */}
                 <Input
                   variant="filled"
                   h="64px"
                   borderRadius={'41px'}
                   placeholder="Email"
+                  name="email"
+                  value={email}
+                  onChange={handleInputChange}
                 />
               </InputGroup>
             </Box>
-            {/* <Box className="emailinput" w={"full"}> */}
-            {/* <Text>Your mobile</Text> */}
-            {/* <InputGroup> */}
-            {/* <InputLeftElement pointerEvents="none" children={<PhoneIcon />} /> */}
-            {/* <Input
-                  borderRadius={'41px'}
-                  variant="filled"
-                  h="64px"
-                  placeholder="Phone Number"
-                />
-              </InputGroup>
-            </Box> */}
             <InputGroup className="nessageinput" w={'full'}>
-              {/* <Text>Your message</Text> */}
-              {/* <Textarea
-              variant="filled"
-              borderRadius={0}
-              h="150px"
-            /> */}
               <Input
                 variant="filled"
                 className="messagebox"
                 h="64px"
                 borderRadius={'41px'}
                 placeholder="Message"
-                // placeholder="Email"
+                name="message"
+                value={message}
+                onChange={handleInputChange}
               />
             </InputGroup>
+            {error && <Text color="red.500">{error}</Text>}
             <Box display="flex" justifyContent="flex-end">
               <Button
-                // textAlign="right"
                 color="black"
                 background="#13e7f5"
                 className="buttonSubmit"
                 h={'64px'}
                 w={'full'}
                 m={'auto'}
-                // p={'15px 51px'}
                 p={'0px'}
                 fontSize={'18px'}
                 borderRadius={'41px'}
                 variant="solid"
+                onClick={handleSendInquiry}
               >
                 Send an Inquiry
               </Button>
