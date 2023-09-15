@@ -31,8 +31,8 @@ import {
   SubFooter,
 } from './Components';
 import './App.css';
-import { useQuery } from 'react-query';
-import axios from 'axios';
+// import { useQuery } from 'react-query';
+// import axios from 'axios';
 import CustomSwitch from './CustomProgressBar';
 const App = observer(() => {
   useLayoutEffect(() => {
@@ -102,19 +102,19 @@ const App = observer(() => {
       .scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
 
-  const url = `${Appstore.apilink}/returncategories`;
-  const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
-    return axios.get(url).then(response => {
-      return response.data.data;
-    });
-  });
-  if (!data) {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      refetch();
-    }, 4000);
-  }
+  // const url = `${Appstore.apilink}/returncategories`;
+  // const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
+  //   return axios.get(url).then(response => {
+  //     return response.data.data;
+  //   });
+  // });
+  // if (!data) {
+  //   let timer;
+  //   clearTimeout(timer);
+  //   timer = setTimeout(() => {
+  //     refetch();
+  //   }, 4000);
+  // }
 
   return (
     <ChakraProvider theme={theme}>

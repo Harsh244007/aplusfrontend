@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
+import ProductsJSON from '../../Configs/JSON/returnProductDetails.json';
 import {
   Box,
   Button,
@@ -15,70 +16,32 @@ import { SingleProductCard } from '../Home/Categories/singleproduct';
 import { Link, useParams } from 'react-router-dom';
 import Pagination from '../Common/pagination';
 import Appstore from '../../Store/Appstore';
-import { useQuery } from 'react-query';
-import axios from 'axios';
+// import { useQuery } from 'react-query';
+// import axios from 'axios';
 const MainProductDetails = () => {
   const [desc, setDesc] = useState();
   let { id, catid, name, catName } = useParams();
-  const url = `${Appstore.apilink}/returnProductDetails/${id}`;
-  const {
-    data,
-    refetch,
-    // status,
-    isRefetching,
-    // isPreviousData,
-    // isFetchedAfterMount,
-    // isLoading,
-  } = useQuery(['getSingleProducts'], async () => {
-    return axios.get(url).then(response => {
-      return response.data.data[0];
-    });
-  });
+
   useEffect(() => {
-    refetch();
+    // refetch();
     window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [name,refetch]);
-  if (!data) {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      refetch();
-    }, 4000);
-  }
-  if (!id) {
-    id = 50;
-  }
-  const url2 = `${Appstore.apilink}/returncategory/${catid}`;
-  const {
-    data: data2,
-    refetch: refetch2,
-    // isLoading: isloading2,
-  } = useQuery(['getMultipleCategories'], async () => {
-    return axios.get(url2).then(response => {
-      return response.data.data;
-    });
-  });
+  }, [name]);
 
-  if (!data2) {
-    let timer2;
-    clearTimeout(timer2);
-    timer2 = setTimeout(() => {
-      refetch2();
-    }, 4000);
-  }
+  const FilterResult = ProductsJSON.data.filter(e => e.pro_name === name);
+  console.log(FilterResult, 'filtered result');
   const [cpage, setCpage] = useState(1);
   const postsPerPage = 4;
   const lastposti = cpage * postsPerPage;
   const firstposti = lastposti - postsPerPage;
   let currentposts;
-  if (data2) {
-    currentposts = data2.slice(firstposti, lastposti);
+  if (ProductsJSON.data) {
+    currentposts = ProductsJSON.data.slice(firstposti, lastposti);
   }
   let color = useColorModeValue('yellow.500', 'yellow.300');
-  if (data && !desc) {
+  if (FilterResult && !desc) {
     const regex = /s:(\d+):"(.*?)";/g;
-    let matches = [...data.pro_desc.matchAll(regex)];
+    let matches = [...FilterResult[0].pro_desc.matchAll(regex)];
     const deserializedObjects = matches.map(match => {
       const array = match[2];
       const deserializedObject = `{${array}}`;
@@ -86,7 +49,7 @@ const MainProductDetails = () => {
     });
     setDesc(deserializedObjects);
     console.log(
-      data.pro_desc.match(/s:(\d+):"(.*?)";/g)[0],
+      FilterResult[0].pro_desc.match(/s:(\d+):"(.*?)";/g)[0],
       'data of single product'
     );
   }
@@ -102,19 +65,21 @@ const MainProductDetails = () => {
     >
       <Link
         className="goBackMain"
-        to={`/products/${catid}/${data && data.pro_name}`}
+        to={`/products/${catid}/${FilterResult && FilterResult.pro_name}`}
       >
         <Button
           loadingText={'Loading'}
-          isLoading={data && !isRefetching && data.pro_name ? false : true}
+          isLoading={FilterResult && FilterResult.pro_name ? false : true}
         >
           Go Back
         </Button>
       </Link>
-      {/* <Heading textAlign={'center'}>
-        {data && !isRefetching ? data.pro_name : `Loading ${name}`}
+      <Heading textAlign={'center'}>
+        {FilterResult.length === 0 && !FilterResult[0].pro_name
+          ? `Loading ${name}`
+          : FilterResult[0].pro_name}
       </Heading>
-      {data && data.length !==0 && !isRefetching ? (
+      {FilterResult.length !== 0 ? (
         <Box
           display={'flex'}
           gap={'30px'}
@@ -125,11 +90,11 @@ const MainProductDetails = () => {
           <Box w={'350px'} h={'350px'} border={'2px dashed #dedede'}>
             <Image
               w={'346px'}
-              alt={data.pro_image}
+              alt={FilterResult[0].pro_image}
               objectFit={'contain'}
               h={'346px'}
               loading="lazy"
-              src={`${Appstore.imageLink}/${data.pro_image}`}
+              src={`${Appstore.imageLink}/${FilterResult[0].pro_image}`}
             />
           </Box>
 
@@ -167,14 +132,13 @@ const MainProductDetails = () => {
                   ''
                 )}
               </Box>
-             
             </Box>
           </Box>
         </Box>
       ) : (
         <Skeleton height={650} width="100%" />
       )}
-      {data2 && data2.length != 0 ? (
+      {ProductsJSON.data.length !== 0 ? (
         <Box m={'auto'} gap={'30px'}>
           <Heading>You might be interested in</Heading>
           <Box
@@ -197,9 +161,9 @@ const MainProductDetails = () => {
               );
             })}
           </Box>
-          {data2 && data2 != [] ? (
+          {ProductsJSON.data.length !== 0 ? (
             <Pagination
-              totalPosts={data2 && data2.length}
+              totalPosts={ProductsJSON.data.length/8}
               postsPerPage={postsPerPage}
               setCurrentPage={setCpage}
               currentPage={cpage}
@@ -210,15 +174,17 @@ const MainProductDetails = () => {
         </Box>
       ) : (
         <Skeleton height={450} width="100%" />
-      )} */}
-      
+      )}
 
-      <h2 style={{margin:"auto",fontSize:"24px"}}>This page is under construction</h2>
+      {/* <h2 style={{ margin: 'auto', fontSize: '24px' }}>
+        This page is under construction
+      </h2> */}
     </Box>
   );
 };
 export default React.memo(MainProductDetails);
- {/* <ListItem>
+{
+  /* <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Between lugs:
                   </Text>{' '}
@@ -255,4 +221,5 @@ export default React.memo(MainProductDetails);
                     Water resistance:
                   </Text>{' '}
                   5 bar (50 metres / 167 feet){' '}
-                </ListItem> */}
+                </ListItem> */
+}

@@ -14,6 +14,7 @@ import {
   Stack,
   useDisclosure,
 } from '@chakra-ui/react';
+import CategoriesJSON from '../../Configs/JSON/categories.json';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
@@ -21,53 +22,21 @@ import './index.css';
 import Dropdown from 'react-dropdown-animated';
 // import Appstore from '../../Store/Appstore';
 import { observer } from 'mobx-react';
-import Appstore from '../../Store/Appstore';
-import { useState } from 'react';
-import { useQuery } from 'react-query';
-import axios from 'axios';
+import { useMemo } from 'react';
 
 const Navigation = observer(({ onClose }) => {
-  // const [showDD, setShowDD] = useState(true);
   const navigate = useNavigate();
-  const toggleDD = () => onClose();
-  let options = [
-    {
-      content: 'Loading Categories Please wait',
-      onClick: event => {
-        toggleDD();
-        // location(`/`);
+
+  const options2 = useMemo(() => {
+    return CategoriesJSON.data.map(e => ({
+      content: e.catname,
+      onClick: async (event) => {
+        await onClose();
+        navigate(`/products/${e.catid}/${e.catname}`);
       },
-    },
-  ];
-  let options2 = [];
-  const url = `${Appstore.apilink}/returncategories`;
-  const { data, refetch, isLoading } = useQuery(['getCategories'], async () => {
-    return axios.get(url).then(response => {
-      return response.data.data;
-    });
-  });
+    }));
+  }, [onClose, navigate]);
 
-  if (!data) {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      refetch();
-    }, 4000);
-  }
-
-  if (!isLoading && data) {
-    data.map(e => {
-      options2.push({
-        content: e.catname,
-        onClick: async( event) => {
-          await toggleDD();
-          console.log(e, 'toggle dd closed');
-          return navigate(`/products/${e.catid}/${e.catname}`);
-        },
-      });
-      return false
-    });
-  }
   return (
     <Stack as="nav">
       <Link to="/" onClick={() => onClose()}>
@@ -75,8 +44,9 @@ const Navigation = observer(({ onClose }) => {
       </Link>
 
       <Dropdown
-        options={data ? options2 : options}
+        options={options2}
         initial={200}
+        closeOnOutsideClick={true}
         exit={4}
         value="Products"
       />

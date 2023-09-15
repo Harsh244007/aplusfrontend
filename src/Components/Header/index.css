@@ -3,6 +3,7 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  position: relative;
   max-width: 1480px;
   z-index: 10000 !important;
   gap: 15px;
@@ -104,9 +105,11 @@
   border-image: none !important;
   margin: auto !important;
   width: 98% !important;
-  height: max-content;
+  height: fit-content;
   margin-top: 10px !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  transition: height 0s ease-in-out;
+  transition: max-height 0s ease-in-out;
   max-width: 1200px !important;
   border: 1px solid transparent !important;
 }
@@ -312,20 +315,28 @@
   height: 40px;
 }
 @media (max-width: 1022px) {
+  .dropdown-container,
+  .dropdown-button {
+    /* display: flex;
+  place-items: center; */
+    height: auto;
+  }
   .dropdown-container {
     padding-bottom: 0px;
   }
   .dropdown-button {
     padding: 0px 8px 0px 0px !important;
   }
-  .dropdown-container:has(.dropdown-options) {
-    padding-bottom: 410px;
+  .dropdown-options {
+    position: relative !important;
   }
-  
-.mainHeader button {
-  font-size: 32px !important;
-}
-  
+  /* .dropdown-container:has(.dropdown-options) { */
+  /* padding-bottom: 410px; */
+  /* } */
+
+  .mainHeader button {
+    font-size: 32px !important;
+  }
 }
 @media (min-width: 1022px) {
   .dropdown-options {
@@ -333,14 +344,59 @@
   }
 }
 
-@media (max-width:1022px){
-
-  .header img{
-  width: 160px !important;
-  height: 53px !important;
-  
+@media (max-width: 1022px) {
+  .header img {
+    width: 160px !important;
+    height: 53px !important;
+  }
+  .mainHeaderDrawer {
+    min-height: 270px !important;
+  }
 }
-.mainHeaderDrawer {
-  height: 250px !important;
- }
+.search-results {
+  max-height: 400px;
+  overflow-y: auto;
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  top: 41px;
+  right: 0px;
+  width: 100%;
+  min-width: 230px;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+.search-results > div a {
+  height: 70px;
+  display: flex;
+  width: 100%;
+  min-width: 230px;
+  border-bottom: 1px solid black;
+  gap: 5px;
+  align-items: center;
+  padding: 4px 0px 4px 10px;
+  justify-content: space-around;
+}
+
+.search-results > div a img {
+  object-fit: contain;
+  /* height: 62px; */
+  width: 30%;
+  aspect-ratio: 1/1;
+  /* flex-grow: 1; */
+}
+
+.search-results > div a p {
+  flex-grow: 2;
+  font-weight: bold;
+  width: 70%;
+}
+@media (max-width: 1300px) {
+  .search-results {
+    right: 10px;
+  }
 }

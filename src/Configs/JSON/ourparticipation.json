@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "DJ Expo 2018",
+      "GROUP_CONCAT(ig.image)": "whats1.jpeg,whats2.jpeg,whats3.jpeg,whats4.jpeg,whats5.jpeg,whats6.jpeg,whats7.jpeg,whats8.jpeg"
+    },
+    {
+      "id": 1,
+      "name": "Mumbai Expo 2018",
+      "GROUP_CONCAT(ig.image)": "1.jpeg,2.jpeg,3.jpeg,4.jpeg,5.jpeg"
+    }
+  ]
+}

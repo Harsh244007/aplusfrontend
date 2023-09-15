@@ -1,75 +1,29 @@
-import React, { useEffect } from 'react';
 import './index.css';
-import { Box, Button, Heading, Skeleton } from '@chakra-ui/react';
 import { SingleProductCard } from '../Home/Categories/singleproduct';
 import { Link, useParams } from 'react-router-dom';
-import { useQuery } from 'react-query';
-import axios from 'axios';
 import Appstore from '../../Store/Appstore';
+import React, { useEffect, useState } from 'react';
+import { Box, Button, Heading, Skeleton } from '@chakra-ui/react';
 import Pagination from '../Common/pagination';
-import { useState } from 'react';
+import ProductsJSON from '../../Configs/JSON/returnProductDetails.json';
+
 const MainProducts = () => {
-  //   const [state, updateState] = React.useState();
-  // const forceUpdate = React.useCallback(() => updateState({}), []);
-
-  let { id, name } = useParams();
-
-  const url = `${Appstore.apilink}/returncategory/${id}`;
-  const {
-    data,
-    status,
-    refetch,
-    isRefetching,
-    isIdle,
-    isPreviousData,
-    isFetchedAfterMount,
-    isLoading,
-  } = useQuery(['getMultipleCategories'], async () => {
-    return axios.get(url).then(response => {
-      return response.data.data;
-    });
-  });
-  useEffect(() => {
-    // forceUpdate()
-    refetch();
-    window.scrollTo(0, 0);
-    // Appstore.setFooter(true)
-  }, [name, refetch]);
-  if (!data) {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      refetch();
-    }, 4000);
-  }
-  useEffect(() => {
-    if (data && data.length === 0) refetch();
-  },[data]);
-
-  console.log(isLoading, status, 'data id of all products');
-  if (!id) {
-    id = 'Loudspeaker';
-  }
+  const { id, name } = useParams();
   const [cpage, setCpage] = useState(1);
   const postsPerPage = 12;
-  const lastposti = cpage * postsPerPage;
-  const firstposti = lastposti - postsPerPage;
-  let currentposts;
-  if (data) {
-    currentposts = data.slice(firstposti, lastposti);
-  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [cpage]);
-  console.log(
-    isRefetching,
-    isPreviousData,
-    status,
-    isIdle,
-    isFetchedAfterMount,
-    'id of product section'
-  );
+  }, [cpage, name]);
+
+  const FilterResult = ProductsJSON.data.filter((e) => e.catid === id);
+
+  const getPaginatedProducts = () => {
+    const lastposti = cpage * postsPerPage;
+    const firstposti = lastposti - postsPerPage;
+    return FilterResult.slice(firstposti, lastposti);
+  };
+
   return (
     <Box
       className="mainProductsMain"
@@ -79,18 +33,17 @@ const MainProducts = () => {
       maxW={'1220px'}
       m={'auto'}
       mt={'100px'}
-      // color={"#fff"}
     >
       <Link className="goBackMain" to={`/`}>
-        <Button
-          loadingText={'Loading'}
-          isLoading={data && !isRefetching ? false : true}
-        >
+        <Button loadingText={'Loading'} isLoading={!FilterResult}>
           Go Back
         </Button>
       </Link>
-      <Heading textAlign={'center'}>{data ? name : `Loading ${name}`}</Heading>
-      {/* {data && data.length!==0 && !isRefetching ? (
+      <Heading textAlign={'center'}>
+        {FilterResult ? name : `Loading ${name}`}
+      </Heading>
+
+      {FilterResult && FilterResult.length !== 0 ? (
         <Box
           display={'flex'}
           gap={'30px'}
@@ -98,35 +51,31 @@ const MainProducts = () => {
           justifyContent={'space-around'}
           alignItems={'center'}
         >
-          {currentposts.map(e => {
-            console.log(e, 'data for all products');
-            return (
-              <SingleProductCard
-                heading={e.pro_name ? e.pro_name : 'LoudSpeaker'}
-                icon={`${Appstore.imageLink}/${e.pro_image}`}
-                href={`/productDetails/${e.catid}/${e.showcaseid}/${e.pro_name}/${name}`}
-              />
-            );
-          })}
+          {getPaginatedProducts().map((e) => (
+            <SingleProductCard
+              key={e.showcaseid}
+              heading={e.pro_name ? e.pro_name : 'LoudSpeaker'}
+              icon={`${Appstore.imageLink}/${e.pro_image}`}
+              href={`/productDetails/${e.catid}/${e.showcaseid}/${e.pro_name}/${name}`}
+            />
+          ))}
         </Box>
       ) : (
         <Skeleton height={650} width="100%" />
-      )} */}
+      )}
 
-
-<h2 style={{margin:"auto",fontSize:"24px"}}>This page is under construction</h2>
-
-      {/* {data && data.length !==0 ? (
+      {FilterResult && FilterResult.length !== 0 ? (
         <Pagination
-          totalPosts={data && data.length}
+          totalPosts={FilterResult.length}
           postsPerPage={postsPerPage}
           setCurrentPage={setCpage}
           currentPage={cpage}
         />
       ) : (
         <Skeleton height={50} width="100%" />
-      )} */}
+      )}
     </Box>
   );
 };
+
 export default React.memo(MainProducts);
