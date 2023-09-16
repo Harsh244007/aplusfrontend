@@ -119,6 +119,7 @@ const MainProductDetails = () => {
         <Box
           display={'flex'}
           gap={'30px'}
+          className="singleProductMainContainer"
           flexWrap={'wrap'}
           justifyContent={'space-around'}
           alignItems={'center'}

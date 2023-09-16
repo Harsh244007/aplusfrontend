@@ -51,7 +51,7 @@ const Getintouch = () => {
         messageChar = messageChar+newMessageSpace[i] + '%20';
       }
 
-    const url = `https://wa.me/+919810290979/?text=Hello%20There%0a%0aI%20have%20a%20regarding%20your%20products%20In%20your%20website%0a%0aName%20:%20${nameChar}%0aEmail%20:%20${email}%0aMessage%20:%20${messageChar}`;
+    const url = `https://wa.me/+919810290979/?text=Hello%20There%0a%0aI%20have%20a%20query%20regarding%20your%20products%20In%20your%20website%0a%0aName%20:%20${nameChar}%0aEmail%20:%20${email}%0aMessage%20:%20${messageChar}`;
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Message:', message);

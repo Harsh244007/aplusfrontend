@@ -34,3 +34,13 @@ img {
     place-items: center;
   }
 }
+
+@media (max-width:1022px){
+  .singleProductMainContainer{
+    width: 100%;
+  }
+  .secondBox{
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+}
