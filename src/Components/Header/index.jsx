@@ -57,6 +57,7 @@ const Header = observer(({ BG = false }) => {
             <Desktopdropdown />
             <InputBox
               searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
               searchResults={searchResults}
               handleSearchInputChange={handleSearchInputChange}
             />
@@ -67,7 +68,7 @@ const Header = observer(({ BG = false }) => {
   );
 });
 
-function InputBox({ searchQuery, handleSearchInputChange, searchResults }) {
+function InputBox({ searchQuery, handleSearchInputChange, searchResults,setSearchQuery }) {
   return (
     <InputGroup className="inputheaderSearchMain" size="xl">
       <Input
@@ -83,13 +84,13 @@ function InputBox({ searchQuery, handleSearchInputChange, searchResults }) {
         <CiSearch className="inputheaderSearchIcon" />
       </InputRightElement>
       {searchQuery.length > 0 && (
-        <SearchResults value={searchQuery} results={searchResults} />
+        <SearchResults value={searchQuery} setSearchQuery={setSearchQuery} results={searchResults} />
       )}
     </InputGroup>
   );
 }
 
-function SearchResults({ results, value }) {
+function SearchResults({ results, value,setSearchQuery }) {
   return (
     <div
       className="search-results" tabindex="0"
@@ -100,7 +101,7 @@ function SearchResults({ results, value }) {
       ) : (
         results.map(result => (
           <div key={result.id}>
-            <Link to={`/productDetails/${result.catid}/${result.showcaseid}/${result.pro_name}`}>
+            <Link onClick={()=>setSearchQuery('')} to={`/productDetails/${result.catid}/${result.showcaseid}/${result.pro_name}`}>
               <img
                 src={`${Appstore.imageLink}/${result.pro_image}`}
                 alt={result.pro_name}
