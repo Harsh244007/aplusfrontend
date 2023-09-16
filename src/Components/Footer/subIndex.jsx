@@ -18,12 +18,20 @@ const SubFooter = () => {
       color={'#fff'}
     >
       <Container maxW={'6xl'} py={2}>
-        <Box className="boxmainFooter">
-          <Text className="footersublast">
-            © {new Date().getFullYear()} A Plus Audios Inc. All rights reserved.
+        <Box className="boxmainFooter2" display={"flex"} >
+          <Text className="footersublast" margin={"auto"}>
+            Copyright © {new Date().getFullYear()} All rights reserved | Made with {"❤️"} by <a target='_blank' href="https://www.tcipher.com">TCIPHER</a>
+          
           </Text>
         </Box>
       </Container>
+      
+      {/* <Container maxW={'6xl'} py={2}>
+        <Box className="boxmainFooter">
+          <Text className="footersublast">
+          </Text>
+        </Box>
+      </Container> */}
     </Box>
   );
 };
