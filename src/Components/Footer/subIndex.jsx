@@ -20,7 +20,7 @@ const SubFooter = () => {
       <Container maxW={'6xl'} py={2}>
         <Box className="boxmainFooter2" display={"flex"} >
           <Text className="footersublast" margin={"auto"}>
-            Copyright © {new Date().getFullYear()} All rights reserved | Made with {"❤️"} by <a target='_blank' href="https://www.tcipher.com">TCIPHER</a>
+            Copyright © {new Date().getFullYear()} All rights reserved | Made with {"❤️"} by <a target='_blank' href="https://tcipher.com">TCIPHER</a>
           
           </Text>
         </Box>

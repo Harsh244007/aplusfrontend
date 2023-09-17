@@ -13,6 +13,7 @@ import nine from '../../../assets/image 20.svg';
 import thirdMain from '../../../assets/thirdFeatureMain.svg'
 import thirdBg from '../../../assets/thirdFeatureImageBG.svg'
 import leftArrow from '../../../assets/LeftArrow.svg'
+import { Link } from 'react-router-dom';
 const FeatureProducts2 = () => {
   return (
     <Box className="MainFeatureProducts2" bgImage={bfImage2} as="section">
@@ -23,7 +24,10 @@ const FeatureProducts2 = () => {
           {/* <Text className="firstfeaturedText2">
             MP3 Player with USB, SD, MMC Card Reader, FM Tuner and Bluetooth
           </Text> */}
+          <Link to="/productDetails/10/153/USB 3000">
+
           <Text className='discoverMoreArrowFeature'>Discover More<Image src={leftArrow}/></Text>
+          </Link>
 
           {/* <Button className='buttonoffeaturedproducts' >View</Button> */}
         </Box>
@@ -37,7 +41,10 @@ const FeatureProducts2 = () => {
           <Text className="firstfeaturedText1">R-925</Text>
           {/* <Text className="firstfeaturedText2">1200w-1800w Into 4 ohm
           </Text> */}
+          <Link to="/productDetails/2/68/R-925">
+
           <Text className='discoverMoreArrowFeature'>Discover More<Image src={leftArrow}/></Text>
+          </Link>
 
           {/* <Button className='buttonoffeaturedproducts' >View</Button> */}
         </Box>
@@ -53,8 +60,10 @@ const FeatureProducts2 = () => {
           2*2400W@4OHM /
           2*3000W@2OHM
           </Text> */}
-          <Text className='discoverMoreArrowFeature'>Discover More<Image src={leftArrow}/></Text>
           {/* <Button className='buttonoffeaturedproducts' >View</Button> */}
+          <Link to="/productDetails/5/88/VAM 6060">
+                      <Text className='discoverMoreArrowFeature'>Discover More<Image src={leftArrow}/></Text>
+            </Link>
         </Box>
         <Box bgImage={thirdBg} className="firstfeaturedImage1 uniqueimage2">
           <Image loading="lazy" src={thirdMain} className="firstImageFeatured" />
