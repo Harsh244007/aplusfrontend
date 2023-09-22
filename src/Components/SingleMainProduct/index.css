@@ -29,7 +29,7 @@ img {
     flex: 2;
   }
   .singleProductImage {
-    flex: 1.2;
+    flex: 1.5;
     display: grid;
     place-items: center;
   }
@@ -47,6 +47,7 @@ img {
 .singleProductImage img{
   scale: 1.2;
   cursor: pointer;
+  aspect-ratio: 1/1;
   transition: all 0.3s ease;
 }
 

@@ -4,7 +4,7 @@
   position: relative !important;
   row-gap: 20px !important;
   justify-content: space-around !important;
-  max-width: 1000px !important;
+  max-width: 1100 !important;
 }
 .mainProductsMain .featueProductsCard1 {
   align-items: center !important;
@@ -19,4 +19,28 @@
 }
 img {
   mix-blend-mode: darken;
+}
+.mainProductsMain .featueProductsCard1 {
+  max-width: 300px;
+  height: 320px;
+  min-width: 300px;
+}
+.mainProductsMain .featueProductsCard1 .featueProductsCard1FirstBox img {
+height: 220px;
+max-height: 220px;
+/* mix-blend-mode: color-burn; */
+max-width: 260px;
+overflow: visible;
+width: 100%;
+aspect-ratio: 1/1;
+}
+  .mainProductsMain .featueProductsCard1 .featueProductsCard1FirstBox{
+  max-width: 300px;
+  height: 320px;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.mainProductsMain .featueProductsCard1 .featueProductsCard1SecondBox h2 {
+  font-size: 22px;
 }
