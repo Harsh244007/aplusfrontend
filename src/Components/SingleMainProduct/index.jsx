@@ -18,6 +18,7 @@ import Pagination from '../Common/pagination';
 import Appstore from '../../Store/Appstore';
 // import { useQuery } from 'react-query';
 // import axios from 'axios';
+import ImageModal from './../Common/ImageModal';
 const MainProductDetails = () => {
   const [desc, setDesc] = useState('');
   let { id, catid, name } = useParams();
@@ -44,29 +45,18 @@ const MainProductDetails = () => {
     currentposts = ProductsJSON.data.slice(firstposti, lastposti);
   }
   let color = useColorModeValue('yellow.500', 'yellow.300');
-  // if (FilterResult.length != '0') {
-  //   if (FilterResult[0].pro_desc == '0' && FilterResult[0].description && FilterResult[0].description !="") {
-  //     // const regex = /s:(\d+):"(.*?)";/g;
-  //     // let matches = [...FilterResult[0].description.matchAll(regex)];
-  //     // const deserializedObjects = matches.map(match => {
-  //     //   const array = match[2];
-  //     //   const deserializedObject = `{${array}}`;
-  //     //   return deserializedObject;
-  //     // });
-  //     // setDesc(FilterResult[0].description.split('\r\n'));
-  //   //  setDesc();
-  //     // return FilterResult[0].description;
-  //   } else {
-  //     const regex = /s:(\d+):"(.*?)";/g;
-  //     let matches = [...FilterResult[0].pro_desc.matchAll(regex)];
-  //     const deserializedObjects = matches.map(match => {
-  //       const array = match[2];
-  //       const deserializedObject = `{${array}}`;
-  //       return deserializedObject;
-  //     });
-  //     setDesc(deserializedObjects);
-  //   }
-  // }
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const openImageModal = imageUrl => {
+    setSelectedImage(imageUrl);
+    setIsImageModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+    setSelectedImage('');
+  };
   useEffect(() => setDesc(''), [id]);
   useEffect(() => {
     if (FilterResult.length !== 0 && desc == '') {
@@ -135,6 +125,11 @@ const MainProductDetails = () => {
               alt={FilterResult[0].pro_image}
               objectFit={'contain'}
               h={'346px'}
+              onClick={() =>
+                openImageModal(
+                  `${Appstore.imageLink}/${FilterResult[0].pro_image}`
+                )
+              }
               loading="lazy"
               src={`${Appstore.imageLink}/${FilterResult[0].pro_image}`}
             />
@@ -202,7 +197,7 @@ const MainProductDetails = () => {
       )}
       {ProductsJSON.data.length !== 0 ? (
         <Box m={'auto'} gap={'30px'}>
-          <Heading>You might be interested in</Heading>
+          <Heading mb="10px">You might be interested in</Heading>
           <Box
             display={'flex'}
             flexWrap={'wrap'}
@@ -242,6 +237,11 @@ const MainProductDetails = () => {
       {/* <h2 style={{ margin: 'auto', fontSize: '24px' }}>
         This page is under construction
       </h2> */}
+      <ImageModal
+        isOpen={isImageModalOpen}
+        imageUrl={selectedImage}
+        onClose={closeImageModal}
+      />
     </Box>
   );
 };

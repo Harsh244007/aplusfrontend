@@ -44,3 +44,12 @@ img {
     padding-bottom: 20px;
   }
 }
+.singleProductImage img{
+  scale: 1.2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.singleProductImage img:hover{
+  scale: 1.4;
+}
