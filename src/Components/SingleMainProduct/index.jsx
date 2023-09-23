@@ -196,8 +196,8 @@ const MainProductDetails = () => {
         <Skeleton height={650} width="100%" />
       )}
       {ProductsJSON.data.length !== 0 ? (
-        <Box m={'auto'} gap={'30px'}>
-          <Heading mb="10px">You might be interested in</Heading>
+        <Box m={'auto'} gap={'30px'} mt="40px">
+          <Heading mb="15px">You might be interested in</Heading>
           <Box
             display={'flex'}
             flexWrap={'wrap'}

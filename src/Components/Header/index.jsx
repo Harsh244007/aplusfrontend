@@ -26,7 +26,7 @@ const Header = observer(({ BG = false }) => {
     setSearchQuery(() => query);
 
     const filteredResults = ReturnCategories.data.filter(item =>
-      item.pro_name.toLowerCase().includes(query.toLowerCase())
+      item.pro_name.split("-").join("").split(" ").join("").toLowerCase().includes(query.split("-").join("").split(" ").join("").toLowerCase())
     );
 
     setSearchResults(filteredResults);
