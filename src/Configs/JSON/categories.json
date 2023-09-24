@@ -13,6 +13,12 @@
       "reg_date": "2019-05-20T19:08:50.000Z"
     },
     {
+      "catid": 11,
+      "catname": "Active Speakers",
+      "status": "1",
+      "reg_date": "2021-02-09T22:51:35.000Z"
+    },
+    {
       "catid": 3,
       "catname": "Microphones",
       "status": "1",

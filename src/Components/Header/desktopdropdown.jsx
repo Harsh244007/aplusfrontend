@@ -48,6 +48,10 @@ const DesktopDropdown = observer(() => {
       <Link to="/contact">
         <Button variant="ghost">Contact</Button>
       </Link>
+      
+      <Link to="/brochure">
+        <Button variant="ghost">Our Brochure</Button>
+      </Link>
     </Stack>
   );
 });

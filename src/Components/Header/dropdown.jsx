@@ -80,6 +80,18 @@ const Navigation = observer(({ onClose }) => {
       >
         Contact us
       </Link>
+      <Link
+        to="/brochure"
+        onClick={() => {
+          // Appstore.setLogin(true);
+          onClose();
+        }}
+      >
+        Our Brochure
+      </Link>
+
+
+      
     </Stack>
   );
 });

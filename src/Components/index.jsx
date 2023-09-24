@@ -21,13 +21,14 @@ const Dj = lazy(() => import('./Participation/Dj'));
 const AboutUSMain = lazy(() => import('./Home/AboutAplus/index'));
 const MainProducts = lazy(() => import('./Products/index'));
 const  MainProductDetails = lazy(()=> import("./SingleMainProduct/index"))
-
+const Brochure = lazy(()=>import('./Brochure/Brochure'))
 export {
   Error,
   MainProducts,
   Contact,
   MainProductDetails,
   Home,
+  Brochure,
   Mumbai,
   CTAFooter,
   FeatureProducts2,

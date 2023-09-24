@@ -29,6 +29,7 @@ import {
   Trusted,
   Reviews,
   SubFooter,
+  Brochure,
 } from './Components';
 import './App.css';
 // import { useQuery } from 'react-query';
@@ -218,6 +219,15 @@ const App = observer(() => {
                     <Getintouch />
                   </Box>
                 </Box>
+              </Suspense>
+            }
+          />
+             <Route
+            path="/brochure"
+            element={
+              <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                <Header BG={true} />
+               <Brochure/>
               </Suspense>
             }
           />

@@ -892,25 +892,14 @@
       "pro_image": "showcaseproduct2021-02-1318214990.jpg",
       "description": "",
       "pro_desc": "a:20:11:{i:0;a:2:{s:7:\"heading\";s:9:\"Type\";s:11:\"description\";s:7:\"Two Way BiAmp\";}i:1;a:2:{s:7:\"heading\";s:11:\"Frequency Response\";s:11:\"description\";s:12:\"50Hz - 20Khz\";}i:2;a:2:{s:7:\"heading\";s:18:\"Sensitivity (1m/1 w)\";s:11:\"description\";s:9:\"93dB\";}i:4;a:2:{s:7:\"heading\";s:18:\"Impedance\";s:11:\"description\";s:9:\"4 Ohm\";}i:5;a:2:{s:7:\"heading\";s:18:\"Woofer\";s:11:\"description\";s:9:\"1x15'' 75mm 600Z\";}i:6;a:2:{s:7:\"heading\";s:18:\"Driver\";s:11:\"description\";s:9:\"1.75'' Titanium\";}i:6;a:2:{s:7:\"heading\";s:18:\"SPL\";s:11:\"description\";s:9:\"123dB\";}i:8;a:2:{s:7:\"heading\";s:18:\"DSP\";s:11:\"description\";s:9:\"96KHz Sampling Frequency 48Bit\";}i:9;a:2:{s:7:\"heading\";s:18:\"Bluetooth Module\";s:11:\"description\";s:9:\"Yes\";}i:11;a:2:{s:7:\"heading\";s:18:\"Amp Type\";s:11:\"description\";s:9:\"LF Class D HF Class AB\";}i:12;a:2:{s:7:\"heading\";s:18:\"Amp Power\";s:11:\"description\";s:9:\"LF300W + HF100W RMS\";}i:13;a:2:{s:7:\"heading\";s:18:\"Peak Power\";s:11:\"description\";s:9:\"LF600W + HF200W RMS\";}i:14;a:2:{s:7:\"heading\";s:18:\"Crossover\";s:11:\"description\";s:9:\"2.0Khz\";}i:15;a:2:{s:7:\"heading\";s:18:\"Dimension\";s:11:\"description\";s:9:\"485x450x775mm\";}i:16;a:2:{s:7:\"heading\";s:18:\"Weight\";s:11:\"description\";s:9:\"23Kgs\";}}",
-          "status": "1",
+      "status": "1",
       "reg_date": "2021-02-13T06:08:39.000Z",
       "update_time": "2021-02-13T08:40:44.000Z"
     },
     {
-      "showcaseid": 82,
-      "pro_name": "15 FD",
-      "catid": "2",
-      "pro_image": "showcaseproduct2019-05-2932055705.jpg",
-      "description": "15” Powered Speaker\r\n600W | Robust Design\r\nDynamic LCD Display\r\n2 Line/Mic Input With Bluetooth\r\nWith DSP Eff ect Processor",
-      "pro_desc": "0",
-      "status": "1",
-      "reg_date": "2019-05-29T00:02:42.000Z",
-      "update_time": "2019-05-29T00:03:18.000Z"
-    },
-    {
       "showcaseid": 85.5,
       "pro_name": "PMQ15AM",
-      "catid": "2",
+      "catid": "11",
       "pro_image": "showcaseproduct2023-05-2921343588.jpg",
       "description": "12” Bluetooth Battery Speaker\r\nUSB/SD/Remote Control/Track list/Title,\r\nFolder Search with 2 VHF microphone\r\n2”VC 35OZ 1 “Driver with Bluetooth\r\nIndicator Light",
       "pro_desc": "0",
@@ -921,7 +910,7 @@
     {
       "showcaseid": 85,
       "pro_name": "PMQ12AM",
-      "catid": "2",
+      "catid": "11",
       "pro_image": "showcaseproduct2019-05-2921343588.jpg",
       "description": "12” Bluetooth Battery Speaker\r\nUSB/SD/Remote Control/Track list/Title,\r\nFolder Search with 2 VHF microphone\r\n2”VC 35OZ 1 “Driver with Bluetooth\r\nIndicator Light",
       "pro_desc": "0",
@@ -1216,7 +1205,7 @@
       "reg_date": "2019-05-29T00:14:39.000Z",
       "update_time": "0000-00-00 00:00:00"
     },
-     {
+    {
       "showcaseid": 88.5,
       "pro_name": "VAX 8000",
       "catid": "5",
@@ -1227,8 +1216,7 @@
       "reg_date": "2019-05-29T00:14:39.000Z",
       "update_time": "0000-00-00 00:00:00"
     },
-  
- 
+
     {
       "showcaseid": 12,
       "pro_name": "CT 2425",
@@ -1504,8 +1492,7 @@
       "reg_date": "2019-05-29T03:00:29.000Z",
       "update_time": "2019-05-29T03:12:48.000Z"
     },
-  
-   
+
     {
       "showcaseid": 136,
       "pro_name": "NW 4465/300x2",

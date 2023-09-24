@@ -59,9 +59,9 @@ console.log(FilterResult,"all products")
       {FilterResult && FilterResult.length !== 0 ? (
         <Box
           display={'flex'}
-          gap={'30px'}
+          gap={'10px'}
           flexWrap={'wrap'}
-          justifyContent={'space-around'}
+          justifyContent={'space-between'}
           alignItems={'center'}
         >
           {getPaginatedProducts().map(e => (

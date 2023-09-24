@@ -112,6 +112,7 @@
 }
 .featueProductsCard1:hover  {
   opacity: 1;
+  z-index: 4;
   scale: 1.1;
 
 }
@@ -131,4 +132,10 @@
   right: 0;
   opacity: 0;
   transition: all 0.4s ease-in-out 0s; */
+}
+@media (min-width:1022px){
+  .MainCategories{
+    display: grid;
+    grid-template-columns: auto;
+  }
 }

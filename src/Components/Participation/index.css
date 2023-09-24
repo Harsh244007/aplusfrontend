@@ -42,7 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 30px 0px 0px 0px;
   padding: 20px;
 }

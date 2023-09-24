@@ -1,0 +1,11 @@
+.MainBrochureMain{
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+  padding: 30px 0px;
+    background-repeat: no-repeat;
+    margin-top: 65px;
+    padding-top: 30px;
+    margin-bottom: 15px !important;
+}

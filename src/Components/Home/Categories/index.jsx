@@ -34,6 +34,7 @@ const FeatureProducts = () => {
       <Container p={10} maxW={'6xl'} mt={5} as='section'>
         <Flex
           flexWrap="wrap"
+          className='MainCategories'
           // gridGap={2}
           justifyContent="space-around"
           alignItems="center"
@@ -46,6 +47,11 @@ const FeatureProducts = () => {
             heading={'Loudspeaker'}
             icon={first}
             href={'/products/1/Loudspeakers'}
+          />{' '}
+          <SingleProductCard
+            heading={'Active Speakers'}
+            icon={first}
+            href={'/products/11/Active Speakers'}
           />{' '}
           <SingleProductCard
             heading={'Micophone'}
@@ -73,7 +79,7 @@ const FeatureProducts = () => {
             href={'/products/5/Amplifiers'}
           />
           <SingleProductCard
-            heading={'Wallmount Loudspeaker'}
+            heading={'Wallmount & install Loudspeaker'}
             icon={seven}
             href={'/products/8/Wallmount Speakers'}
           />
