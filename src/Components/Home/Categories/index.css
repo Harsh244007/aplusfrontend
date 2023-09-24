@@ -136,6 +136,22 @@
 @media (min-width:1022px){
   .MainCategories{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+  }
+  .MainCategories > *:nth-child(1),
+  .MainCategories > *:nth-child(2),
+  .MainCategories > *:nth-child(3){
+grid-column: span 4;
+  }
+  .MainCategories > *:nth-child(4),
+  .MainCategories > *:nth-child(5),
+  .MainCategories > *:nth-child(6),
+  .MainCategories > *:nth-child(7),
+  .MainCategories > *:nth-child(8),
+  .MainCategories > *:nth-child(9),
+  .MainCategories > *:nth-child(10),
+  .MainCategories > *:nth-child(11){
+grid-column: span 3;
   }
 }

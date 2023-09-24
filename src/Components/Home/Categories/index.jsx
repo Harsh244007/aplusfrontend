@@ -18,8 +18,9 @@ import {
   // Text,
   // useColorModeValue,
 } from '@chakra-ui/react';
-import first from "../../../assets/Rectangle 16.png"
-import second from "../.././../assets/Rectangle 162.svg"
+import first from "../../../assets/showcaseproduct2019-05-2887109266.jpg"
+import activeSpeaker from "../../../assets/showcaseproduct2019-05-2921343588.jpg"
+import second from "../.././../assets/showcaseproduct2019-05-2983048629.jpg"
 import third from "../../../assets/Rectangle 163.png"
 import four from "../.././../assets/Rectangle 164.png"
 import fifth from "../../../assets/Rectangle 165.png"
@@ -50,7 +51,7 @@ const FeatureProducts = () => {
           />{' '}
           <SingleProductCard
             heading={'Active Speakers'}
-            icon={first}
+            icon={activeSpeaker}
             href={'/products/11/Active Speakers'}
           />{' '}
           <SingleProductCard

@@ -9,7 +9,7 @@ import third from '../../../assets/part/1.jpeg';
 import fourth from '../../../assets/part/2.jpeg';
 const AboutUSMain = () => {
   return (
-    <Box className="MainAboutUS" backgroundImage={main} as="section">
+    <Box className="MainAboutUS" zIndex={1} backgroundImage={main} as="section">
       <Box className='secondheaderaboutusBox'  maxW={"1400px"} m="auto">
 
       <Heading className='secondheaderaboutus' >ABOUT US</Heading>
@@ -21,7 +21,7 @@ const AboutUSMain = () => {
           products that deliver the most faithful and natural reproduction of
           sound in a variety of applications.
         </Text> 
-        <Box className="ImagesAboutUs">
+        <Box className="ImagesAboutUs" position={"relative"} zIndex={5}>
           <Image loading="lazy" className="imagesaboutussa" src={first} />
           <Image loading="lazy" className="imagesaboutussa" src={second} />
           <Image loading="lazy" className="imagesaboutussa" src={third} />

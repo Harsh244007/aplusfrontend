@@ -67,15 +67,22 @@
 .ImagesAboutUs {
   display: flex !important;
   height: 296px !important;
+  max-height: 296px !important;
   width: 1160px !important;
   overflow: hidden !important;
   scrollbar-width: none !important;
   row-gap: 20px !important;
-  overflow-x: hidden !important;
+  overflow: hidden !important;
   max-width: 1400px !important;
-  overflow-y: hidden !important;
   padding-right: 50px !important;
 }
+.ImagesAboutUs:hover img{
+scale: 1.2;
+}
+
+.ImagesAboutUs:hover {
+  gap: 60px
+  }
 .ImagesAboutUs::-webkit-scrollbar {
   display: none;
 }
