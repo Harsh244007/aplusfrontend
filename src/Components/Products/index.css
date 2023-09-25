@@ -44,3 +44,8 @@ aspect-ratio: 1/1;
 .mainProductsMain .featueProductsCard1 .featueProductsCard1SecondBox h2 {
   font-size: 22px;
 }
+@media (max-width:700px){
+  .mainProductsMain > div{
+    justify-content: center !important;
+  }
+}
