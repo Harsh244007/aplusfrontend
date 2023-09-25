@@ -76,13 +76,6 @@
   max-width: 1400px !important;
   padding-right: 50px !important;
 }
-.ImagesAboutUs:hover img{
-scale: 1.2;
-}
-
-.ImagesAboutUs:hover {
-  gap: 60px
-  }
 .ImagesAboutUs::-webkit-scrollbar {
   display: none;
 }
