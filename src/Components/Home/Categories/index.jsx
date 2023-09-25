@@ -25,10 +25,10 @@ import third from "../../../assets/showcaseproduct2021-02-1336121825.jpg"
 import four from "../.././../assets/showcaseproduct2019-05-2935229910.jpg"
 import fifth from "../../../assets/showcaseproduct2019-05-2921333783.jpg"
 import six from "../.././../assets/showcaseproduct2021-01-3136795763.jpg"
-import seven from "../../../assets/Rectangle 167.svg"
+import seven from "../../../assets/showcaseproduct2019-05-2945961978.jpg"
 import eight from "../.././../assets/showcaseproduct2019-05-2959706407.jpg"
 import main from "../../../assets/image18.svg"
-import nine from "../.././../assets/Rectangle 169.svg"
+import nine from "../.././../assets/showcaseproduct2019-05-2935108461.jpg"
 import {CategoriesProductCard, SingleProductCard} from './singleproduct';
 const FeatureProducts = () => {
   return (

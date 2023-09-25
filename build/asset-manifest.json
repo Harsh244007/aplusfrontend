@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5255e6c5.css",
-    "main.js": "/static/js/main.20ed55a7.js",
+    "main.js": "/static/js/main.eeff402e.js",
     "static/css/731.ec42aeaa.chunk.css": "/static/css/731.ec42aeaa.chunk.css",
     "static/js/731.fef0b1b7.chunk.js": "/static/js/731.fef0b1b7.chunk.js",
     "static/css/83.fb3282b5.chunk.css": "/static/css/83.fb3282b5.chunk.css",
@@ -21,8 +21,8 @@
     "static/js/335.8d85d751.chunk.js": "/static/js/335.8d85d751.chunk.js",
     "static/css/579.27d109e5.chunk.css": "/static/css/579.27d109e5.chunk.css",
     "static/js/579.57a632ef.chunk.js": "/static/js/579.57a632ef.chunk.js",
-    "static/css/808.d2bfa7a6.chunk.css": "/static/css/808.d2bfa7a6.chunk.css",
-    "static/js/808.36708b96.chunk.js": "/static/js/808.36708b96.chunk.js",
+    "static/css/961.9e3a2372.chunk.css": "/static/css/961.9e3a2372.chunk.css",
+    "static/js/961.f65b09f8.chunk.js": "/static/js/961.f65b09f8.chunk.js",
     "static/css/269.bdde4a17.chunk.css": "/static/css/269.bdde4a17.chunk.css",
     "static/js/269.9a70a488.chunk.js": "/static/js/269.9a70a488.chunk.js",
     "static/css/419.c4a493c9.chunk.css": "/static/css/419.c4a493c9.chunk.css",
@@ -65,7 +65,7 @@
     "static/media/thirdMainHome.svg": "/static/media/thirdMainHome.2a566a224224ee1a1e70274d31a7f8c5.svg",
     "static/media/firstmain.svg": "/static/media/firstmain.086f507d8a6fd14f522882c4931bb674.svg",
     "static/media/secondFeatureMainImage.svg": "/static/media/secondFeatureMainImage.3d90657af08e3bef75877a9bcf5ff1de.svg",
-    "static/media/Rectangle 167.svg": "/static/media/Rectangle 167.13f7d518d934945614c31e3f4ca49a19.svg",
+    "static/media/showcaseproduct2019-05-2945961978.jpg": "/static/media/showcaseproduct2019-05-2945961978.560a5114041704eb78a2.jpg",
     "static/media/newMainHome1.png": "/static/media/newMainHome1.181f3b0d391a8e41a5df.png",
     "static/media/newMainHome5.png": "/static/media/newMainHome5.10cad67b107896115bc6.png",
     "static/media/newMainHome3.png": "/static/media/newMainHome3.0e032cd6795b3eee701a.png",
@@ -88,7 +88,6 @@
     "static/media/28.jpeg": "/static/media/28.cc59b4bb7114e79e5583.jpeg",
     "static/media/23.jpeg": "/static/media/23.d4dbe2c827333db40d86.jpeg",
     "static/media/newMainHome8.png": "/static/media/newMainHome8.ee3dba08f5c89aa63eac.png",
-    "static/media/Rectangle 169.svg": "/static/media/Rectangle 169.8fdf739eba4c4c2c52b14af6e79c729f.svg",
     "static/media/22.jpeg": "/static/media/22.650dbe41a860632526b6.jpeg",
     "static/media/2.jpeg": "/static/media/2.70865293f8cd73d6f9ef.jpeg",
     "static/media/15.jpeg": "/static/media/15.c7aa1ab575a0dc744d18.jpeg",
@@ -100,6 +99,7 @@
     "static/media/Rectangle 21.png": "/static/media/Rectangle 21.0b04cf8a83e66ddb454a.png",
     "static/media/showcaseproduct2021-01-3136795763.jpg": "/static/media/showcaseproduct2021-01-3136795763.dbe9cb0d627359d9b602.jpg",
     "static/media/24.jpeg": "/static/media/24.1f84ecefac8b1443c67d.jpeg",
+    "static/media/showcaseproduct2019-05-2935108461.jpg": "/static/media/showcaseproduct2019-05-2935108461.95786ad9f10dbde41509.jpg",
     "static/media/Rectangle 22.png": "/static/media/Rectangle 22.d84b061ec635f0f6c186.png",
     "static/media/aboutus.jpg": "/static/media/aboutus.9c326b930e6fdaf93eb6.jpg",
     "static/media/newBGHome1.jpg": "/static/media/newBGHome1.9a4dcfc5762174d46238.jpg",
@@ -114,7 +114,7 @@
     "static/media/thirdFeatureImageBG.svg": "/static/media/thirdFeatureImageBG.95d12b30b687bfe5782cce09e1bb8cee.svg",
     "static/media/secondFeatureImageBG.svg": "/static/media/secondFeatureImageBG.d92e4f15f8f9ca53d633fcfc3220bdba.svg",
     "main.5255e6c5.css.map": "/static/css/main.5255e6c5.css.map",
-    "main.20ed55a7.js.map": "/static/js/main.20ed55a7.js.map",
+    "main.eeff402e.js.map": "/static/js/main.eeff402e.js.map",
     "731.ec42aeaa.chunk.css.map": "/static/css/731.ec42aeaa.chunk.css.map",
     "731.fef0b1b7.chunk.js.map": "/static/js/731.fef0b1b7.chunk.js.map",
     "83.fb3282b5.chunk.css.map": "/static/css/83.fb3282b5.chunk.css.map",
@@ -134,8 +134,8 @@
     "335.8d85d751.chunk.js.map": "/static/js/335.8d85d751.chunk.js.map",
     "579.27d109e5.chunk.css.map": "/static/css/579.27d109e5.chunk.css.map",
     "579.57a632ef.chunk.js.map": "/static/js/579.57a632ef.chunk.js.map",
-    "808.d2bfa7a6.chunk.css.map": "/static/css/808.d2bfa7a6.chunk.css.map",
-    "808.36708b96.chunk.js.map": "/static/js/808.36708b96.chunk.js.map",
+    "961.9e3a2372.chunk.css.map": "/static/css/961.9e3a2372.chunk.css.map",
+    "961.f65b09f8.chunk.js.map": "/static/js/961.f65b09f8.chunk.js.map",
     "269.bdde4a17.chunk.css.map": "/static/css/269.bdde4a17.chunk.css.map",
     "269.9a70a488.chunk.js.map": "/static/js/269.9a70a488.chunk.js.map",
     "419.c4a493c9.chunk.css.map": "/static/css/419.c4a493c9.chunk.css.map",
@@ -171,6 +171,6 @@
   },
   "entrypoints": [
     "static/css/main.5255e6c5.css",
-    "static/js/main.20ed55a7.js"
+    "static/js/main.eeff402e.js"
   ]
 }
