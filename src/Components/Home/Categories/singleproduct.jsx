@@ -40,7 +40,7 @@ const SingleProductCard = React.memo(({ heading, description, icon, href ,referL
       overflow="hidden"
       // p={5}
     >
-      <Stack className='featueProductsCard1FirstBox'  p={4} background={`#F8FBFD`} rowGap={5}>
+      <Stack className='featueProductsCard1FirstBox'  p={4} background={`#F8FBFD`} rowGap={5} position={"relative"} zIndex={3}>
         <Image loading="lazy"
           src={icon}
           w="179px"
@@ -51,8 +51,8 @@ const SingleProductCard = React.memo(({ heading, description, icon, href ,referL
           // className="featuredprocutsimage"
         />
       </Stack>
-      <Box className="overlay"></Box>
-      <Box className='featueProductsCard1SecondBox' mt={2}>
+      {/* <Box className="overlay"></Box> */}
+      <Box className='featueProductsCard1SecondBox' mt={2} position={"relative"} zIndex={5}>
         <Heading overflow={"visible"} height={"auto"} fontSize={18} fontWeight={600} size="md" position={"relative"} zIndex={5}>
           {heading}
         </Heading>

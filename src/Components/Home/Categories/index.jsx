@@ -26,7 +26,7 @@ import four from "../.././../assets/Rectangle 164.png"
 import fifth from "../../../assets/Rectangle 165.png"
 import six from "../.././../assets/Rectangle 166.png"
 import seven from "../../../assets/Rectangle 167.svg"
-import eight from "../.././../assets/Rectangle 168.png"
+import eight from "../.././../assets/showcaseproduct2019-05-2959706407.jpg"
 import main from "../../../assets/image18.svg"
 import nine from "../.././../assets/Rectangle 169.svg"
 import {CategoriesProductCard, SingleProductCard} from './singleproduct';
