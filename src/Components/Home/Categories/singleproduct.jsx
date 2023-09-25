@@ -43,6 +43,7 @@ const SingleProductCard = React.memo(({ heading, description, icon, href ,referL
       <Stack className='featueProductsCard1FirstBox'  p={4} background={`#F8FBFD`} rowGap={5} position={"relative"} zIndex={3}>
         <Image loading="lazy"
           src={icon}
+          position={"relative"} zIndex={3}
           w="179px"
           height="196px"
           objectFit="contain"
@@ -53,7 +54,7 @@ const SingleProductCard = React.memo(({ heading, description, icon, href ,referL
       </Stack>
       {/* <Box className="overlay"></Box> */}
       <Box className='featueProductsCard1SecondBox' mt={2} position={"relative"} zIndex={5}>
-        <Heading overflow={"visible"} height={"auto"} fontSize={18} fontWeight={600} size="md" position={"relative"} zIndex={5}>
+        <Heading overflow={"visible"} height={"fit-content"} fontSize={18} fontWeight={600} size="md" position={"relative"} zIndex={5}>
           {heading}
         </Heading>
       </Box>
