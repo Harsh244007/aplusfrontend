@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5255e6c5.css",
-    "main.js": "/static/js/main.bd693131.js",
+    "main.js": "/static/js/main.aaaa48bd.js",
     "static/css/731.ec42aeaa.chunk.css": "/static/css/731.ec42aeaa.chunk.css",
     "static/js/731.fef0b1b7.chunk.js": "/static/js/731.fef0b1b7.chunk.js",
     "static/css/83.fb3282b5.chunk.css": "/static/css/83.fb3282b5.chunk.css",
@@ -21,8 +21,8 @@
     "static/js/335.8d85d751.chunk.js": "/static/js/335.8d85d751.chunk.js",
     "static/css/579.27d109e5.chunk.css": "/static/css/579.27d109e5.chunk.css",
     "static/js/579.57a632ef.chunk.js": "/static/js/579.57a632ef.chunk.js",
-    "static/css/381.0bf8c798.chunk.css": "/static/css/381.0bf8c798.chunk.css",
-    "static/js/381.e3f8942a.chunk.js": "/static/js/381.e3f8942a.chunk.js",
+    "static/css/109.46fe55c5.chunk.css": "/static/css/109.46fe55c5.chunk.css",
+    "static/js/109.712e7df3.chunk.js": "/static/js/109.712e7df3.chunk.js",
     "static/css/269.bdde4a17.chunk.css": "/static/css/269.bdde4a17.chunk.css",
     "static/js/269.9a70a488.chunk.js": "/static/js/269.9a70a488.chunk.js",
     "static/css/419.c4a493c9.chunk.css": "/static/css/419.c4a493c9.chunk.css",
@@ -58,6 +58,7 @@
     "static/js/215.e06f8dbb.chunk.js": "/static/js/215.e06f8dbb.chunk.js",
     "static/media/Aplus Catalog July 2023.pdf": "/static/media/Aplus Catalog July 2023.267577f51d7cc69fc0ac.pdf",
     "static/media/showcaseproduct2019-05-2887109266.jpg": "/static/media/showcaseproduct2019-05-2887109266.0ebcc0f30e57d723ee73.jpg",
+    "static/media/showcaseproduct2019-05-2959706407.jpg": "/static/media/showcaseproduct2019-05-2959706407.e6ec8c4f2a47a040c244.jpg",
     "static/media/image18.svg": "/static/media/image18.274fdb7efe8b7dd3e7751da40ac45331.svg",
     "static/media/thirdMainHome.svg": "/static/media/thirdMainHome.2a566a224224ee1a1e70274d31a7f8c5.svg",
     "static/media/firstmain.svg": "/static/media/firstmain.086f507d8a6fd14f522882c4931bb674.svg",
@@ -99,7 +100,6 @@
     "static/media/aboutus.jpg": "/static/media/aboutus.9c326b930e6fdaf93eb6.jpg",
     "static/media/newBGHome1.jpg": "/static/media/newBGHome1.9a4dcfc5762174d46238.jpg",
     "static/media/newMainHome4.png": "/static/media/newMainHome4.268a9f482ede00deb39f.png",
-    "static/media/Rectangle 168.png": "/static/media/Rectangle 168.d2909767730fb586b213.png",
     "static/media/Aplus-logo-675x324-white.png": "/static/media/Aplus-logo-675x324-white.3bbce33726f6a5550a71.png",
     "static/media/Rectangle 164.png": "/static/media/Rectangle 164.7248044713066c9010dc.png",
     "static/media/uber2.svg": "/static/media/uber2.2377d2b23c848253ed2ff2fd28113470.svg",
@@ -111,7 +111,7 @@
     "static/media/thirdFeatureImageBG.svg": "/static/media/thirdFeatureImageBG.95d12b30b687bfe5782cce09e1bb8cee.svg",
     "static/media/secondFeatureImageBG.svg": "/static/media/secondFeatureImageBG.d92e4f15f8f9ca53d633fcfc3220bdba.svg",
     "main.5255e6c5.css.map": "/static/css/main.5255e6c5.css.map",
-    "main.bd693131.js.map": "/static/js/main.bd693131.js.map",
+    "main.aaaa48bd.js.map": "/static/js/main.aaaa48bd.js.map",
     "731.ec42aeaa.chunk.css.map": "/static/css/731.ec42aeaa.chunk.css.map",
     "731.fef0b1b7.chunk.js.map": "/static/js/731.fef0b1b7.chunk.js.map",
     "83.fb3282b5.chunk.css.map": "/static/css/83.fb3282b5.chunk.css.map",
@@ -131,8 +131,8 @@
     "335.8d85d751.chunk.js.map": "/static/js/335.8d85d751.chunk.js.map",
     "579.27d109e5.chunk.css.map": "/static/css/579.27d109e5.chunk.css.map",
     "579.57a632ef.chunk.js.map": "/static/js/579.57a632ef.chunk.js.map",
-    "381.0bf8c798.chunk.css.map": "/static/css/381.0bf8c798.chunk.css.map",
-    "381.e3f8942a.chunk.js.map": "/static/js/381.e3f8942a.chunk.js.map",
+    "109.46fe55c5.chunk.css.map": "/static/css/109.46fe55c5.chunk.css.map",
+    "109.712e7df3.chunk.js.map": "/static/js/109.712e7df3.chunk.js.map",
     "269.bdde4a17.chunk.css.map": "/static/css/269.bdde4a17.chunk.css.map",
     "269.9a70a488.chunk.js.map": "/static/js/269.9a70a488.chunk.js.map",
     "419.c4a493c9.chunk.css.map": "/static/css/419.c4a493c9.chunk.css.map",
@@ -168,6 +168,6 @@
   },
   "entrypoints": [
     "static/css/main.5255e6c5.css",
-    "static/js/main.bd693131.js"
+    "static/js/main.aaaa48bd.js"
   ]
 }
