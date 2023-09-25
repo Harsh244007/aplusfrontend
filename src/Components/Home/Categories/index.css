@@ -156,11 +156,11 @@ grid-column: span 3 !important;
   }
 }
 @media (max-width:1022px){
-  .featueProductsCard1SecondBox{
+  .MainCategories .featueProductsCard1SecondBox{
     padding: 0px !important;
   }
   
-  .featueProductsCard1SecondBox h2{
+  .MainCategories .featueProductsCard1SecondBox h2{
     min-width: 200px !important;
   }
 }
