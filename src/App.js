@@ -167,6 +167,16 @@ const App = observer(() => {
               </>
             }
           />
+                    <Route
+            path="*"
+            element={
+              <>
+                <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                  <Header />
+                  <Error/>
+                  </Suspense>
+                  </>}
+                  />
           <Route
             path="/index.html"
             element={
