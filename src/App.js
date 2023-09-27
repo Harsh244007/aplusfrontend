@@ -167,16 +167,17 @@ const App = observer(() => {
               </>
             }
           />
-                    <Route
+          <Route
             path="*"
             element={
               <>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
                   <Header />
-                  <Error/>
-                  </Suspense>
-                  </>}
-                  />
+                  <Error />
+                </Suspense>
+              </>
+            }
+          />
           <Route
             path="/index.html"
             element={
@@ -232,12 +233,12 @@ const App = observer(() => {
               </Suspense>
             }
           />
-             <Route
+          <Route
             path="/brochure"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
                 <Header BG={true} />
-               <Brochure/>
+                <Brochure />
               </Suspense>
             }
           />
