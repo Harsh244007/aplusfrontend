@@ -12,5 +12,5 @@
       "timeout": 0
     }
   },
-  "routes": ["/","/about-us","/participation","/brochure","/Mumbai-Expo-2018","/DJ-Expo-2018"]
+  "routes": ["/","/about-us","/participation","/brochure","/Mumbai-Expo-2018","/DJ-Expo-2018","*","/products"]
 }

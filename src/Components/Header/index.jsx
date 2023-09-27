@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import logomain from '../../assets/Aplus-logo-675x324-white.png';
 import { CiSearch } from 'react-icons/ci';
 import ReturnCategories from '../../Configs/JSON/returnProductDetails.json';
-const Header = observer(({ BG = false }) => {
+const Header = observer(({ BG = true }) => {
   const { colorMode } = useColorMode();
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
