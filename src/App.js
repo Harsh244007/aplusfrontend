@@ -135,13 +135,13 @@ const App = observer(() => {
               </>
             }
           /> */}
-
+ <Header />
           <Route
             path=""
             element={
               <>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header />
+                  {/* <Header /> */}
                   <Home />
                 </Suspense>
 
@@ -167,23 +167,13 @@ const App = observer(() => {
               </>
             }
           />
-          <Route
-            path="*"
-            element={
-              <>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header />
-                  <Error />
-                </Suspense>
-              </>
-            }
-          />
+         
           <Route
             path="/index.html"
             element={
               <>
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <Header />
+                  {/* <Header /> */}
                   <Home />
                 </Suspense>
 
@@ -214,7 +204,7 @@ const App = observer(() => {
             path="/about-us"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <AboutMain />
               </Suspense>
             }
@@ -224,7 +214,7 @@ const App = observer(() => {
             path="/contact"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <Box className="contactgetintouchmain" as="sections">
                   <Box mt="50px">
                     <Getintouch />
@@ -237,7 +227,7 @@ const App = observer(() => {
             path="/brochure"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <Brochure />
               </Suspense>
             }
@@ -246,7 +236,7 @@ const App = observer(() => {
             path="/products"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProducts />
               </Suspense>
             }
@@ -255,7 +245,7 @@ const App = observer(() => {
             path="/products/:id/:name"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProducts />
               </Suspense>
             }
@@ -264,7 +254,7 @@ const App = observer(() => {
             path="/products/:id/"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProducts />
               </Suspense>
             }
@@ -273,7 +263,7 @@ const App = observer(() => {
             path="/products/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProducts />
               </Suspense>
             }
@@ -282,7 +272,7 @@ const App = observer(() => {
             path="/productDetails"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProductDetails />
               </Suspense>
             }
@@ -291,7 +281,7 @@ const App = observer(() => {
             path="/productDetails/:catid/:id/:name"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProductDetails />
               </Suspense>
             }
@@ -300,7 +290,7 @@ const App = observer(() => {
             path="/productDetails/:catid/:id/:name/:catName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProductDetails />
               </Suspense>
             }
@@ -309,7 +299,7 @@ const App = observer(() => {
             path="/productDetails/:catid/:id/:name/:catName/:subName"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <MainProductDetails />
               </Suspense>
             }
@@ -318,7 +308,7 @@ const App = observer(() => {
             path="/participation"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <Participation />
               </Suspense>
             }
@@ -328,7 +318,7 @@ const App = observer(() => {
             path="/Mumbai-Expo-2018"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <Mumbai />
               </Suspense>
             }
@@ -338,9 +328,20 @@ const App = observer(() => {
             path="/DJ-Expo-2018"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                <Header BG={true} />
+                {/* <Header BG={true} /> */}
                 <Dj />
               </Suspense>
+            }
+          />
+           <Route
+            path="*"
+            element={
+              <>
+                <Suspense fallback={<Skeleton height={450} width="100%" />}>
+                 
+                  <Error />
+                </Suspense>
+              </>
             }
           />
         </CustomSwitch>
