@@ -125,6 +125,7 @@ const App = observer(() => {
         <Goup onClick={goupOnclick} />
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
+        <Header />
         <CustomSwitch>
           {/* <Route
             path="*"
@@ -135,7 +136,6 @@ const App = observer(() => {
               </>
             }
           /> */}
- <Header />
           <Route
             path=""
             element={
@@ -167,7 +167,7 @@ const App = observer(() => {
               </>
             }
           />
-         
+
           <Route
             path="/index.html"
             element={
@@ -333,17 +333,7 @@ const App = observer(() => {
               </Suspense>
             }
           />
-           <Route
-            path="*"
-            element={
-              <>
-                <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                 
-                  <Error />
-                </Suspense>
-              </>
-            }
-          />
+          <Route path="*" element={<Error />} />
         </CustomSwitch>
       </Suspense>
       <Suspense fallback={<Skeleton height={450} width="100%" />}>
