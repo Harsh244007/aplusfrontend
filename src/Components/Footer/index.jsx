@@ -97,11 +97,11 @@ const Footer = observer(() => {
               </Text>
             </Box>
 
-            <a href="tel:+919810290979">
+            <a href="tel:+919811670799">
               <ListHeader className="listheader">
                 {' '}
                 <BsPhone />
-                +91 98102 90979
+                +91 98116 70799
               </ListHeader>
             </a>
 
