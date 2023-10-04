@@ -1568,6 +1568,17 @@
       "status": "1",
       "reg_date": "2021-02-13T06:32:05.000Z",
       "update_time": "2021-02-13T08:32:42.000Z"
-    }
+    },
+    {
+      "showcaseid": 77.5,
+      "pro_name": "APLA-212",
+      "catid": "2",
+      "pro_image": "showcaseproduct2023-05-2930160354.jpg",
+      "description": "",
+      "pro_desc": "a:20:9:{i:0;a:2:{s:7:\"heading\";s:12:\"Power Rating\";s:11:\"description\";s:10:\"1000W/2400W\";}i:1;a:2:{s:7:\"heading\";s:16:\"Recommended Amp.\";s:11:\"description\";s:18:\"1600W-2000W @ 4 ohm\";}i:2;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:10:\"35Hz-18KHz\";}i:3;a:2:{s:7:\"heading\";s:11:\"Sensitivity\";s:11:\"description\";s:17:\"101dbSPL (1w/1 m)\";}i:4;a:2:{s:7:\"heading\";s:17:\"Nominal Impedance\";s:11:\"description\";s:5:\"4 ohm\";}i:5;a:2:{s:7:\"heading\";s:18:\"Dimensions (HXWXD)\";s:11:\"description\";s:13:\"380x930x530mm\";}i:6;a:2:{s:7:\"heading\";s:16:\"Input Connectors\";s:11:\"description\";s:17:\"4 Pole Speakon x2\";}i:7;a:2:{s:7:\"heading\";s:9:\"LF Driver\";s:11:\"description\";s:10:\"NEO-12-500x2\";}i:8;a:2:{s:7:\"heading\";s:9:\"HF Driver\";s:11:\"description\";s:7:\"CT-4440\";}}",
+      "status": "1",
+      "reg_date": "2019-05-28T23:44:27.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
   ]
 }

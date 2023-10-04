@@ -751,17 +751,7 @@
       "update_time": "0000-00-00 00:00:00"
     },
 
-    {
-      "showcaseid": 77.5,
-      "pro_name": "APLA-212",
-      "catid": "2",
-      "pro_image": "showcaseproduct2023-05-2930160354.jpg",
-      "description": "",
-      "pro_desc": "a:20:9:{i:0;a:2:{s:7:\"heading\";s:12:\"Power Rating\";s:11:\"description\";s:10:\"1000W/2400W\";}i:1;a:2:{s:7:\"heading\";s:16:\"Recommended Amp.\";s:11:\"description\";s:18:\"1600W-2000W @ 4 ohm\";}i:2;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:10:\"35Hz-18KHz\";}i:3;a:2:{s:7:\"heading\";s:11:\"Sensitivity\";s:11:\"description\";s:17:\"101dbSPL (1w/1 m)\";}i:4;a:2:{s:7:\"heading\";s:17:\"Nominal Impedance\";s:11:\"description\";s:5:\"4 ohm\";}i:5;a:2:{s:7:\"heading\";s:18:\"Dimensions (HXWXD)\";s:11:\"description\";s:13:\"380x930x530mm\";}i:6;a:2:{s:7:\"heading\";s:16:\"Input Connectors\";s:11:\"description\";s:17:\"4 Pole Speakon x2\";}i:7;a:2:{s:7:\"heading\";s:9:\"LF Driver\";s:11:\"description\";s:10:\"NEO-12-500x2\";}i:8;a:2:{s:7:\"heading\";s:9:\"HF Driver\";s:11:\"description\";s:7:\"CT-4440\";}}",
-      "status": "1",
-      "reg_date": "2019-05-28T23:44:27.000Z",
-      "update_time": "0000-00-00 00:00:00"
-    },
+
 
     {
       "showcaseid": 77.6,
@@ -964,6 +954,28 @@
       "update_time": "0000-00-00 00:00:00"
     },
     {
+      "showcaseid": 9.2,
+      "pro_name": "AP-108",
+      "catid": "3",
+      "pro_image": "showcaseproduct2019108-05-2959967254.jpg",
+      "description": "",
+      "pro_desc": "a:20:3:{i:0;a:2:{s:7:\"heading\";s:9:\"Impedance\";s:11:\"description\";s:7:\"600 Ohm\";}i:1;a:2:{s:7:\"heading\";s:11:\"Directivity\";s:11:\"description\";s:12:\"Undirectonal\";}i:2;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:9:\"50Hz-9KHz\";}}",
+      "status": "1",
+      "reg_date": "2019-05-27T22:24:08.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 9.4,
+      "pro_name": "AP-88",
+      "catid": "3",
+      "pro_image": "showcaseproduct201988-05-2959967254.jpg",
+      "description": "",
+      "pro_desc": "a:20:3:{i:0;a:2:{s:7:\"heading\";s:9:\"Impedance\";s:11:\"description\";s:7:\"600 Ohm\";}i:1;a:2:{s:7:\"heading\";s:11:\"Directivity\";s:11:\"description\";s:12:\"Undirectonal\";}i:2;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:9:\"50Hz-9KHz\";}}",
+      "status": "1",
+      "reg_date": "2019-05-27T22:24:08.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
       "showcaseid": 103,
       "pro_name": "AP-38",
       "catid": "3",
@@ -1001,7 +1013,7 @@
       "pro_name": "AP-9310",
       "catid": "3",
       "pro_image": "showcaseproduct2019-05-2915737890.jpg",
-      "description": "                     TRANSMITTERS\r\n\r\nTransmission Power ..........  10mW or 5mW\r\nModulation Mode.............. PLL Synthesized\r\nBattery Type ..................... 2*AA\r\nImage & Spurious Rejection....... >50dB\r\nFrequency Response........... 60Hz-15KHZ+3dB\r\n\r\n\r\n                     RECEIVER\r\nCarrier Frequency......... UHF650-814MHz\r\nTotal Channels ..........100\r\nOscillation Mode .........PLL Synthesized\r\nDynamic Range ..........>110dB\r\nTHD .....................<0.5%\r\nFrequency Response..... 50Hz 16KHz ± 3dB\r\nS/N Ratio ...................>90dB\r\nEff ective Use Range.............. >60M\r\nPower Supply.............. Dc14-22V 500mA\r\nReceiver Type ...............Antenna Diversity     ",
+      "description": "                     TRANSMITTERS\r\n\r\nTransmission Power .  10mW or 5mW\r\nModulation Mode. PLL Synthesized\r\nBattery Type . 2*AA\r\nImage & Spurious Rejection. >50dB\r\nFrequency Response. 60Hz-15KHZ+3dB\r\n\r\n\r\n                     RECEIVER\r\nCarrier Frequency. UHF650-814MHz\r\nTotal Channels .100\r\nOscillation Mode .PLL Synthesized\r\nDynamic Range .>110dB\r\nTHD .<0.5%\r\nFrequency Response. 50Hz 16KHz ± 3dB\r\nS/N Ratio .>90dB\r\nEff ective Use Range. >60M\r\nPower Supply. Dc14-22V 500mA\r\nReceiver Type .Antenna Diversity     ",
       "pro_desc": "0",
       "status": "1",
       "reg_date": "2019-05-29T04:04:11.000Z",
@@ -1012,7 +1024,7 @@
       "pro_name": "AP-1100",
       "catid": "3",
       "pro_image": "showcaseproduct2019-05-2920217773.jpg",
-      "description": "                    TRANSMITTERS\r\nAdjustment Mode................... FM\r\nImage Controlment................ >50dB\r\nMax deviation .....................<75KHz\r\nPower DC....................... 2.4~3.0V\r\n\r\n                    SPECIFICATION\r\nChannel........................ 2 channels\r\nFrequency range.......... 480MHz-860MHz\r\nFrequency response....... 50Hz-16KHz±3dB\r\nDynamic range................. >110dB\r\nTHD ..........................<0.5%\r\nS/N Ratio...................... >90dB\r\nOperating range................ >20M\r\nPower consumption..............1W-2W\r\n\r\n                    RECEIVER\r\nSensitivity .................2.0uV\r\nS/N Ration.............. >90dB\r\nDistortion .................<0.5%\r\nOutput................... Balanced output, 6.35mm mixing output x1\r\nPower................. DC12V 200mA",
+      "description": "                    TRANSMITTERS\r\nAdjustment Mode. FM\r\nImage Controlment. >50dB\r\nMax deviation .<75KHz\r\nPower DC. 2.4~3.0V\r\n\r\n                    SPECIFICATION\r\nChannel. 2 channels\r\nFrequency range. 480MHz-860MHz\r\nFrequency response. 50Hz-16KHz±3dB\r\nDynamic range. >110dB\r\nTHD .<0.5%\r\nS/N Ratio. >90dB\r\nOperating range. >20M\r\nPower consumption.1W-2W\r\n\r\n                    RECEIVER\r\nSensitivity .2.0uV\r\nS/N Ration. >90dB\r\nDistortion .<0.5%\r\nOutput. Balanced output, 6.35mm mixing output x1\r\nPower. DC12V 200mA",
       "pro_desc": "0",
       "status": "1",
       "reg_date": "2019-05-29T04:15:18.000Z",
@@ -1023,10 +1035,56 @@
       "pro_name": "AP-2100",
       "catid": "3",
       "pro_image": "showcaseproduct2019-07-2032587008.jpg",
-      "description": "HANDHELD TRANSMITTER SPECIFICATION\r\n\r\nDimension (mm).......... 50x249 mm\r\nAntenna................built-in Type\r\nHarmonic radiation........<0.005%, at 0~ 50ºC\r\nFrequency Stability..........±0.005%, at 0~50ºC\r\nbattery Type...............AA 1.5 V\r\nBattery Time..............For more than 8 hours\r\n\r\n\r\nRECEIVER FEATURE\r\n\r\nChannels...........Total : 200\r\nCarrier Frequency.........480MHz-860MHz\r\nBandwidth...............?250kHz\r\nFrequency Response........30Hz-16KHz+_3dB\r\nsensitivity..........>100dB\r\nTHD...............<0.5%\r\nS/N Ratio.............>90dB\r\nEff ective Use Range..........50M\r\nPower Consumption............2W - 4W\r\n\r\nRECEIVER SPECIFICATION\r\n\r\nChannel numbers..........200 Channels\r\nReceiver shell.............ElA Standard 1/2U\r\nReceiving sensivity...........2.0 ? V\r\nBandwidth..............50 Mhz\r\nChannel Spacing............250 kHz\r\nS/N Ratio...........>90 dB\r\nReceive Type..........UHF\r\nAudio Jack........1 6.3mm mix output & 2*XLR balance output\r\nBattery Status Direction............Display the transmitter battery status\r\nAntenna Input Socket.............Two the BNC socket\r\nPower supply.............220~240 VAC/ 12 ~ 14 DC\r\nDimensions..................210(L)x155(W)x45(H)\r\nEnvironmental Conditions...........Apply to : -10 ~ 60ºC",
+      "description": "HANDHELD TRANSMITTER SPECIFICATION\r\n\r\nDimension (mm). 50x249 mm\r\nAntenna.built-in Type\r\nHarmonic radiation.<0.005%, at 0~ 50ºC\r\nFrequency Stability.±0.005%, at 0~50ºC\r\nbattery Type.AA 1.5 V\r\nBattery Time.For more than 8 hours\r\n\r\n\r\nRECEIVER FEATURE\r\n\r\nChannels.Total : 200\r\nCarrier Frequency.480MHz-860MHz\r\nBandwidth.<=250kHz\r\nFrequency Response.30Hz-16KHz+_3dB\r\nsensitivity.>100dB\r\nTHD.<0.5%\r\nS/N Ratio.>90dB\r\nEffective Use Range.50M\r\nPower Consumption.2W - 4W\r\n\r\nRECEIVER SPECIFICATION\r\n\r\nChannel numbers.200 Channels\r\nReceiver shell.ElA Standard 1/2U\r\nReceiving sensivity.2.0 ? V\r\nBandwidth.50 Mhz\r\nChannel Spacing.250 kHz\r\nS/N Ratio.>90 dB\r\nReceive Type.UHF\r\nAudio Jack.1 6.3mm mix output & 2*XLR balance output\r\nBattery Status Direction.Display the transmitter battery status\r\nAntenna Input Socket.Two the BNC socket\r\nPower supply.220~240 VAC/ 12 ~ 14 DC\r\nDimensions.210(L)x155(W)x45(H)\r\nEnvironmental Conditions.Apply to : -10 ~ 60ºC",
       "pro_desc": "0",
       "status": "1",
       "reg_date": "2019-07-20T12:32:18.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    
+    {
+      "showcaseid": 148.5,
+      "pro_name": "AP-2100 LL",
+      "catid": "3",
+      "pro_image": "showcaseproduct2100l-07-2032587008.jpg",
+      "description": "HANDHELD TRANSMITTER SPECIFICATION\r\n\r\nDimension (mm). 50x249 mm\r\nAntenna.built-in Type\r\nHarmonic radiation.<= -60 dBc\r\nFrequency Stability.±0.005%, at 0~50ºC\r\nbattery Type.AA 1.5 V\r\nBattery Time.For more than 8 hours\r\n\r\n\r\nRECEIVER FEATURE\r\n\r\nChannels.Total : 200\r\nCarrier Frequency.480MHz-860MHz\r\nBandwidth.<=250kHz\r\nFrequency Response.30Hz-16KHz+_3dB\r\nsensitivity.>100dB\r\nTHD.<0.5%\r\nS/N Ratio.>90dB\r\nEffective Use Range.50M\r\nPower Consumption.2W - 4W\r\n\r\nRECEIVER SPECIFICATION\r\n\r\nChannel numbers.200 Channels\r\nReceiver shell.ElA Standard 1/2U\r\nReceiving sensivity.2.0 ? V\r\nBandwidth.50 Mhz\r\nChannel Spacing.250 kHz\r\nS/N Ratio.>90 dB\r\nReceive Type.UHF\r\nAudio Jack.1 6.3mm mix output & 2*XLR balance output\r\nBattery Status Direction.Display the transmitter battery status\r\nAntenna Input Socket.Two the BNC socket\r\nPower supply.220~240 VAC/ 12 ~ 14 DC\r\nDimensions.210(L)x155(W)x45(H)\r\nEnvironmental Conditions.Apply to : -10 ~ 60ºC",
+      "pro_desc": "0",
+      "status": "1",
+      "reg_date": "2019-07-20T12:32:18.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 148.7,
+      "pro_name": "AP-3100",
+      "catid": "3",
+      "pro_image": "showcaseproduct3119-07-2032587008.jpg",
+      "description": "HANDHELD TRANSMITTER SPECIFICATION\r\n\r\nDimension (mm). 51x252 mm\r\nAntenna.built-in Type\r\nHarmonic radiation.<0.005%, at 0~ 50ºC\r\nFrequency Stability.±0.005%, at 0~50ºC\r\nbattery Type.AA 1.5 V\r\nBattery Time.For more than 8 hours\r\n\r\n\r\nRECEIVER FEATURE\r\n\r\nChannels.Total : 200\r\nCarrier Frequency.440MHz-960MHz\r\nBandwidth.<=250kHz\r\nFrequency Response.30Hz-16KHz+_3dB\r\nsensitivity.>100dB\r\nTHD.<0.5%\r\nS/N Ratio.>90dB\r\nEffective Use Range.> 70M\r\nPower Consumption.2W - 4W\r\n\r\nRECEIVER SPECIFICATION\r\n\r\nChannel numbers.200 Channels\r\nReceiver shell.ElA Standard 1/2U\r\nReceiving sensivity.2.0 ? V\r\nBandwidth.50 Mhz\r\nChannel Spacing.250 kHz\r\nS/N Ratio.>90 dB\r\nReceive Type.UHF\r\nAudio Jack.1 6.3mm mix output & 2*XLR balance output\r\nBattery Status Direction.Display the transmitter battery status\r\nAntenna Input Socket.Two the BNC socket\r\nPower supply.DC14-22V 500mA\r\nDimensions.419(L)x172(W)x42(H)\r\nEnvironmental Conditions.Apply to : -10 ~ 60ºC",
+      "pro_desc": "0",
+      "status": "1",
+      "reg_date": "2019-07-20T12:32:18.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    
+    {
+      "showcaseid": 148.9,
+      "pro_name": "AP-3100 LL",
+      "catid": "3",
+      "pro_image": "showcaseproduct3100l-07-2032587008.jpg",
+      "description": "HANDHELD TRANSMITTER SPECIFICATION\r\n\r\nDimension (mm). 51x252 mm\r\nAntenna.built-in Type\r\nHarmonic radiation.<0.005%, at 0~ 50ºC\r\nFrequency Stability.±0.005%, at 0~50ºC\r\nbattery Type.AA 1.5 V\r\nBattery Time.For more than 8 hours\r\n\r\n\r\nRECEIVER FEATURE\r\n\r\nChannels.Total : 200\r\nCarrier Frequency.440MHz-960MHz\r\nBandwidth.<=250kHz\r\nFrequency Response.30Hz-16KHz+_3dB\r\nsensitivity.>100dB\r\nTHD.<0.5%\r\nS/N Ratio.>90dB\r\nEffective Use Range.> 70M\r\nPower Consumption.2W - 4W\r\n\r\nRECEIVER SPECIFICATION\r\n\r\nChannel numbers.200 Channels\r\nReceiver shell.ElA Standard 1/2U\r\nReceiving sensivity.2.0 ? V\r\nBandwidth.50 Mhz\r\nChannel Spacing.250 kHz\r\nS/N Ratio.>90 dB\r\nReceive Type.UHF\r\nAudio Jack.1 6.3mm mix output & 2*XLR balance output\r\nBattery Status Direction.Display the transmitter battery status\r\nAntenna Input Socket.Two the BNC socket\r\nPower supply.DC14-22V 500mA\r\nDimensions.419(L)x172(W)x42(H)\r\nEnvironmental Conditions.Apply to : -10 ~ 60ºC",
+      "pro_desc": "0",
+      "status": "1",
+      "reg_date": "2019-07-20T12:32:18.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 91.9,
+      "pro_name": "AP-PX4",
+      "catid": "4",
+      "pro_image": "showcaseproduct20194-05-2939037890.jpg",
+      "description": "With Digital Display MP3 (U-DISK MP3 input) | Bluetooth\r\n With record function USB | Dual \r\n 8 Band Display Main Output |  Single\r\n group main output control | Record earphone\r\nmonitor output | 3 Band EQ Each Channel\r\n+48V Phantom Power\r\nSingle 8 Band EQ",
+      "pro_desc": "0",
+      "status": "1",
+      "reg_date": "2019-05-29T00:21:02.000Z",
       "update_time": "0000-00-00 00:00:00"
     },
     {
@@ -1073,28 +1131,7 @@
       "reg_date": "2019-05-29T00:24:21.000Z",
       "update_time": "0000-00-00 00:00:00"
     },
-    {
-      "showcaseid": 97,
-      "pro_name": "PMX300",
-      "catid": "4",
-      "pro_image": "showcaseproduct2019-05-2962361932.jpg",
-      "description": "Professional 3-channel ultra low-noise DJ mixer with\r\nadditional Mic input and Headphone monitor\r\nThe built-in fully independent single channel USB player\r\nLarge LCD display with track\r\nSuper-smooth ULTRAGLIDE faders with up to 500,000 life\r\ncycles | 1x Microphone XLR input\r\nXLR Balanced master output\r\n2x switchable phono (line) / line stereo inputs\r\n1 x line stereo input | All stereo inputs with gain and\r\n3-band EQ(+12/-26dB) | 60mm channel faders\r\n45mm dual-rail crossfader for channels 1 and 3 with steep\r\nfl at curve switch\r\nMaster section with level control and dual level meter\r\nAdditional booth output",
-      "pro_desc": "0",
-      "status": "1",
-      "reg_date": "2019-05-29T00:26:10.000Z",
-      "update_time": "0000-00-00 00:00:00"
-    },
-    {
-      "showcaseid": 98,
-      "pro_name": "GM16P",
-      "catid": "4",
-      "pro_image": "showcaseproduct2021-02-1314503547.jpg",
-      "description": "With Bluebooth Play\r\nWith Digital Display MP3(U -DISK MP3 input)\r\nMP3 with REC | +48V Phantom Power | Dual 9 Band EQ\r\nEach Channel with Mute Switch\r\nBuild in Double 99 DSP Eff ector\r\nWith reduce noice function for Karaoke\r\nFive band eff ect level monitor\r\nDual twelve band level display main output\r\nRecord earphone monitor output | 3 band EQ each channel\r\n350W/ 450W/ 650W(4 ohm X2)",
-      "pro_desc": "0",
-      "status": "1",
-      "reg_date": "2019-05-29T00:26:52.000Z",
-      "update_time": "0000-00-00 00:00:00"
-    },
+    
     {
       "showcaseid": 173,
       "pro_name": "AP-PX4",
@@ -1212,6 +1249,28 @@
       "pro_image": "showcaseproduct20198000-05-2922067240.jpg",
       "description": "",
       "pro_desc": "a:20:5:{i:0;a:2:{s:7:\"heading\";s:12:\"Power @ 8 Ohm\";s:11:\"description\";s:42:\"2x2000W\";}i:1;a:2:{s:7:\"heading\";s:18:\"Power @ 4 Ohm\";s:11:\"description\";s:5:\"2X4000W\";}i:2;a:2:{s:7:\"heading\";s:18:\"Power @ 2 Ohm\";s:11:\"description\";s:5:\"2X6000W\";}i:3;a:2:{s:7:\"heading\";s:18:\"Bridged @ 8 Ohm\";s:11:\"description\";s:5:\"4000W\";}i:1;a:2:{s:7:\"heading\";s:18:\"Bridged @ 4 Ohm\";s:11:\"description\";s:5:\"8000W\";}i:4;a:2:{s:7:\"heading\";s:10:\"Net Weight\";s:11:\"description\";s:6:\"42 Kgs\";}}",
+      "status": "1",
+      "reg_date": "2019-05-29T00:14:39.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 88.7,
+      "pro_name": "APIN 1.2D",
+      "catid": "5",
+      "pro_image": "showcaseproduct2019800023-05-2922067240.jpg",
+      "description": "",
+      "pro_desc": "a:20:8:{i:0;a:2:{s:7:\"heading\";s:12:\"Continuous rated Power\";s:11:\"description\";s:42:\"600+600W RMS Max. For each Zone 2 Ohm\";}i:1;a:2:{s:7:\"heading\";s:18:\"Stereo/Mono\";s:11:\"description\";s:5:\"600+600W RMS @ 10% THD\";}i:2;a:2:{s:7:\"heading\";s:18:\"Tone Controls\";s:11:\"description\";s:5:\"BASS : (100Hz) ± 10dB for each Zone MID : (1kHz) ± 10dB for each Zone TREBLE : (10kHz) ± 10dB for each Zone\";}i:3;a:2:{s:7:\"heading\";s:18:\"Input Impedance\";s:11:\"description\";s:5:\"10k Unbalanced\";}i:4;a:2:{s:7:\"heading\";s:18:\"Channel Separation\";s:11:\"description\";s:5:\"70dB @ 1KHZ\";}i:5;a:2:{s:10:\"heading\";s:10:\"Damping Factor\";s:11:\"description\";s:6:\"400:1 @ 4 Ohm Load\";}i:4;a:2:{s:10:\"heading\";s:10:\"Protections\";s:11:\"description\";s:6:\"Temp. DC Short Circuit Overload\";}i:4;a:2:{s:10:\"heading\";s:10:\"Cooling\";s:11:\"description\";s:6:\"1 AC Fan (120mm x 120mm)\";}i:4;a:2:{s:10:\"heading\";s:10:\"Frequency Response(-2Db)\";s:11:\"description\";s:6:\"30-20000Hz\";}i:4;a:2:{s:10:\"heading\";s:10:\"Power Supply\";s:11:\"description\";s:6:\"220~240V, 50/60Hz\";}i:4;a:2:{s:10:\"heading\";s:10:\"Dimensions /Weight\";s:11:\"description\";s:6:\"W 505 x H 155 x d x440mm/22 kg\";}i:4;a:2:{s:10:\"heading\";s:10:\"Net Weight\";s:11:\"description\";s:6:\"42 Kgs\";}}",
+      "status": "1",
+      "reg_date": "2019-05-29T00:14:39.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 88.9,
+      "pro_name": "APIN 2.2D",
+      "catid": "5",
+      "pro_image": "showcaseproduct2019800022-05-2922067240.jpg",
+      "description": "",
+      "pro_desc": "a:20:5:{i:0;a:2:{s:7:\"heading\";s:12:\"Continuous rated Power\";s:11:\"description\";s:42:\"1100+1100W RMS Max. For each Zone 2 Ohm\";}i:1;a:2:{s:7:\"heading\";s:18:\"Stereo/Mono\";s:11:\"description\";s:5:\"1000+1000W RMS @ 10% THD\";}i:2;a:2:{s:7:\"heading\";s:18:\"Tone Controls\";s:11:\"description\";s:5:\"BASS : (100Hz) ± 10dB for each Zone MID : (1kHz) ± 10dB for each Zone TREBLE : (10kHz) ± 10dB for each Zone\";}i:3;a:2:{s:7:\"heading\";s:18:\"Input Impedance\";s:11:\"description\";s:5:\"10k Unbalanced\";}i:1;a:2:{s:7:\"heading\";s:18:\"Channel Separation\";s:11:\"description\";s:5:\"70dB @ 1KHZ\";}i:4;a:2:{s:7:\"heading\";s:10:\"Damping Factor\";s:11:\"description\";s:6:\"400:1 @ 4 Ohm Load\";}i:4;a:2:{s:10:\"heading\";s:10:\"Protections\";s:11:\"description\";s:6:\"Temp. DC Short Circuit Overload\";}i:4;a:2:{s:10:\"heading\";s:10:\"Cooling\";s:11:\"description\";s:6:\"2 AC Fan (120mm x 120mm)\";}i:4;a:2:{s:10:\"heading\";s:10:\"Frequency Response(-2Db)\";s:11:\"description\";s:6:\"30-20000Hz\";}i:4;a:2:{s:10:\"heading\";s:10:\"Power Supply\";s:11:\"description\";s:6:\"220~240V, 50/60Hz\";}i:4;a:2:{s:10:\"heading\";s:10:\"Dimensions /Weight\";s:11:\"description\";s:6:\"W 505 x H 155 x d x440mm/23.5 kg\";}i:4;a:2:{s:10:\"heading\";s:10:\"Net Weight\";s:11:\"description\";s:6:\"42 Kgs\";}}",
       "status": "1",
       "reg_date": "2019-05-29T00:14:39.000Z",
       "update_time": "0000-00-00 00:00:00"
@@ -1589,6 +1648,52 @@
       "pro_image": "showcaseproduct2019-05-2945961978.jpg",
       "description": "",
       "pro_desc": "a:20:9:{i:0;a:2:{s:7:\"heading\";s:9:\"Impedance\";s:11:\"description\";s:6:\"8 ohms\";}i:1;a:2:{s:7:\"heading\";s:6:\"Woofer\";s:11:\"description\";s:13:\"6.5”(166mm)\";}i:2;a:2:{s:7:\"heading\";s:7:\"Tweeter\";s:11:\"description\";s:21:\"1” (25mm) Silk dome\";}i:3;a:2:{s:7:\"heading\";s:20:\"Sensititity(l w/1 m)\";s:11:\"description\";s:4:\"87dB\";}i:4;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:10:\"70Hz-20KHz\";}i:5;a:2:{s:7:\"heading\";s:10:\"Power(RMS)\";s:11:\"description\";s:3:\"40W\";}i:6;a:2:{s:7:\"heading\";s:21:\"Over Dimension(WxDxH)\";s:11:\"description\";s:13:\"199x188x300mm\";}i:7;a:2:{s:7:\"heading\";s:6:\"Colour\";s:11:\"description\";s:11:\"white/black\";}i:8;a:2:{s:7:\"heading\";s:11:\"Transformer\";s:11:\"description\";s:19:\"30W-15W-7 .5W /100V\";}}",
+      "status": "1",
+      "reg_date": "2019-05-29T00:51:37.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+
+
+    {
+      "showcaseid": 14.2,
+      "pro_name": "EIW-85A",
+      "catid": "8",
+      "pro_image": "showcaseproduct201985A-05-2892317228.jpg",
+      "description": "",
+      "pro_desc": "a:20:9:{i:0;a:2:{s:7:\"heading\";s:9:\"Frequency Response\";s:11:\"description\";s:6:\"45 Hz-20KHz\";}i:1;a:2:{s:7:\"heading\";s:6:\"RMS Power\";s:11:\"description\";s:11:\"80 W\";}i:2;a:2:{s:7:\"heading\";s:7:\"Impedance\";s:11:\"description\";s:27:\"8 ohms\";}i:3;a:2:{s:7:\"heading\";s:20:\"Sensititity(l w/1 m)\";s:11:\"description\";s:4:\"88 dB\";}i:4;a:2:{s:7:\"heading\";s:18:\"Woofer\";s:11:\"description\";s:10:\"8 inch kevlar woven cone\";}i:5;a:2:{s:7:\"heading\";s:10:\"Tweeter\";s:11:\"description\";s:3:\"0.76 inch silk dome, pivoting\";}i:6;a:2:{s:7:\"heading\";s:21:\"Tweeter Equalizer\";s:11:\"description\";s:13:\"+2dB/-2dB\";}i:7;a:2:{s:7:\"heading\";s:6:\"Enclousre Material\";s:11:\"description\";s:11:\"ABS\";}i:8;a:2:{s:7:\"heading\";s:11:\"Cutout Dimensions\";s:11:\"description\";s:15:\"338*218mm\";}i:9;a:2:{s:7:\"heading\";s:11:\"Depth with 1/2 inch drywall\";s:11:\"description\";s:15:\"98mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"377*257*108mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"377*257*108mm\";}}",
+      "status": "1",
+      "reg_date": "2019-05-28T03:02:05.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 107.2,
+      "pro_name": "TPI-304",
+      "catid": "8",
+      "pro_image": "showcaseproduct3042019-05-2945961978.jpg",
+      "description": "",
+      "pro_desc": "a:20:9:.i:1;a:2:{s:7:\"heading\";s:6:\"Power\";s:11:\"description\";s:11:\"5W/10W\";}i:2;a:2:{s:7:\"heading\";s:7:\"Impedance\";s:11:\"description\";s:27:\"8 ohms\";}i:3;a:2:{s:7:\"heading\";s:20:\"Line Voltage\";s:11:\"description\";s:4:\"70V/100V DC\";}i:4;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:10:\"88Hz-17kHZ\";}i:5;a:2:{s:7:\"heading\";s:10:\"Sensititity (1w/1m)\";s:11:\"description\";s:3:\"90dB\";}.i:7;a:2:{s:7:\"heading\";s:6:\"Speaker Unit\";s:11:\"description\";s:11:\"5 inch (120mm)\";}i:8;a:2:{s:7:\"heading\";s:11:\"Cutout Dimensions\";s:11:\"description\";s:15:\"338*218mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"150mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"195*57mm\";}}",
+      "status": "1",
+      "reg_date": "2019-05-29T00:51:37.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 14.4,
+      "pro_name": "TPI-305",
+      "catid": "8",
+      "pro_image": "showcaseproduct3052019-05-2892317228.jpg",
+      "description": "",
+      "pro_desc": "a:20:9:.i:1;a:2:{s:7:\"heading\";s:6:\"Power\";s:11:\"description\";s:11:\"5W/10W\";}i:2;a:2:{s:7:\"heading\";s:7:\"Impedance\";s:11:\"description\";s:27:\"8 ohms\";}i:3;a:2:{s:7:\"heading\";s:20:\"Line Voltage\";s:11:\"description\";s:4:\"70V/100V DC\";}i:4;a:2:{s:7:\"heading\";s:18:\"Frequency Response\";s:11:\"description\";s:10:\"88Hz-17kHZ\";}i:5;a:2:{s:7:\"heading\";s:10:\"Sensititity (1w/1m)\";s:11:\"description\";s:3:\"91dB\";}.i:7;a:2:{s:7:\"heading\";s:6:\"Speaker Unit\";s:11:\"description\";s:11:\"6.5 inch (166mm)\";}i:8;a:2:{s:7:\"heading\";s:11:\"Cutout Dimensions\";s:11:\"description\";s:15:\"338*218mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"163mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"180*50mm\";}}",
+      "status": "1",
+      "reg_date": "2019-05-28T03:02:05.000Z",
+      "update_time": "0000-00-00 00:00:00"
+    },
+    {
+      "showcaseid": 107.4,
+      "pro_name": "EIW-50A",
+      "catid": "8",
+      "pro_image": "showcaseproduct201950A-05-2945961978.jpg",
+      "description": "",
+      "pro_desc": "a:20:9:{i:0;a:2:{s:7:\"heading\";s:9:\"Frequency Response\";s:11:\"description\";s:6:\"65 Hz-20KHz\";}i:1;a:2:{s:7:\"heading\";s:6:\"RMS Power\";s:11:\"description\";s:11:\"40 W\";}i:2;a:2:{s:7:\"heading\";s:7:\"Impedance\";s:11:\"description\";s:27:\"8 ohms\";}i:3;a:2:{s:7:\"heading\";s:20:\"Sensititity(l w/1 m)\";s:11:\"description\";s:4:\"86 dB\";}i:4;a:2:{s:7:\"heading\";s:18:\"Woofer\";s:11:\"description\";s:10:\"5.25 inch kevlar woven cone\";}i:5;a:2:{s:7:\"heading\";s:10:\"Tweeter\";s:11:\"description\";s:3:\"0.76 inch silk dome, pivoting\";}i:6;a:2:{s:7:\"heading\";s:21:\"Tweeter Equalizer\";s:11:\"description\";s:13:\"+2dB/-2dB\";}i:7;a:2:{s:7:\"heading\";s:6:\"Enclousre Material\";s:11:\"description\";s:11:\"ABS\";}i:8;a:2:{s:7:\"heading\";s:11:\"Cutout Dimensions\";s:11:\"description\";s:15:\"192 mm\";}i:9;a:2:{s:7:\"heading\";s:11:\"Depth with 1/2 inch drywall\";s:11:\"description\";s:15:\"80mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"232*88 mm\";}i:8;a:2:{s:7:\"heading\";s:11:\"Overall Dimensions\";s:11:\"description\";s:15:\"377*257*108mm\";}}",
       "status": "1",
       "reg_date": "2019-05-29T00:51:37.000Z",
       "update_time": "0000-00-00 00:00:00"

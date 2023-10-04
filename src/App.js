@@ -224,7 +224,7 @@ const App = observer(() => {
             }
           />
           <Route
-            path="/brochure"
+            path="/catalogue"
             element={
               <Suspense fallback={<Skeleton height={450} width="100%" />}>
                 {/* <Header BG={true} /> */}

@@ -11,7 +11,7 @@ const Brochure = () => {
   }, []);
   return (
     <Box className="MainBrochureMain"  as="section">
-      <Heading className='headeraboutusmain2' mb={"20px"}>Our Brochure</Heading>
+      <Heading className='headeraboutusmain2' mb={"20px"}>Our Catalogue</Heading>
       <iframe src={CATELOGUE} width={"100%"} height={"1000px"}  />
     </Box>
   );

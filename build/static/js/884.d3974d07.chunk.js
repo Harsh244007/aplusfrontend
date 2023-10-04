@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaplusaudio=self.webpackChunkaplusaudio||[]).push([[884],{6884:function(u,a,s){s.r(a),s.d(a,{default:function(){return r}});var n=s(3330),e=s(3069);s.p;s.p;s.p;var t=s(3726),c=function(){return(0,t.jsx)(e.xu,{className:"MainProducts",as:"section"})},r=n.memo(c)}}]);
+//# sourceMappingURL=884.d3974d07.chunk.js.map

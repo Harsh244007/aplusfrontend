@@ -81,13 +81,13 @@ const Navigation = observer(({ onClose }) => {
         Contact us
       </Link>
       <Link
-        to="/brochure"
+        to="/catalogue"
         onClick={() => {
           // Appstore.setLogin(true);
           onClose();
         }}
       >
-        Our Brochure
+        Our Catalogue
       </Link>
 
 
