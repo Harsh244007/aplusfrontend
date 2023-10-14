@@ -30,13 +30,14 @@ import eight from "../.././../assets/showcaseproduct2019-05-2959706407.jpg"
 import main from "../../../assets/image18.svg"
 import nine from "../.././../assets/showcaseproduct2019-05-2935108461.jpg"
 import {CategoriesProductCard, SingleProductCard} from './singleproduct';
-const FeatureProducts = () => {
+const FeatureProducts = ({id}) => {
   return (
-      <Container p={10} maxW={'6xl'} mt={5} as='section'>
+      <Container p={10} maxW={'6xl'} id={id} mt={5} as='section'>
         <Flex
           flexWrap="wrap"
           className='MainCategories'
           // gridGap={2}
+
           justifyContent="space-around"
           alignItems="center"
           w="full"

@@ -54,3 +54,6 @@ img {
 .singleProductImage img:hover{
   scale: 1.4;
 }
+.productDetailsText{
+  font-size: 22px !important;
+}

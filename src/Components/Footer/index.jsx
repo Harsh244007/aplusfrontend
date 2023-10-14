@@ -18,8 +18,6 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsPhone } from 'react-icons/bs';
 import { TbDeviceLandlinePhone } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
-// import Appstore from '../../Store/Appstore';
-// import { CheckIcon } from '@chakra-ui/icons';
 import {
   FaInstagram,
   FaFacebook as FaTwitter,
@@ -125,23 +123,23 @@ const Footer = observer(() => {
                 <Link to="/">
                   <Text fontSize={17}>Home</Text>
                 </Link>
-                <Link to="/FAQ">
-                  <Text fontSize={17}>FAQs</Text>
+                <Link to="/#MainCategories">
+                  <Text fontSize={17}>Products</Text>
                 </Link>
 
-                <Link to="/artists">
-                  <Text fontSize={17}>Events</Text>
+                <Link to="/participation">
+                  <Text fontSize={17}>Our Participation</Text>
                 </Link>
               </Box>
               <Box className="midboxFooter3">
                 <Link to="/about-us">
                   <Text fontSize={17}>About Us</Text>
                 </Link>
-                <Link to="/artists">
-                  <Text fontSize={17}>Entertainers</Text>
+                <Link to="/contact">
+                  <Text fontSize={17}>Contact</Text>
                 </Link>
-                <Link to="/about-us">
-                  <Text fontSize={17}>Contact Us</Text>
+                <Link to="/catalogue">
+                  <Text fontSize={17}>Our Catalogue</Text>
                 </Link>
               </Box>
             </Box>

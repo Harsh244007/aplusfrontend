@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './index.css';
 import ProductsJSON from '../../Configs/JSON/returnProductDetails.json';
 import {
@@ -6,11 +6,8 @@ import {
   Button,
   Heading,
   Image,
-  // List,
-  // ListItem,
   Skeleton,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { SingleProductCard } from '../Home/Categories/singleproduct';
 import { Link, useParams } from 'react-router-dom';
@@ -41,10 +38,20 @@ const MainProductDetails = () => {
   const lastposti = cpage * postsPerPage;
   const firstposti = lastposti - postsPerPage;
   let currentposts;
+  const shuffledData = useMemo(() => {
+    if (ProductsJSON.data) {
+      const copyOfData = [...ProductsJSON.data];
+      for (let i = copyOfData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copyOfData[i], copyOfData[j]] = [copyOfData[j], copyOfData[i]];
+      }
+      return copyOfData;
+    }
+  }, [id, cpage]);
   if (ProductsJSON.data) {
-    currentposts = ProductsJSON.data.slice(firstposti, lastposti);
+    currentposts = shuffledData.slice(firstposti, lastposti);
   }
-  let color = useColorModeValue('yellow.500', 'yellow.300');
+  // let color = useColorModeValue('yellow.500', 'yellow.300');
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
@@ -139,9 +146,10 @@ const MainProductDetails = () => {
             <Box>
               <Text
                 fontWeight={'bold'}
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={color}
+                fontSize={{ base: '20px', lg: '20px' }}
+                color={'#1bacc4'}
                 // fontWeight={'500'}
+                className="productDetailsText"
                 textTransform={'uppercase'}
                 mb={'4'}
               >

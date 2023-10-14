@@ -11,7 +11,6 @@ import {
   Getintouch,
   Mumbai,
   Footer,
-  About,
   Goup,
   FeatureProducts2,
   AboutMain,
@@ -35,6 +34,7 @@ import './App.css';
 // import { useQuery } from 'react-query';
 // import axios from 'axios';
 import CustomSwitch from './CustomProgressBar';
+import { useLocation } from 'react-router-dom';
 const App = observer(() => {
   useLayoutEffect(() => {
     const handleresize = async e => {
@@ -94,6 +94,22 @@ const App = observer(() => {
       // window.removeEventListener('scroll', scroller);
     };
   }, []);
+  const location = useLocation();
+  const { hash } = location;
+  const scrollToSection = () => {
+  if (hash) {
+    const targetSection = document.querySelector(hash);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+
+// Listen for URL changes and scroll to the section
+useEffect(() => {
+  scrollToSection();
+}, [location]);
+
   useEffect(() => {
     setTimeout(HideLandingLoader, 5000);
     window.scrollTo(0, 0);
@@ -146,7 +162,7 @@ const App = observer(() => {
                 </Suspense>
 
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <FeatureProducts />
+                  <FeatureProducts id="MainCategories" />
                 </Suspense>
 
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
@@ -178,7 +194,7 @@ const App = observer(() => {
                 </Suspense>
 
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>
-                  <FeatureProducts />
+                  <FeatureProducts id="MainCategories" />
                 </Suspense>
 
                 <Suspense fallback={<Skeleton height={450} width="100%" />}>

@@ -18,7 +18,6 @@ const DesktopDropdown = observer(() => {
           setShowDD(e => true),
           1000
         );
-        // setShowDD(e=>!e)
         navigate(`/products/${e.catid}/${e.catname}`);
       },
     }));

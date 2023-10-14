@@ -1,74 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Door Opening Animation</title>
+  <body>
+    <div class="container">
+      <div class="item" onclick="expandItem(this)">
+        <p>Item 1</p>
+      </div>
+      <div class="item" onclick="expandItem(this)">
+        <p>Item 2</p>
+      </div>
+      <div class="item" onclick="expandItem(this)">
+        <p>Item 3</p>
+      </div>
+    </div>
+    <script>
+      function expandItem(item) {
+        item.classList.add('expanded');
+        item.style.transform = 'translate3d(0, 0, 0)';
+
+        const otherItems = document.querySelectorAll('.item:not(.expanded)');
+        otherItems.prepend(otherItems)
+        for (let i = 0; i < otherItems.length; i++) {
+          otherItems[i].classList.add('row');
+          otherItems[i].style.transform = `translate3d(0, ${i * 100}px, 0)`;
+        }
+      }
+    </script>
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        padding: 0;
       }
 
       .container {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
-      .left-door,
-      .right-door {
-        position: absolute;
+      .item {
+        background-color: #ccc;
+        padding: 20px;
+        margin: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .item.expanded {
+        transform: translate3d(0, 0, 0);
+        /* position: absolute; */
         top: 0;
-        width: 50%;
-        height: 100%;
-
-        background-color: #333;
-        z-index: 1;
-        /* transition: transform 6s ease-in-out; */
-      }
-      .left-door {
-        transform-origin: top left;
-        animation: openLeftDoor 6s forwards;
         left: 0;
       }
-      .right-door {
-        right: 0;
-        bottom: 50%;
-        animation: openLeftDoor 6s forwards;
-        transform-origin: bottom right;
-      }
 
-      @keyframes openLeftDoor {
-        20% {
-          transform: scaleX(70%);
-        }
-        40% {
-          transform: scaleX(80%);
-        }
-        60% {
-          transform: scaleX(50%);
-        }
-        80% {
-          transform: scaleX(60%);
-        }
-        100% {
-          transform: scaleX(-100%);
-        }
+      .item.row {
+        display: flex;
+        flex-direction: row;
       }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="left-door"></div>
-      <div class="right-door"></div>
-      <div class="content">
-        <h1>Hello, World!</h1>
-      </div>
-    </div>
   </body>
 </html>
