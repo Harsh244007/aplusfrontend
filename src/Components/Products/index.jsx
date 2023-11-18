@@ -9,10 +9,10 @@ import ProductsJSON from '../../Configs/JSON/returnProductDetails.json';
 import CategoriesJSON from '../../Configs/JSON/categories.json';
 
 const MainProducts = () => {
-  const { id, name } = useParams();
+  let { id, name } = useParams();
   const [cpage, setCpage] = useState(1);
   const postsPerPage = 12;
-  let newName
+  let newName;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,18 +25,19 @@ const MainProducts = () => {
     const firstposti = lastposti - postsPerPage;
     return FilterResult.slice(firstposti, lastposti);
   };
-    if (id != undefined) {
-      const newProductNameCategories = CategoriesJSON.data.filter(
-        e => e.catid == id
-      );
-      if (
-        newProductNameCategories.length != 0 &&
-        newProductNameCategories[0].catname != undefined
-      ) {
-        newName = newProductNameCategories[0].catname;
-      }
+  if(id === undefined) id=1
+  if (id != undefined) {
+    const newProductNameCategories = CategoriesJSON.data.filter(
+      e => e.catid == id
+    );
+    if (
+      newProductNameCategories.length != 0 &&
+      newProductNameCategories[0].catname != undefined
+    ) {
+      newName = newProductNameCategories[0].catname;
     }
-console.log(FilterResult,"all products")
+  }
+  console.log(FilterResult, 'all products');
   return (
     <Box
       className="mainProductsMain"
